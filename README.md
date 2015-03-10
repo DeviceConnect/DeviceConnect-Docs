@@ -4,6 +4,42 @@ https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/readme.ja.md
 # About DeviceConnect WebAPI
 "DeviceConnect WebAPI" is WebAPI which operates as a virtual server on a smart phone. It can use easily various wearable devices and an IoT device by unific description from a web browser or an application. 
 
+# Introduction
+Device Connect system is a multi-OS, on the run-time environment of multi-platform, provides API (RESTful) for connection to a smart device.<br>
+Thus, it is intended to improve the convenience of the connection and cooperation method between the smart device.<br>
+<br> Function list Device Connect system provides is as follows.
+
+- Provides the ability to display the peripheral list of possible cooperation
+- Connection I / F eliminate (Bluetooth, BLE, Wi-Fi, NFC) a descriptive difficulty of the difference of
+- Provide unified API by equipment profile
+
+
+
+<a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_en.png" style="text-align:center" ">
+<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_en.png" border="0"
+ width="251" height="235" alt="" style="text-align:center"/></a>
+
+# Connecting to Device Connect
+
+In Android version Device Connect, and that make an inquiry to the HTTP server (DeviceConnectManager) you are running in the local in the terminal, it is possible to perform hardware operations and, the information acquisition.
+
+<a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DeviceConnectApplicationManual/image1.png" >
+<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DeviceConnectApplicationManual/image1.png" border="0"
+ width="808" height="290" alt="" /></a><br>
+
+# Repository of DeviceConnect
+
+* [DeviceConnect-Android](http://github/DeviceConnect-Android)<br>
+It is a repository that sample implement DeviceConnect platform on Android.<br>
+In Android terminal, if you want to operate the DeviceConnect, please check out from this repository.<br>
+<br>
+* [DeviceConnect-iOS](http://github/DeviceConnect-iOS)<br>
+It is a repository that sample implement DeviceConnect platform on iOS.<br>
+In iOS terminal, if you want to operate the DeviceConnect, please check out from this repository.<br>
+<br>
+* [DeviceConnect-JS](http://github/DeviceConnect-JS)
+It is a repository that implements the SDK for calling DeviceConnect from HTML.
+
 # Example for Android
 * https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/Bin/demoWebSite.zip
 
@@ -29,7 +65,7 @@ Android root
 
 2.Access the internal file URI with Chrome browser.
 ```
-  e.g. "file:///storage/emulated/0/dConnect/demoWebSite/index.html"
+  file:///sdcard/dConnect/demoWebSite/index.html
 ```
 
 3.Install the Manager APK and the Android Host APK from "Download APK".
