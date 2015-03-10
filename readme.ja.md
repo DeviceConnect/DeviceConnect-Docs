@@ -10,45 +10,85 @@ Device Connect WebAPIはスマートフォン上で仮想サーバとして動�
 * 機能拡張のためのプラグイン開発用SDKを用意しております。任意のWebAPI機能の追加が可能です。
 * 同じローカルネットワーク上にあるDeviceConnect WebAPIがセットアップされたAndroid端末も設定変更で利用できます（セキュリティ上のリスクについてご留意いただく必要があります）。
 
+# はじめに
+Device Connectシステムは、マルチOS、マルチプラットフォームのランタイム環境上において、スマートデバイスと接続するためのAPI (RESTful) を提供します。
+これにより、スマートデバイスとの接続方法・連携方法の利便性を向上することを目的としています。
+ Device Connectシステムが提供する機能一覧は以下の通りです。
+
+- 連携可能な周辺機器一覧を表示する機能を提供
+- 接続I/F（Bluetooth, BLE, Wi-Fi, NFC）の違いのわかりにくさを解消
+- 機器プロファイルによる統一的なAPIの提供
 
 
-# サンプルでの動作確認（Android用）
+
+<center><a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" style="text-align:center" target="_blank">
+<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" border="0"
+ width="251" height="235" alt="" style="text-align:center"/></a></center>
+
+# Device Connectへの接続
+
+Android版Device Connectでは、端末内のローカルに起動しているHTTPサーバ(DeviceConnectManager)に問い合わせを行う事で、ハードウェアの操作や、情報取得を行う事が可能です。
+
+<center><a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DeviceConnectApplicationManual/image1.png" target="_blank">
+<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DeviceConnectApplicationManual/image1.png" border="0"
+ width="808" height="290" alt="" /></a><br></center>
+
+# DeviceConnectのレポジトリ
+
+* [DeviceConnect-Android](http://github/DeviceConnect-Android)<br>
+Android上にDeviceConnectプラットホームをサンプル実装したレポジトリです。<br>
+Android端末で、DeviceConnectを動作させたい場合には、このレポジトリからチェックアウトしてください。<br>
+<br>
+* [DeviceConnect-iOS](http://github/DeviceConnect-iOS)<br>
+iOS上にDeviceConnectプラットホームをサンプル実装したレポジトリです。<br>
+iOS端末で、DeviceConnectを動作させたい場合には、このレポジトリからチェックアウトしてください。<br>
+<br>
+* [DeviceConnect-JS](http://github/DeviceConnect-JS)<br>
+HTMLからDeviceConnectを呼び出すためのSDKを実装したレポジトリです。<br>
+<br>
+* [DeviceConnect-Common](http://github/DeviceConnect-Common)<br>
+DeviceConnect-Android、およびDeviceConnect-iOSと連携するデバイス上で動作するアプリのレポジトリです。
+
+# サンプルでの動作確認
 * https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/Bin/demoWebSite.zip
-
-_2014/10/15にAndroid用動作サンプルのAPKファイルのパッケージ名を一部更新しました。_
-_お手数ですが以前のAPKがインストールされている場合、以下の手順で旧データを削除してからご確認ください。_
 
 1. 内部ストレージのdemoWebSite.zipから展開したファイルを削除
 2. DeviceConnect ManagerおよびPlug-inのAPKをアンインストール
-3. （Chromeブラウザの場合）メニューの”履歴”から”閲覧履歴データの消去...”を選択
-4. ”キャッシュの消去”のチェックを有効化し、”クリア”ボタンを選択
 
 ## Android端末でのChromeブラウザからの動作確認
 
-1. Androidの内部ストレージにデモコンテンツをフォルダを作成し（[例]"dConnect"）、  
+1\. Androidの内部ストレージにデモコンテンツをフォルダを作成し（[例]"dConnect"）、  
   そこにサンプルのdemoWebSiteフォルダ以下のすべてのファイルをコピーしてください。
+  adbコマンドが使える場合は、以下のようなコマンドでファイルをコピーすることができます。
+  
+```
+adb push demoWebSite /sdcard/demoWebSite
+```
+  
+  
 ```
 Android root
    └── mnt
        └── sdcard
-           └── dConnect #ここにフォルダを作成
-                └── demoWebSite #ここにjavaScriptのサンプルをコピー
+             └── demoWebSite #ここにjavaScriptのサンプルをコピー
 ```
 
-2. Chromeブラウザのアドレス欄に内部ストレージのURIを記入し、  
+2\. Chromeブラウザのアドレス欄に内部ストレージのURIを記入し、  
   内部ストレージにあるWebコンテンツにアクセスしてください。
+   
 ```
-    [例] file:///storage/emulated/0/dConnect/demoWebSite/index.html
+    [例] file:///sdcard/demoWebSite/index.html
 ```
 
-3. "Download APK"のリンクから、Device Connect本体の"DeviceConnectManager"、  
+3\. "Download APK"のリンクから、Device Connect本体の"DeviceConnectManager"、  
   デバイスプラグインの"Android Host"をダウンロードし、インストールしてください。
 
   _※設定のセキュリティから、提供元不明のアプリのインストールの許可が必要です。_
 
-4. トップページに戻ってください。
+4\. トップページに戻ってください。
 
-5. "Launch UI-App"のリンクからDeviceConnectWebAPIの動作をご確認ください。
+5\. "Launch UI-App"のリンクからDeviceConnectWebAPIの動作をご確認ください。
+
   * CheckボタンでDeviceConnectWebAPIの動作状況の確認が行えます。
   * 未起動の場合、"Device Connect was not found."と表示されます。
   * DeviceConnectManagerがインストールされていれば、設定画面が表示されます。
@@ -79,7 +119,6 @@ Android root
    _※遠隔で意図しない端末の操作およびデータ参照をされるリスクが伴います。信頼が出来ないローカルネットワーク環境に接続される可能性がある場合はDeviceConnectManagerのAllow External IPのチェックを無効化してください_
 
 
-
 # 対応デバイス
 
 <table>
@@ -88,6 +127,8 @@ Android root
     <td>製品名</td>
     <td>機器種別</td>
     <td>対応プラグイン</td>
+    <td>Android</td>
+    <td>iOS</td>
     <td>備考</td>
   </tr>
   <tr>
@@ -95,6 +136,8 @@ Android root
     <td>SmartWatchMN2</td>
     <td>腕時計型デバイス</td>
     <td>MN2/SW2 プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>通知以外の機能を利用するには、スマートウォッチ側でミニアプリの起動が必要</td>
   </tr>
   <tr>
@@ -102,6 +145,8 @@ Android root
     <td>SmartWatchSW2</td>
     <td>腕時計型デバイス</td>
     <td>MN2/SW2 プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>通知以外の機能を利用するには、スマートウォッチ側でミニアプリの起動が必要</td>
   </tr>
   <tr>
@@ -109,6 +154,8 @@ Android root
     <td>Sphero 2.0</td>
     <td>ボール型スマートトイ</td>
     <td>Sphero プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -116,6 +163,8 @@ Android root
     <td>DICE+</td>
     <td>サイコロ型スマートトイ</td>
     <td>DICE+ プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td>ソースコード開示なし、開発者向けファームウェアへのアップデートが必要</td>
   </tr>
   <tr>
@@ -123,6 +172,8 @@ Android root
     <td>hue</td>
     <td>スマートライト</td>
     <td>hue プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -130,6 +181,8 @@ Android root
     <td>Bloom Lamp</td>
     <td>スマートライト</td>
     <td>hue プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -137,13 +190,17 @@ Android root
     <td>LightStrips</td>
     <td>スマートライト</td>
     <td>hue プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
     <td>IRKit</td>
     <td>IRKit</td>
     <td>赤外線リモコン</td>
-    <td>Irkit プラグイン</td>
+    <td>IRKit プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -151,6 +208,8 @@ Android root
     <td>Moverio BT-200</td>
     <td>メガネ型デバイス</td>
     <td>AndroidHost プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>個別の拡張機能にも対応予定</td>
   </tr>
   <tr>
@@ -158,6 +217,8 @@ Android root
     <td>M100 Smart Glass</td>
     <td>メガネ型デバイス</td>
     <td>AndroidHost プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>個別の拡張機能にも対応予定</td>
   </tr>
   <tr>
@@ -165,6 +226,8 @@ Android root
     <td>Inforod</td>
     <td>メガネ型デバイス</td>
     <td>AndroidHost プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>個別の拡張機能にも対応予定</td>
   </tr>
   <tr>
@@ -172,6 +235,8 @@ Android root
     <td>DSC-QX100</td>
     <td>レンズスタイルカメラ</td>
     <td>SonyCamera プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -179,6 +244,8 @@ Android root
     <td>DSC-QX10</td>
     <td>レンズスタイルカメラ</td>
     <td>SonyCamera プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -186,13 +253,17 @@ Android root
     <td>Pebble</td>
     <td>腕時計型デバイス</td>
     <td>Pebble プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
     <td>-</td>
-    <td>Android端末 Ver4.0以降</td>
+    <td>Android端末 Ver4.2以降</td>
     <td>Android端末</td>
     <td>AndroidHost プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
   <tr>
@@ -200,6 +271,8 @@ Android root
     <td>G Watch</td>
     <td>Android  Wear端末</td>
     <td>Wear プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>仮対応のため、ADBでのAPKのインストールが必要</td>
   </tr>
   <tr>
@@ -207,6 +280,8 @@ Android root
     <td>Gear Live</td>
     <td>Android  Wear端末</td>
     <td>Wear プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>仮対応のため、ADBでのAPKのインストールが必要</td>
   </tr>
   <tr>
@@ -214,6 +289,8 @@ Android root
     <td>ChromeCast</td>
     <td>HDMIドングル</td>
     <td>ChromeCast プラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td>Google Cast SDK Developer ConsoleのページでデバイスとReceiverアプリの登録が必要</td>
   </tr>
   <tr>
@@ -221,6 +298,8 @@ Android root
     <td>UA-767PBT-C</td>
     <td>血圧計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -228,6 +307,9 @@ Android root
     <td>UA-851PBT-C</td>
     <td>血圧計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
+
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -235,6 +317,8 @@ Android root
     <td>TM-2656VPM</td>
     <td>血圧計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -242,6 +326,8 @@ Android root
     <td>UC-321PBT-C</td>
     <td>体重計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -249,6 +335,8 @@ Android root
     <td>HBF-206IT</td>
     <td>体重体組成計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -256,6 +344,8 @@ Android root
     <td>HHX-IT1</td>
     <td>活動量計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -263,6 +353,8 @@ Android root
     <td>UA-772</td>
     <td>血圧計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -270,6 +362,8 @@ Android root
     <td>UW201</td>
     <td>活動量計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -277,6 +371,8 @@ Android root
     <td>HEM-7250IT</td>
     <td>血圧計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -284,6 +380,8 @@ Android root
     <td>HBF-208IT</td>
     <td>体重体組成計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -291,6 +389,8 @@ Android root
     <td>HBF-215IT</td>
     <td>体重体組成計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -298,6 +398,8 @@ Android root
     <td>FS-500</td>
     <td>歩数計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -305,6 +407,8 @@ Android root
     <td>FS-700</td>
     <td>活動量計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -312,6 +416,8 @@ Android root
     <td>EX-950</td>
     <td>歩数計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -319,6 +425,8 @@ Android root
     <td>MS-FRV01</td>
     <td>血糖計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -326,6 +434,8 @@ Android root
     <td>MT-KT02DZ</td>
     <td>歩行強度計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -333,6 +443,8 @@ Android root
     <td>C215</td>
     <td>体温計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -340,6 +452,8 @@ Android root
     <td>ES-H700D</td>
     <td>血圧計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -347,6 +461,8 @@ Android root
     <td>ZS-NS05</td>
     <td>パルスオキシメータ</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -354,6 +470,8 @@ Android root
     <td>WT-B100DZ</td>
     <td>体組成計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
   </tr>
   <tr>
@@ -361,6 +479,8 @@ Android root
     <td>H7</td>
     <td>心拍計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
   <tr>
@@ -368,6 +488,8 @@ Android root
     <td>Mio Alpha</td>
     <td>心拍計</td>
     <td>mHealth プラグイン</td>
+    <td>○</td>
+    <td>×</td>
     <td>ソースコード開示なし</td>
   </tr>
 </table>
