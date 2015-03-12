@@ -100,13 +100,13 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceiveGetAllRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief level取得リクエストを受け取ったことをデリゲートに通知する。
@@ -121,13 +121,13 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceiveGetLevelRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief charging取得リクエストを受け取ったことをデリゲートに通知する。
@@ -142,13 +142,13 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceiveGetChargingRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief chargingTime取得リクエストを受け取ったことをデリゲートに通知する。
@@ -163,13 +163,13 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceiveGetChargingTimeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief dischargingTime取得リクエストを受け取ったことをデリゲートに通知する。
@@ -184,13 +184,13 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceiveGetDischargingTimeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 #pragma mark - Put Methods
 #pragma mark Event Registration
@@ -208,14 +208,14 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceivePutOnChargingChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -231,14 +231,14 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceivePutOnBatteryChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 #pragma mark - Delete Methods
@@ -256,14 +256,14 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceiveDeleteOnChargingChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -279,14 +279,14 @@ extern NSString *const DConnectBatteryProfileParamBattery;
  @param[in] profile このイベントを通知するDConnectBatteryProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectBatteryProfile *)profile didReceiveDeleteOnBatteryChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 @end

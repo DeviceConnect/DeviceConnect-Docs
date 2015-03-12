@@ -1,6 +1,6 @@
 //
 //  DPSpheroProfile.h
-//  DConnectSDK
+//  dConnectDeviceSphero
 //
 //  Copyright (c) 2014 NTT DOCOMO, INC.
 //  Released under the MIT license
@@ -173,12 +173,12 @@ extern NSString *const DPSpheroProfileParamImpactTimestamp;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{dConnectドメイン}/sphero/quaternion/onquaternion?deviceId=xxxxx&sessionKey=yyyyy
+ PUT http://{dConnectドメイン}/sphero/quaternion/onquaternion?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -186,7 +186,7 @@ extern NSString *const DPSpheroProfileParamImpactTimestamp;
 - (BOOL)                     profile:(DPSpheroProfile *)profile
     didReceivePutOnQuaternionRequest:(DConnectRequestMessage *)request
                             response:(DConnectResponseMessage *)response
-                            deviceId:(NSString *)deviceId
+                            serviceId:(NSString *)serviceId
                           sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -194,12 +194,12 @@ extern NSString *const DPSpheroProfileParamImpactTimestamp;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- DELETE http://{dConnectドメイン}/sphero/quaternion/onquaternion?deviceId=xxxxx&sessionKey=yyyyy
+ DELETE http://{dConnectドメイン}/sphero/quaternion/onquaternion?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -207,7 +207,7 @@ extern NSString *const DPSpheroProfileParamImpactTimestamp;
 - (BOOL)                    profile:(DPSpheroProfile *)profile
 didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
                            response:(DConnectResponseMessage *)response
-                           deviceId:(NSString *)deviceId
+                           serviceId:(NSString *)serviceId
                          sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -215,12 +215,12 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{dConnectドメイン}/sphero/locator/onlocator?deviceId=xxxxx&sessionKey=yyyyy
+ PUT http://{dConnectドメイン}/sphero/locator/onlocator?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @param[in] flag キャリブレーションの自動修正有効
  @param[in] newX 新しいX座標
@@ -232,7 +232,7 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
 - (BOOL)                    profile:(DPSpheroProfile *)profile
       didReceivePutOnLocatorRequest:(DConnectRequestMessage *)request
                            response:(DConnectResponseMessage *)response
-                           deviceId:(NSString *)deviceId
+                           serviceId:(NSString *)serviceId
                          sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -240,12 +240,12 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- DELETE http://{dConnectドメイン}/sphero/locator/onlocator?deviceId=xxxxx&sessionKey=yyyyy
+ DELETE http://{dConnectドメイン}/sphero/locator/onlocator?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -253,19 +253,19 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
 - (BOOL)                    profile:(DPSpheroProfile *)profile
    didReceiveDeleteOnLocatorRequest:(DConnectRequestMessage *)request
                            response:(DConnectResponseMessage *)response
-                           deviceId:(NSString *)deviceId
+                           serviceId:(NSString *)serviceId
                          sessionKey:(NSString *)sessionKey;
 /*!
  @brief Collisionのイベントを登録できる.<br>
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{dConnectドメイン}/sphero/collision/oncollision?deviceId=xxxxx&sessionKey=yyyyy
+ PUT http://{dConnectドメイン}/sphero/collision/oncollision?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -273,7 +273,7 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
 - (BOOL)                    profile:(DPSpheroProfile *)profile
     didReceivePutOnCollisionRequest:(DConnectRequestMessage *)request
                            response:(DConnectResponseMessage *)response
-                           deviceId:(NSString *)deviceId
+                           serviceId:(NSString *)serviceId
                          sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -281,12 +281,12 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- DELETE http://{dConnectドメイン}/sphero/collision/oncollision?deviceId=xxxxx&sessionKey=yyyyy
+ DELETE http://{dConnectドメイン}/sphero/collision/oncollision?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -294,7 +294,7 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
 - (BOOL)                    profile:(DPSpheroProfile *)profile
  didReceiveDeleteOnCollisionRequest:(DConnectRequestMessage *)request
                            response:(DConnectResponseMessage *)response
-                           deviceId:(NSString *)deviceId
+                           serviceId:(NSString *)serviceId
                          sessionKey:(NSString *)sessionKey;
 @end
 

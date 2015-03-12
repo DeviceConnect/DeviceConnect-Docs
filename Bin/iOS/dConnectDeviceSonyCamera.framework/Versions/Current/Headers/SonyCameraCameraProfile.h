@@ -1,6 +1,6 @@
 //
 //  SonyCameraCameraProfile.h
-//  DConnectSDK
+//  dConnectDeviceSonyCamera
 //
 //  Copyright (c) 2014 NTT DOCOMO, INC.
 //  Released under the MIT license
@@ -55,19 +55,19 @@ extern NSString *const SonyCameraCameraProfileParamZoomdiameter;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- GET http://{dConnectドメイン}/camera/zoom?deviceId=xxxxx
+ GET http://{dConnectドメイン}/camera/zoom?serviceId=xxxxx
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL)         profile:(SonyCameraCameraProfile *)profile
 didReceiveGetZoomRequest:(DConnectRequestMessage *)request
                 response:(DConnectResponseMessage *)response
-                deviceId:(NSString *)deviceId;
+                serviceId:(NSString *)serviceId;
 
 #pragma mark - Put Methods
 
@@ -77,12 +77,12 @@ didReceiveGetZoomRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{dConnectドメイン}/camera/zoom?deviceId=xxxxx
+ PUT http://{dConnectドメイン}/camera/zoom?serviceId=xxxxx
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] direction ズームインかアウトか
  @param[in] movement ズームをどの程度行うか
  @retval YES レスポンスパラメータを返却する
@@ -92,7 +92,7 @@ didReceiveGetZoomRequest:(DConnectRequestMessage *)request
 - (BOOL)         profile:(SonyCameraCameraProfile *)profile
 didReceivePutZoomRequest:(DConnectRequestMessage *)request
                 response:(DConnectResponseMessage *)response
-                deviceId:(NSString *)deviceId
+                serviceId:(NSString *)serviceId
                direction:(NSString *)direction
                 movement:(NSString *)movement;
 @end

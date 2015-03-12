@@ -120,7 +120,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] kind 種別
  
  @retval YES レスポンスパラメータを返却する。
@@ -128,7 +128,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  */
 - (BOOL) profile:(DConnectSettingsProfile *)profile didReceiveGetVolumeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             kind:(DConnectSettingsProfileVolumeKind)kind;
 
 /*!
@@ -145,14 +145,14 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectSettingsProfile *)profile didReceiveGetDateRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  
@@ -168,14 +168,14 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectSettingsProfile *)profile didReceiveGetLightRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  
@@ -191,14 +191,14 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectSettingsProfile *)profile didReceiveGetSleepRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 #pragma mark - Put Methods
 
@@ -216,7 +216,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] kind 種別
  @param[in] level 音量
  
@@ -225,7 +225,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  */
 - (BOOL) profile:(DConnectSettingsProfile *)profile didReceivePutVolumeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             kind:(DConnectSettingsProfileVolumeKind)kind
            level:(NSNumber *)level;
 
@@ -243,7 +243,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] date 日時
  
  @retval YES レスポンスパラメータを返却する。
@@ -251,7 +251,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  */
 - (BOOL) profile:(DConnectSettingsProfile *)profile didReceivePutDateRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             date:(NSString *)date;
 
 /*!
@@ -268,7 +268,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] level 明度パーセント
  
  @retval YES レスポンスパラメータを返却する。
@@ -276,7 +276,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  */
 - (BOOL) profile:(DConnectSettingsProfile *)profile didReceivePutLightRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
            level:(NSNumber *)level;
 
 /*!
@@ -293,7 +293,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] time 消灯するまでの時間(ミリ秒)
  
  @retval YES レスポンスパラメータを返却する。
@@ -301,7 +301,7 @@ typedef NS_ENUM(NSInteger, DConnectSettingsProfileVolumeKind) {
  */
 - (BOOL) profile:(DConnectSettingsProfile *)profile didReceivePutSleepRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             time:(NSNumber *)time;
 
 @end

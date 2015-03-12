@@ -22,7 +22,7 @@
  @brief プロファイルのベースクラス。
  
  このサンプルコードでは、以下のようなURLに対応する。<br>
- GET http://{dConnectドメイン}/gotapi/example/test?deviceId=xxxx
+ GET http://{dConnectドメイン}/gotapi/example/test?serviceId=xxxx
  
  */
 @interface DConnectProfile : NSObject

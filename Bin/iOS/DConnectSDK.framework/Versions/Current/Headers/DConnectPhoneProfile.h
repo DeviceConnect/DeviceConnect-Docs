@@ -103,7 +103,7 @@ typedef NS_ENUM(NSInteger, DConnectPhoneProfileCallState) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] phoneNumber 電話番号
  
  @retval YES レスポンスパラメータを返却する。
@@ -111,7 +111,7 @@ typedef NS_ENUM(NSInteger, DConnectPhoneProfileCallState) {
  */
 - (BOOL) profile:(DConnectPhoneProfile *)profile didReceivePostCallRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
      phoneNumber:(NSString *)phoneNumber;
 
 #pragma mark - Put Methods
@@ -130,7 +130,7 @@ typedef NS_ENUM(NSInteger, DConnectPhoneProfileCallState) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] mode 電話のモード
  
  @retval YES レスポンスパラメータを返却する。
@@ -138,7 +138,7 @@ typedef NS_ENUM(NSInteger, DConnectPhoneProfileCallState) {
  */
 - (BOOL) profile:(DConnectPhoneProfile *)profile didReceivePutSetRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             mode:(NSNumber *)mode;
 
 #pragma mark Event Registration
@@ -157,14 +157,14 @@ typedef NS_ENUM(NSInteger, DConnectPhoneProfileCallState) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectPhoneProfile *)profile didReceivePutOnConnectRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 #pragma mark - Delete Methods
@@ -184,14 +184,14 @@ typedef NS_ENUM(NSInteger, DConnectPhoneProfileCallState) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectPhoneProfile *)profile didReceiveDeleteOnConnectRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 

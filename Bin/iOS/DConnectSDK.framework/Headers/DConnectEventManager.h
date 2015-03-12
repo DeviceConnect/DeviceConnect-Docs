@@ -118,27 +118,27 @@
                         attribute:(NSString *)attribute;
 
 /*!
- @brief 指定されたデバイスIDとAPIに紐づくイベント情報の一覧を取得する。
+ @brief 指定されたサービスIDとAPIに紐づくイベント情報の一覧を取得する。
  
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] profile プロファイル名
  @param[in] attribute アトリビュート名
  @return イベントの一覧
  */
-- (NSArray *) eventListForDeviceId:(NSString *)deviceId
+- (NSArray *) eventListForServiceId:(NSString *)serviceId
                            profile:(NSString *)profile
                          attribute:(NSString *)attribute;
 
 /*!
- @brief 指定されたデバイスIDとAPIに紐づくイベント情報の一覧を取得する。
+ @brief 指定されたサービスIDとAPIに紐づくイベント情報の一覧を取得する。
  
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] profile プロファイル名
  @param[in] interface インターフェース名
  @param[in] attribute アトリビュート名
  @return イベントの一覧
  */
-- (NSArray *) eventListForDeviceId:(NSString *)deviceId
+- (NSArray *) eventListForServiceId:(NSString *)serviceId
                            profile:(NSString *)profile
                          interface:(NSString *)interface
                          attribute:(NSString *)attribute;
@@ -151,7 +151,7 @@
 - (void) flush;
 
 /*!
- @brief 指定されたイベント情報からAPI情報、デバイスID、セッションキーをもつイベントメッセージを生成する。
+ @brief 指定されたイベント情報からAPI情報、サービスID、セッションキーをもつイベントメッセージを生成する。
  
  @param[in] event イベントデータ
  @return イベントメッセージ

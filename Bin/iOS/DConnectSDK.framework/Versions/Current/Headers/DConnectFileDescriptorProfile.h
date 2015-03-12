@@ -120,7 +120,7 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  @param[in] profile このイベントを通知するDConnectFileDescriptorProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス
  @param[in] flag フラグ
  @retval YES レスポンスパラメータを返却する
@@ -128,7 +128,7 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  */
 - (BOOL) profile:(DConnectFileDescriptorProfile *)profile didReceiveGetOpenRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path
             flag:(NSString *)flag;
 
@@ -145,7 +145,7 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  @param[in] profile このイベントを通知するDConnectFileDescriptorProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス
  @param[in] length ファイル読み込みサイズ
  @param[in] position 読み込み開始位置。省略された場合はnilが入る。
@@ -154,7 +154,7 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  */
 - (BOOL) profile:(DConnectFileDescriptorProfile *)profile didReceiveGetReadRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path
           length:(NSNumber *)length
         position:(NSNumber *)position;
@@ -174,14 +174,14 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  @param[in] profile このイベントを通知するDConnectFileDescriptorProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectFileDescriptorProfile *)profile didReceivePutCloseRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path;
 
 
@@ -198,7 +198,7 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  @param[in] profile このイベントを通知するDConnectFileDescriptorProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス
  @param[in] media ファイルに書き込むデータのバイナリ
  @param[in] position ファイルの書き込み開始位置。省略された場合nilが入る。
@@ -207,7 +207,7 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  */
 - (BOOL) profile:(DConnectFileDescriptorProfile *)profile didReceivePutWriteRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path
            media:(NSData *)media
         position:(NSNumber *)position;
@@ -227,14 +227,14 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  @param[in] profile このイベントを通知するDConnectFileDescriptorProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectFileDescriptorProfile *)profile didReceivePutOnWatchFileRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 #pragma mark - Delete Methods
@@ -253,14 +253,14 @@ extern NSString *const DConnectFileDescriptorProfileParamPath;
  @param[in] profile このイベントを通知するDConnectFileDescriptorProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectFileDescriptorProfile *)profile didReceiveDeleteOnWatchFileRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 @end

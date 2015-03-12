@@ -19,9 +19,9 @@
 extern NSString *const DConnectMessageAction;
 
 /*!
- @brief 共通パラメータ: deviceId。
+ @brief 共通パラメータ: serviceId。
  */
-extern NSString *const DConnectMessageDeviceId;
+extern NSString *const DConnectMessageServiceId;
 
 /*!
  @brief 共通パラメータ: pluginId。
@@ -54,6 +54,11 @@ extern NSString *const DConnectMessageSessionKey;
 extern NSString *const DConnectMessageAccessToken;
 
 /*!
+ @brief 共通パラメータ: origin。
+ */
+extern NSString *const DConnectMessageOrigin;
+
+/*!
  @brief 共通パラメータ: result。
  */
 extern NSString *const DConnectMessageResult;
@@ -69,6 +74,16 @@ extern NSString *const DConnectMessageErrorCode;
 extern NSString *const DConnectMessageErrorMessage;
 
 /*!
+ @brief 共通パラメータ: product。
+ */
+extern NSString *const DConnectMessageProduct;
+
+/*!
+ @brief 共通パラメータ: version。
+ */
+extern NSString *const DConnectMessageVersion;
+
+/*!
  @brief 共通パラメータ: api。
  */
 extern NSString *const DConnectMessageAPI;
@@ -77,6 +92,11 @@ extern NSString *const DConnectMessageAPI;
  @brief デフォルトAPI名: gotapi。
  */
 extern NSString *const DConnectMessageDefaultAPI;
+
+/*!
+ @brief HTTPリクエストヘッダに指定するiOSネイティブアプリのオリジン。
+ */
+extern NSString *const DConnectMessageHeaderGotAPIOrigin;
 
 /*!
  @enum DConnectMessageActionType
@@ -107,8 +127,8 @@ typedef NS_ENUM(NSUInteger, DConnectMessageErrorCodeType) {
     DConnectMessageErrorCodeNotSupportProfile,        /*!< サポートされていないプロファイルにアクセスされた */
     DConnectMessageErrorCodeNotSupportAction,         /*!< サポートされていないアクションが指定された */
     DConnectMessageErrorCodeNotSupportAttribute,      /*!< サポートされていないアトリビュート・インターフェースが指定された */
-    DConnectMessageErrorCodeEmptyDeviceId,            /*!< deviceIdが設定されていない */
-    DConnectMessageErrorCodeNotFoundDevice,           /*!< デバイスが発見できなかった */
+    DConnectMessageErrorCodeEmptyServiceId,            /*!< serviceIdが設定されていない */
+    DConnectMessageErrorCodeNotFoundService,           /*!< サービスが発見できなかった */
     DConnectMessageErrorCodeTimeout,                  /*!< タイムアウトが発生した */
     DConnectMessageErrorCodeUnknownAttribute,         /*!< 未知のインターフェース・アトリビュートにアクセスされた */
     DConnectMessageErrorCodeLowBattery,               /*!< バッテリー低下で操作不能 */

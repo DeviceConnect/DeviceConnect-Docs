@@ -17,6 +17,15 @@
 #import <DConnectSDK/DConnectProfileProvider.h>
 #import <DConnectSDk/DConnectSettings.h>
 
+/*!
+ @brief Device Connect Managerの表示用の名前。
+ */
+extern NSString *const DConnectManagerName;
+
+/*!
+ @brief Device Connect Managerのバージョン名。
+ */
+extern NSString *const DConnectManagerVersion;
 
 /*!
  @brief アプリケーションがホームボタン押下で一時停止されたことを通知するイベント名。

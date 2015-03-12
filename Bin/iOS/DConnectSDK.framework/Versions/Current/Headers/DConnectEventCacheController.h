@@ -61,27 +61,27 @@
 /*!
  @brief キャッシュから指定された条件に合うイベントデータを取得する。
  
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] profile プロファイル名
  @param[in] interface インターフェース名
  @param[in] attribute アトリビュート名
  @param[in] sessionKey セッションキー
  @return イベントデータ。条件に合うものが無い場合はnilを返す。
  */
-- (DConnectEvent *) eventForDeviceId:(NSString *)deviceId profile:(NSString *)profile
+- (DConnectEvent *) eventForServiceId:(NSString *)serviceId profile:(NSString *)profile
                            interface:(NSString *)interface attribute:(NSString *)attribute
                           sessionKey:(NSString *)sessionKey;
 
 /*!
  @brief キャッシュから条件にあうイベントデータの一覧を取得する。
  
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] profile プロファイル名
  @param[in] interface インターフェース名
  @param[in] attribute アトリビュート名
  @return イベントデータの一覧。無い場合は空のリストを返す。
  */
-- (NSArray *) eventsForDeviceId:(NSString *)deviceId profile:(NSString *)profile
+- (NSArray *) eventsForServiceId:(NSString *)serviceId profile:(NSString *)profile
                       interface:(NSString *)interface attribute:(NSString *)attribute;
 
 /*!

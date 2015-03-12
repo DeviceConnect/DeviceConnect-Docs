@@ -33,7 +33,7 @@
      self = [super init];
      if (self) {
          // プロファイルを追加
-         [self addProfile:[ExampleNetworkServiceDiscoveryProfile new]];
+         [self addProfile:[ExampleServiceDiscoveryProfile new]];
          [self addProfile:[ExampleSystemProfile new]];
      }
      return self;

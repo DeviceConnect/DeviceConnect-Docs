@@ -65,7 +65,7 @@ extern const long long DConnectVibrationProfileDefaultMaxVibrationTime;
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] pattern 鳴動パターン
  
  @retval YES レスポンスパラメータを返却する。
@@ -73,7 +73,7 @@ extern const long long DConnectVibrationProfileDefaultMaxVibrationTime;
  */
 - (BOOL) profile:(DConnectVibrationProfile *)profile didReceivePutVibrateRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
          pattern:(NSArray *) pattern;
 
 #pragma mark - Delete Methods
@@ -92,14 +92,14 @@ extern const long long DConnectVibrationProfileDefaultMaxVibrationTime;
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectVibrationProfile *)profile didReceiveDeleteVibrateRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 @end
 

@@ -1,6 +1,6 @@
 //
 //  DPDiceProfile.h
-//  DConnectSDK
+//  dConnectDeviceDicePlus
 //
 //  Copyright (c) 2014 NTT DOCOMO, INC.
 //  Released under the MIT license
@@ -78,12 +78,12 @@ extern NSString *const DPDiceProfileParamZ;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{dConnectドメイン}/dice/ondice?deviceId=xxxxx&sessionKey=yyyyy
+ PUT http://{dConnectドメイン}/dice/ondice?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId デバイスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -91,7 +91,7 @@ extern NSString *const DPDiceProfileParamZ;
 - (BOOL)               profile:(DPDiceProfile *)profile
     didReceivePutOnDiceRequest:(DConnectRequestMessage *)request
                       response:(DConnectResponseMessage *)response
-                      deviceId:(NSString *)deviceId
+                      serviceId:(NSString *)serviceId
                     sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -99,12 +99,12 @@ extern NSString *const DPDiceProfileParamZ;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- DELETE http://{dConnectドメイン}/dice/magnetometer/onmagnetmeter?deviceId=xxxxx&sessionKey=yyyyy
+ DELETE http://{dConnectドメイン}/dice/magnetometer/onmagnetmeter?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId デバイスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -112,7 +112,7 @@ extern NSString *const DPDiceProfileParamZ;
 - (BOOL)                profile:(DPDiceProfile *)profile
   didReceiveDeleteOnDiceRequest:(DConnectRequestMessage *)request
                        response:(DConnectResponseMessage *)response
-                       deviceId:(NSString *)deviceId
+                       serviceId:(NSString *)serviceId
                      sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -120,12 +120,12 @@ extern NSString *const DPDiceProfileParamZ;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{dConnectドメイン}/dice/magnetometer/onmagnetmeter?deviceId=xxxxx&sessionKey=yyyyy
+ PUT http://{dConnectドメイン}/dice/magnetometer/onmagnetmeter?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId デバイスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -133,7 +133,7 @@ extern NSString *const DPDiceProfileParamZ;
 - (BOOL)                   profile:(DPDiceProfile *)profile
 didReceivePutOnMagnetometerRequest:(DConnectRequestMessage *)request
                           response:(DConnectResponseMessage *)response
-                          deviceId:(NSString *)deviceId
+                          serviceId:(NSString *)serviceId
                         sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -141,12 +141,12 @@ didReceivePutOnMagnetometerRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- DELETE http://{dConnectドメイン}/dice/magnetometer/onmagnetmeter?deviceId=xxxxx&sessionKey=yyyyy
+ DELETE http://{dConnectドメイン}/dice/magnetometer/onmagnetmeter?serviceId=xxxxx&sessionKey=yyyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId デバイスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -154,7 +154,7 @@ didReceivePutOnMagnetometerRequest:(DConnectRequestMessage *)request
 - (BOOL)                      profile:(DPDiceProfile *)profile
 didReceiveDeleteOnMagnetometerRequest:(DConnectRequestMessage *)request
                              response:(DConnectResponseMessage *)response
-                             deviceId:(NSString *)deviceId
+                             serviceId:(NSString *)serviceId
                            sessionKey:(NSString *)sessionKey;
 
 
