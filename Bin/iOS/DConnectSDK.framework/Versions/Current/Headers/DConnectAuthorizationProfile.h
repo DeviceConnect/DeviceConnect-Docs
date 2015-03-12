@@ -20,14 +20,14 @@
 extern NSString *const DConnectAuthorizationProfileName;
 
 /*!
- @brief アトリビュート: create_client。
+ @brief アトリビュート: grant。
  */
-extern NSString *const DConnectAuthorizationProfileAttrCreateClient;
+extern NSString *const DConnectAuthorizationProfileAttrGrant;
 
 /*!
- @brief アトリビュート: request_accesstoken。
+ @brief アトリビュート: accesstoken。
  */
-extern NSString *const DConnectAuthorizationProfileAttrRequestAccessToken;
+extern NSString *const DConnectAuthorizationProfileAttrAccessToken;
 
 /*!
  @brief パラメータ: package。
@@ -38,16 +38,6 @@ extern NSString *const DConnectAuthorizationProfileParamPackage;
  @brief パラメータ: clientId。
  */
 extern NSString *const DConnectAuthorizationProfileParamClientId;
-
-/*!
- @brief パラメータ: clientSecret。
- */
-extern NSString *const DConnectAuthorizationProfileParamClientSecret;
-
-/*!
- @brief パラメータ: grantType。
- */
-extern NSString *const DConnectAuthorizationProfileParamGrantType;
 
 /*!
  @brief パラメータ: scope。
@@ -65,14 +55,14 @@ extern NSString *const DConnectAuthorizationProfileParamScopes;
 extern NSString *const DConnectAuthorizationProfileParamApplicationName;
 
 /*!
- @brief パラメータ: signature。
- */
-extern NSString *const DConnectAuthorizationProfileParamSignature;
-
-/*!
  @brief パラメータ: expirePeriod。
  */
 extern NSString *const DConnectAuthorizationProfileParamExpirePeriod;
+
+/*!
+ @brief パラメータ: expire。
+ */
+extern NSString *const DConnectAuthorizationProfileParamExpire;
 
 /*!
  @brief パラメータ: accessToken。

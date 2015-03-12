@@ -1,6 +1,6 @@
 //
 //  DCMTemperatureProfileName.h
-//  DConnectSDK
+//  DCMDevicePluginSDK
 //
 //  Copyright (c) 2014 NTT DOCOMO, INC.
 //  Released under the MIT license
@@ -55,19 +55,19 @@ enum {
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{dConnectドメイン}/temperature?deviceId=xxxxx
+ PUT http://{dConnectドメイン}/temperature?serviceId=xxxxx
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL)                        profile:(DCMTemperatureProfile *)profile
         didReceiveGetTemperatureRequest:(DConnectRequestMessage *)request
                                response:(DConnectResponseMessage *)response
-                               deviceId:(NSString *)deviceId;
+                               serviceId:(NSString *)serviceId;
 @end
 
 /*!

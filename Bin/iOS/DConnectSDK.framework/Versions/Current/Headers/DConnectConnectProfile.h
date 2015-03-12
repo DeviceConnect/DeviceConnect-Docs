@@ -105,12 +105,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveGetWifiRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief bluetooth取得リクエストを受け取ったことをデリゲートに通知する。
@@ -125,12 +125,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveGetBluetoothRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief ble取得リクエストを受け取ったことをデリゲートに通知する。
@@ -145,12 +145,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveGetBLERequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief nfc取得リクエストを受け取ったことをデリゲートに通知する。
@@ -165,12 +165,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveGetNFCRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 #pragma mark - Put Methods
 
@@ -187,12 +187,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutWiFiRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief Bluetooth機能有効化リクエストを受け取ったことをデリゲートに通知する。
@@ -207,12 +207,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutBluetoothRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief Bluetooth検索可能状態有効化リクエストを受け取ったことをデリゲートに通知する。
@@ -227,12 +227,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutBluetoothDiscoverableRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief BLE機能有効化リクエストを受け取ったことをデリゲートに通知する。
@@ -247,12 +247,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutBLERequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief NFC機能有効化リクエストを受け取ったことをデリゲートに通知する。
@@ -267,12 +267,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutNFCRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 #pragma mark Event Registration
 
@@ -289,13 +289,13 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutOnWifiChangeRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId sessionKey:(NSString *)sessionKey;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId sessionKey:(NSString *)sessionKey;
 
 /*!
  @brief onbluetoothchangeイベント登録リクエストを受け取ったことをデリゲートに通知する。
@@ -310,13 +310,13 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutOnBluetoothChangeRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId sessionKey:(NSString *)sessionKey;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId sessionKey:(NSString *)sessionKey;
 
 /*!
  @brief onblechangeイベント登録リクエストを受け取ったことをデリゲートに通知する。
@@ -331,13 +331,13 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutOnBLEChangeRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId sessionKey:(NSString *)sessionKey;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId sessionKey:(NSString *)sessionKey;
 
 /*!
  @brief onnfcchangeイベント登録リクエストを受け取ったことをデリゲートに通知する。
@@ -352,13 +352,13 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceivePutOnNFCChangeRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId sessionKey:(NSString *)sessionKey;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId sessionKey:(NSString *)sessionKey;
 
 #pragma mark - Delete Methods
 
@@ -375,12 +375,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteWiFiRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief Bluetooth機能無効化リクエストを受け取ったことをデリゲートに通知する。
@@ -395,12 +395,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteBluetoothRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief Bluetooth検索可能状態無効化リクエストを受け取ったことをデリゲートに通知する。
@@ -415,13 +415,13 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteBluetoothDiscoverableRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief BLE機能無効化リクエストを受け取ったことをデリゲートに通知する。
@@ -436,12 +436,12 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteBLERequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId;
 
 /*!
  @brief NFC機能無効化リクエストを受け取ったことをデリゲートに通知する。
@@ -456,13 +456,13 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteNFCRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 #pragma mark Event Unregistration
 
@@ -479,14 +479,14 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteOnWifiChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -502,14 +502,14 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteOnBluetoothChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -525,14 +525,14 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteOnBLEChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -548,14 +548,14 @@ extern NSString *const DConnectConnectProfileParamConnectStatus;
  @param[in] profile このイベントを通知するDConnectConnectProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectConnectProfile *)profile didReceiveDeleteOnNFCChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 

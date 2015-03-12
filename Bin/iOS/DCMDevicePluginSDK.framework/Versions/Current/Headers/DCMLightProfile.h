@@ -1,6 +1,6 @@
 //
 //  DCMLightProfileName.h
-//  DConnectSDK
+//  DCMDevicePluginSDK
 //
 //  Copyright (c) 2014 NTT DOCOMO, INC.
 //  Released under the MIT license
@@ -95,19 +95,19 @@ extern NSString *const DCMLightProfileParamGroupName;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- GET http://{ドメイン}/light?deviceid=xxxxx
+ GET http://{ドメイン}/light?serviceId=xxxxx
  </pre>
  @param[in] profile プロファイル
 @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL)              profile:(DCMLightProfile *)profile
     didReceiveGetLightRequest:(DConnectRequestMessage *)request
                      response:(DConnectResponseMessage *)response
-                     deviceId:(NSString *)deviceId;
+                     serviceId:(NSString *)serviceId;
 
 /*!
  @brief デバイスのライトを点灯する<br>
@@ -115,12 +115,12 @@ extern NSString *const DCMLightProfileParamGroupName;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- POST http://{ドメイン}/light?deviceId=xxxxx&lightId=yyyy
+ POST http://{ドメイン}/light?serviceId=xxxxx&lightId=yyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] lightId ライトID
  @param[in] brightness 明るさ
  @param[in] color 色
@@ -131,7 +131,7 @@ extern NSString *const DCMLightProfileParamGroupName;
 - (BOOL)            profile:(DCMLightProfile *)profile
  didReceivePostLightRequest:(DConnectRequestMessage *)request
                    response:(DConnectResponseMessage *)response
-                   deviceId:(NSString *)deviceId
+                   serviceId:(NSString *)serviceId
                     lightId:(NSString*)lightId
                  brightness:(double)brightness
                       color:(NSString*)color
@@ -142,12 +142,12 @@ extern NSString *const DCMLightProfileParamGroupName;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{ドメイン}/light?deviceId=xxxxx&lightId=yyyy
+ PUT http://{ドメイン}/light?serviceId=xxxxx&lightId=yyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] lightId ライトID
  @param[in] name ライト名
  @param[in] brightness 明るさ
@@ -159,7 +159,7 @@ extern NSString *const DCMLightProfileParamGroupName;
 - (BOOL)            profile:(DCMLightProfile *)profile
   didReceivePutLightRequest:(DConnectRequestMessage *)request
                    response:(DConnectResponseMessage *)response
-                   deviceId:(NSString *)deviceId
+                   serviceId:(NSString *)serviceId
                     lightId:(NSString*)lightId
                        name:(NSString*)name
                  brightness:(double)brightness
@@ -171,12 +171,12 @@ extern NSString *const DCMLightProfileParamGroupName;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- DELETE http://{ドメイン}/light?deviceId=xxxxx&lightId=yyyy
+ DELETE http://{ドメイン}/light?serviceId=xxxxx&lightId=yyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] lightId ライトID
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -184,7 +184,7 @@ extern NSString *const DCMLightProfileParamGroupName;
 - (BOOL)                 profile:(DCMLightProfile *)profile
     didReceiveDeleteLightRequest:(DConnectRequestMessage *)request
                         response:(DConnectResponseMessage *)response
-                        deviceId:(NSString *)deviceId
+                        serviceId:(NSString *)serviceId
                          lightId:(NSString*)lightId;
 
 
@@ -196,19 +196,19 @@ extern NSString *const DCMLightProfileParamGroupName;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- GET http://{ドメイン}/light/group?deviceid=xxxxx
+ GET http://{ドメイン}/light/group?serviceId=xxxxx
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL)                profile:(DCMLightProfile *)profile
  didReceiveGetLightGroupRequest:(DConnectRequestMessage *)request
                        response:(DConnectResponseMessage *)response
-                       deviceId:(NSString *)deviceId;
+                       serviceId:(NSString *)serviceId;
 
 /*!
  @brief デバイスのライトグループを点灯する<br>
@@ -216,12 +216,12 @@ extern NSString *const DCMLightProfileParamGroupName;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- POST http://{ドメイン}/light/group?deviceId=xxxxx&groupId=yyyy
+ POST http://{ドメイン}/light/group?serviceId=xxxxx&groupId=yyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] groupId ライトグループID
  @param[in] brightness 明るさ
  @param[in] color 色
@@ -232,7 +232,7 @@ extern NSString *const DCMLightProfileParamGroupName;
 - (BOOL)                profile:(DCMLightProfile *)profile
 didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
                        response:(DConnectResponseMessage *)response
-                       deviceId:(NSString *)deviceId
+                       serviceId:(NSString *)serviceId
                         groupId:(NSString*)groupId
                      brightness:(double)brightness
                           color:(NSString*)color
@@ -243,12 +243,12 @@ didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{ドメイン}/light/group?deviceId=xxxxx&groupId=yyyy
+ PUT http://{ドメイン}/light/group?serviceId=xxxxx&groupId=yyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] groupId ライトグループID
  @param[in] name ライト名
  @param[in] brightness 明るさ
@@ -260,7 +260,7 @@ didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
 - (BOOL)                profile:(DCMLightProfile *)profile
  didReceivePutLightGroupRequest:(DConnectRequestMessage *)request
                        response:(DConnectResponseMessage *)response
-                       deviceId:(NSString *)deviceId
+                       serviceId:(NSString *)serviceId
                         groupId:(NSString*)groupId
                            name:(NSString*)name
                      brightness:(double)brightness
@@ -272,12 +272,12 @@ didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- DELETE http://{ドメイン}/light/group?deviceId=xxxxx&groupId=yyyy
+ DELETE http://{ドメイン}/light/group?serviceId=xxxxx&groupId=yyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] groupId ライトID
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -285,7 +285,7 @@ didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
 - (BOOL)                    profile:(DCMLightProfile *)profile
   didReceiveDeleteLightGroupRequest:(DConnectRequestMessage *)request
                            response:(DConnectResponseMessage *)response
-                           deviceId:(NSString *)deviceId
+                           serviceId:(NSString *)serviceId
                             groupId:(NSString*)groupId;
 
 /*!
@@ -294,12 +294,12 @@ didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- POST http://{ドメイン}/light/group/create?deviceId=xxxxx&groupId=yyyy&groupName=bathroom
+ POST http://{ドメイン}/light/group/create?serviceId=xxxxx&groupId=yyyy&groupName=bathroom
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] groupId ライトグループID
  @param[in] groupName ライトグループ名
  @retval YES レスポンスパラメータを返却する。
@@ -308,7 +308,7 @@ didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
 - (BOOL)                        profile:(DCMLightProfile *)profile
   didReceivePostLightGroupCreateRequest:(DConnectRequestMessage *)request
                                response:(DConnectResponseMessage *)response
-                               deviceId:(NSString *)deviceId
+                               serviceId:(NSString *)serviceId
                                lightIds:(NSArray*)lightIds
                               groupName:(NSString*)groupName;
 
@@ -318,12 +318,12 @@ didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- DELETE http://{ドメイン}/light/group/clear?deviceId=xxxxx&groupId=yyyy
+ DELETE http://{ドメイン}/light/group/clear?serviceId=xxxxx&groupId=yyyy
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] groupId ライトID
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -331,7 +331,7 @@ didReceivePostLightGroupRequest:(DConnectRequestMessage *)request
 - (BOOL)                        profile:(DCMLightProfile *)profile
  didReceiveDeleteLightGroupClearRequest:(DConnectRequestMessage *)request
                                response:(DConnectResponseMessage *)response
-                               deviceId:(NSString *)deviceId
+                               serviceId:(NSString *)serviceId
                                 groupId:(NSString*)groupId;
 
 

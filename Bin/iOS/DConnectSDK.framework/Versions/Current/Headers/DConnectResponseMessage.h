@@ -107,28 +107,28 @@
 - (void) setErrorToNotSupportAttributeWithMessage:(NSString *)message;
 
 /*!
- @brief レスポンスエラーをデバイスID未設定エラーに設定する。
+ @brief レスポンスエラーをサービスID未設定エラーに設定する。
  */
-- (void) setErrorToEmptyDeviceId;
+- (void) setErrorToEmptyServiceId;
 
 /*!
- @brief レスポンスエラーをデバイスID未設定エラーに設定し、指定された文字列をエラーメッセージに設定する。
+ @brief レスポンスエラーをサービスID未設定エラーに設定し、指定された文字列をエラーメッセージに設定する。
  
  @param[in] message エラーメッセージ
  */
-- (void) setErrorToEmptyDeviceIdWithMessage:(NSString *)message;
+- (void) setErrorToEmptyServiceIdWithMessage:(NSString *)message;
 
 /*!
  @brief レスポンスエラーをデバイス検知失敗エラーに設定する。
  */
-- (void) setErrorToNotFoundDevice;
+- (void) setErrorToNotFoundService;
 
 /*!
  @brief レスポンスエラーをデバイス検知失敗エラーに設定し、指定された文字列をエラーメッセージに設定する。
  
  @param[in] message エラーメッセージ
  */
-- (void) setErrorToNotFoundDeviceWithMessage:(NSString *)message;
+- (void) setErrorToNotFoundServiceWithMessage:(NSString *)message;
 
 /*!
  @brief レスポンスエラーをタイムアウトエラーに設定する。

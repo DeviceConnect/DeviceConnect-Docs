@@ -52,7 +52,7 @@ typedef NS_ENUM(NSUInteger, DConnectEventError) {
 /*!
  @brief イベント登録時に指定されたデバイスのID。
  */
-@property (nonatomic, strong) NSString *deviceId;
+@property (nonatomic, strong) NSString *serviceId;
 
 /*!
  @brief イベント登録時に指定されたアクセストークン。

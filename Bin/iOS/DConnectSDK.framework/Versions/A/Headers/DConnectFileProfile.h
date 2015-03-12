@@ -161,14 +161,14 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  @param[in] profile このイベントを通知するDConnectFileProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectFileProfile *)profile didReceiveGetReceiveRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path;
 
 /*!
@@ -184,7 +184,7 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  @param[in] profile このイベントを通知するDConnectFileProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス。省略された場合はnil。
  @param[in] mimeType マイムタイプ。省略された場合はnil。
  @param[in] order 並び順。0スタートのインデックスで、偶数番にパラメータ名、奇数番に並び順が入る。。省略された場合はnil。
@@ -195,7 +195,7 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  */
 - (BOOL) profile:(DConnectFileProfile *)profile didReceiveGetListRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path
         mimeType:(NSString *)mimeType
            order:(NSArray *)order
@@ -217,7 +217,7 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  @param[in] profile このイベントを通知するDConnectFileProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス。省略された場合はnil。
  @param[in] mimeType マイムタイプ。省略された場合はnil。
  @param[in] data ファイルのバイナリデータ
@@ -226,7 +226,7 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  */
 - (BOOL) profile:(DConnectFileProfile *)profile didReceivePostSendRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path
         mimeType:(NSString *)mimeType
             data:(NSData *)data;
@@ -244,14 +244,14 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  @param[in] profile このイベントを通知するDConnectFileProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス。省略された場合はnil。
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */
 - (BOOL) profile:(DConnectFileProfile *)profile didReceivePostMkdirRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path;
 
 #pragma mark - Delete Methods
@@ -269,13 +269,13 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  @param[in] profile このイベントを通知するDConnectFileProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス。省略された場合はnil。
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlink で返却すること。
  */- (BOOL) profile:(DConnectFileProfile *)profile didReceiveDeleteRemoveRequest:(DConnectRequestMessage *)request
            response:(DConnectResponseMessage *)response
-           deviceId:(NSString *)deviceId
+           serviceId:(NSString *)serviceId
                path:(NSString *)path;
 
 /*!
@@ -291,7 +291,7 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  @param[in] profile このイベントを通知するDConnectFileProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] path ファイルパス。省略された場合はnil。
  @param[in] force 強制削除フラグ。省略された場合はfalse。
  @retval YES レスポンスパラメータを返却する
@@ -299,7 +299,7 @@ typedef NS_ENUM(NSUInteger, DConnectFileProfileFileType) {
  */
 - (BOOL) profile:(DConnectFileProfile *)profile didReceiveDeleteRmdirRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
             path:(NSString *)path
            force:(BOOL)force;
 

@@ -253,14 +253,14 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceiveGetMediaRecorderRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  
@@ -276,7 +276,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット
  
  @retval YES レスポンスパラメータを返却する。
@@ -284,7 +284,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceiveGetOptionsRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           target:(NSString *)target;
 
 #pragma mark - Post Methods
@@ -303,7 +303,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット。省略された場合はnil。
  
  @retval YES レスポンスパラメータを返却する。
@@ -311,7 +311,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePostTakePhotoRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           target:(NSString *)target;
 
 /*!
@@ -328,7 +328,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット。省略された場合はnil。
  @param[in] timeslice タイムスライス。省略された場合はnil。
  
@@ -336,7 +336,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePostRecordRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
           target:(NSString *)target timeslice:(NSNumber *)timeslice;
 
 
@@ -356,7 +356,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット。省略された場合はnil。
  
  @retval YES レスポンスパラメータを返却する。
@@ -364,7 +364,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutPauseRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           target:(NSString *)target;
 
 /*!
@@ -381,7 +381,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット。省略された場合はnil。
  
  @retval YES レスポンスパラメータを返却する。
@@ -389,7 +389,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutResumeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           target:(NSString *) target;
 
 /*!
@@ -406,7 +406,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット。省略された場合はnil。
  
  @retval YES レスポンスパラメータを返却する。
@@ -414,7 +414,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutStopRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           target:(NSString *)target;
 
 
@@ -432,7 +432,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット。省略された場合はnil。
  
  @retval YES レスポンスパラメータを返却する。
@@ -440,7 +440,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutMuteTrackRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           target:(NSString *)target;
 
 /*!
@@ -457,7 +457,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット。省略された場合はnil。
  
  @retval YES レスポンスパラメータを返却する。
@@ -465,7 +465,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutUnmuteTrackRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           target:(NSString *)target;
 
 
@@ -483,7 +483,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] target ターゲット。省略された場合はnil。
  @param[in] imageWidth 画像の横幅
  @param[in] imageHeight 画像の縦幅
@@ -494,7 +494,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutOptionsRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           target:(NSString *)target
       imageWidth:(NSNumber *)imageWidth
      imageHeight:(NSNumber *)imageHeight
@@ -516,7 +516,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -524,7 +524,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutOnPhotoRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -541,7 +541,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -549,7 +549,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutOnRecordingChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -566,7 +566,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -574,7 +574,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutOnDataAvailableRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 #pragma mark - Delete Methods
@@ -594,7 +594,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -602,7 +602,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceiveDeleteOnPhotoRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -618,7 +618,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -626,7 +626,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceiveDeleteOnRecordingChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -643,7 +643,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -651,7 +651,7 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
  */
 - (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceiveDeleteOnDataAvailableRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 @end

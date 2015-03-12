@@ -140,7 +140,7 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] type 通知タイプ
  @param[in] dir メッセージの文字の向き。省略された場合nil。
  @param[in] lang メッセージの言語。省略された場合nil。
@@ -153,7 +153,7 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceivePostNotifyRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId type:(NSNumber *)type
+        serviceId:(NSString *)serviceId type:(NSNumber *)type
              dir:(NSString *)dir lang:(NSString *)lang
             body:(NSString *)body tag:(NSString *)tag icon:(NSData *)icon;
 
@@ -174,14 +174,14 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceivePutOnClickRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -198,14 +198,14 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceivePutOnShowRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -222,14 +222,14 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceivePutOnCloseRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -246,14 +246,14 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceivePutOnErrorRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 #pragma mark - Delete Methods
@@ -272,7 +272,7 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] notificationId 通知ID
  
  @retval YES レスポンスパラメータを返却する。
@@ -280,7 +280,7 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceiveDeleteNotifyRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId notificationId:(NSString *)notificationId;
+        serviceId:(NSString *)serviceId notificationId:(NSString *)notificationId;
 
 #pragma mark Event Unregistration
 
@@ -298,14 +298,14 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceiveDeleteOnClickRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -322,14 +322,14 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceiveDeleteOnShowRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -346,14 +346,14 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceiveDeleteOnCloseRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId sessionKey:(NSString *)sessionKey;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId sessionKey:(NSString *)sessionKey;
 
 /*!
  
@@ -369,14 +369,14 @@ typedef NS_ENUM(NSInteger, DConnectNotificationProfileNotificationType) {
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectNotificationProfile *)profile didReceiveDeleteOnErrorRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response deviceId:(NSString *)deviceId sessionKey:(NSString *)sessionKey;
+        response:(DConnectResponseMessage *)response serviceId:(NSString *)serviceId sessionKey:(NSString *)sessionKey;
 
 
 @end

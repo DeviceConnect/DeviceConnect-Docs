@@ -60,10 +60,10 @@
 - (void) setSessionKey:(NSString *)sessionKey;
 
 /*!
- @brief デバイスIDを設定する。
- @param[in] deviceId デバイスID
+ @brief サービスIDを設定する。
+ @param[in] serviceId サービスID
  */
-- (void) setDeviceId:(NSString *)deviceId;
+- (void) setServiceId:(NSString *)serviceId;
 
 /*!
  @brief プラグインIDを設定する。
@@ -121,11 +121,11 @@
 - (NSString *) sessionKey;
 
 /*!
- @brief デバイスIDを取得する。
- @retval デバイスID
- @retval nil デバイスIDが設定されていない場合
+ @brief サービスIDを取得する。
+ @retval サービスID
+ @retval nil サービスIDが設定されていない場合
  */
-- (NSString *) deviceId;
+- (NSString *) serviceId;
 
 /*!
  @brief プラグインIDを取得する。

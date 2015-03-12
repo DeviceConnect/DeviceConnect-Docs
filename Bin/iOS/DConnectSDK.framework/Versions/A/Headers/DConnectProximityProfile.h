@@ -88,7 +88,7 @@ extern NSString *const DConnectProximityProfileParamNear;
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -96,7 +96,7 @@ extern NSString *const DConnectProximityProfileParamNear;
  */
 - (BOOL) profile:(DConnectProximityProfile *)profile didReceivePutOnDeviceProximityRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -113,7 +113,7 @@ extern NSString *const DConnectProximityProfileParamNear;
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -121,7 +121,7 @@ extern NSString *const DConnectProximityProfileParamNear;
  */
 - (BOOL) profile:(DConnectProximityProfile *)profile didReceivePutOnUserProximityRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 #pragma mark - Delete Methods
@@ -141,7 +141,7 @@ extern NSString *const DConnectProximityProfileParamNear;
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -149,7 +149,7 @@ extern NSString *const DConnectProximityProfileParamNear;
  */
 - (BOOL) profile:(DConnectProximityProfile *)profile didReceiveDeleteOnDeviceProximityRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -166,7 +166,7 @@ extern NSString *const DConnectProximityProfileParamNear;
  @param[in] profile プロファイル
  @param[in] request リクエストパラメータ
  @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  
  @retval YES レスポンスパラメータを返却する。
@@ -174,7 +174,7 @@ extern NSString *const DConnectProximityProfileParamNear;
  */
 - (BOOL) profile:(DConnectProximityProfile *)profile didReceiveDeleteOnUserProximityRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 @end

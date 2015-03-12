@@ -280,13 +280,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceiveGetPlayStatusRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief コンテンツ情報取得リクエストを受け取ったことをデリゲートに通知する。
@@ -301,14 +301,14 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] mediaId メディアID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceiveGetMediaRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
          mediaId:(NSString *)mediaId;
 
 /*!
@@ -324,7 +324,7 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] query 検索文字列
  @param[in] mimeType マイムタイプ
  @param[in] order 並び順。0スタートのインデックスで、偶数番にパラメータ名、奇数番に並び順が入る。
@@ -335,7 +335,7 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceiveGetMediaListRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
            query:(NSString *)query
         mimeType:(NSString *)mimeType
            order:(NSArray *)order
@@ -355,13 +355,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceiveGetSeekRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief メディアプレーヤーの音量取得リクエストを受け取ったことをデリゲートに通知する。
@@ -376,13 +376,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceiveGetVolumeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief メディアプレーヤーミュート状態取得リクエストを受け取ったことをデリゲートに通知する。
@@ -397,13 +397,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceiveGetMuteRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 #pragma mark - Put Methods
 
@@ -420,14 +420,14 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] mediaId メディアID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutMediaRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
          mediaId:(NSString *) mediaId;
 
 /*!
@@ -448,13 +448,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutPlayRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief 再生停止リクエストを受け取ったことをデリゲートに通知する。
@@ -474,13 +474,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutStopRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief 再生一時停止リクエストを受け取ったことをデリゲートに通知する。
@@ -500,13 +500,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutPauseRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief 再生再開リクエストを受け取ったことをデリゲートに通知する。
@@ -526,13 +526,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutResumeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief 再生位置変更リクエストを受け取ったことをデリゲートに通知する。
@@ -547,14 +547,14 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] pos 再生位置
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutSeekRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
              pos:(NSNumber *)pos;
 
 /*!
@@ -570,14 +570,14 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutOnStatusChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 /*!
@@ -593,14 +593,14 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] volume 音量
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutVolumeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
           volume:(NSNumber *)volume;
 
 /*!
@@ -616,13 +616,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceivePutMuteRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 #pragma mark - Delete Methods
 
@@ -639,13 +639,13 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceiveDeleteMuteRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
+        serviceId:(NSString *)serviceId;
 
 /*!
  @brief onstatuschangeイベント解除リクエストを受け取ったことをデリゲートに通知する。
@@ -660,14 +660,14 @@ extern NSString *const DConnectMediaPlayerProfileOrderDESC;
  @param[in] profile このイベントを通知するDConnectMediaPlayerProfileのオブジェクト
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] sessionKey セッションキー
  @retval YES レスポンスパラメータを返却する
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL) profile:(DConnectMediaPlayerProfile *)profile didReceiveDeleteOnStatusChangeRequest:(DConnectRequestMessage *)request
         response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId
+        serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
 @end

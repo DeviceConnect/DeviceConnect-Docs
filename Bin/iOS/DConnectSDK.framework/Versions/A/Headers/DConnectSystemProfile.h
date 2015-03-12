@@ -28,11 +28,6 @@ extern NSString *const DConnectSystemProfileName;
 extern NSString *const DConnectSystemProfileInterfaceDevice;
 
 /*!
- @brief アトリビュート: device。
- */
-extern NSString *const DConnectSystemProfileAttrDevice;
-
-/*!
  @brief アトリビュート: wakeup。
  */
 extern NSString *const DConnectSystemProfileAttrWakeUp;
@@ -72,46 +67,6 @@ extern NSString *const DConnectSystemProfileParamId;
  */
 extern NSString *const DConnectSystemProfileParamName;
 
-/*!
- @brief パラメータ: version。
- */
-extern NSString *const DConnectSystemProfileParamVersion;
-
-/*!
- @brief パラメータ: connect。
- */
-extern NSString *const DConnectSystemProfileParamConnect;
-
-/*!
- @brief パラメータ: wifi。
- */
-extern NSString *const DConnectSystemProfileParamWiFi;
-
-/*!
- @brief パラメータ: bluetooth。
- */
-extern NSString *const DConnectSystemProfileParamBluetooth;
-
-/*!
- @brief パラメータ: nfc。
- */
-extern NSString *const DConnectSystemProfileParamNFC;
-
-/*!
- @brief パラメータ: ble。
- */
-extern NSString *const DConnectSystemProfileParamBLE;
-
-/*!
- @enum DConnectSystemProfileConnectState
- @brief デバイスの接続状態定数。
- */
-typedef NS_ENUM(NSInteger, DConnectSystemProfileConnectState) {
-    DConnectSystemProfileConnectStateNone = 0,  /*!< 非対応 */
-    DConnectSystemProfileConnectStateOn,        /*!< 接続ON */
-    DConnectSystemProfileConnectStateOff        /*!< 接続OFF */
-};
-
 @class DConnectSystemProfile;
 
 /*!
@@ -122,31 +77,6 @@ typedef NS_ENUM(NSInteger, DConnectSystemProfileConnectState) {
  */
 @protocol DConnectSystemProfileDelegate <NSObject>
 @optional
-
-#pragma mark - Get Methods
-
-/*!
-
- @brief 周辺機器のシステム情報取得リクエストを受け取ったことをデリゲートに通知する。
- 
- profileが周辺機器のシステム情報取得リクエストを受け取ったことをデリゲートに通知する。<br>
- 実装されない場合には、Not supportのエラーが返却される。
- 
- <p>
- [対応するAPI] Device System API [GET]
- </p>
- 
- @param[in] profile プロファイル
- @param[in] request リクエストパラメータ
- @param[in,out] response レスポンスパラメータ
- @param[in] deviceId デバイスID
- 
- @retval YES レスポンスパラメータを返却する。
- @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
- */
-- (BOOL) profile:(DConnectSystemProfile *)profile didReceiveGetDeviceRequest:(DConnectRequestMessage *)request
-        response:(DConnectResponseMessage *)response
-        deviceId:(NSString *)deviceId;
 
 #pragma mark - Put Methods
 
@@ -208,69 +138,6 @@ typedef NS_ENUM(NSInteger, DConnectSystemProfileConnectState) {
  */
 
 @protocol DConnectSystemProfileDataSource <NSObject>
-@optional
-
-/*!
- 
- @brief データソースにWiFiの接続状態を要求する。
- 
- 実装されていない場合にはDConnectSystemProfileConnectStateNoneをレスポンスとして返却する。
- 
- @param[in] profile プロファイル
- @param[in] deviceId デバイスID
- 
- @retval DConnectSystemProfileConnectStateNone 非対応
- @retval DConnectSystemProfileConnectStateOn 接続ON
- @retval DConnectSystemProfileConnectStateOff 接続OFF
- */
-- (DConnectSystemProfileConnectState) profile:(DConnectSystemProfile *)profile
-                         wifiStateForDeviceId:(NSString *)deviceId;
-
-/*!
- @brief データソースにBluetoothの接続状態を要求する。
- 
- 実装されていない場合にはDConnectSystemProfileConnectStateNoneをレスポンスとして返却する。
- 
- @param[in] profile プロファイル
- @param[in] deviceId デバイスID
- 
- @retval DConnectSystemProfileConnectStateNone 非対応
- @retval DConnectSystemProfileConnectStateOn 接続ON
- @retval DConnectSystemProfileConnectStateOff 接続OFF
- */
-- (DConnectSystemProfileConnectState) profile:(DConnectSystemProfile *)profile
-                    bluetoothStateForDeviceId:(NSString *)deviceId;
-
-/*!
- @brief データソースにNFCの接続状態を要求する。
- 
- 実装されていない場合にはDConnectSystemProfileConnectStateNoneをレスポンスとして返却する。
- 
- @param[in] profile プロファイル
- @param[in] deviceId デバイスID
- 
- @retval DConnectSystemProfileConnectStateNone 非対応
- @retval DConnectSystemProfileConnectStateOn 接続ON
- @retval DConnectSystemProfileConnectStateOff 接続OFF
- */
-- (DConnectSystemProfileConnectState) profile:(DConnectSystemProfile *)profile
-                          nfcStateForDeviceId:(NSString *)deviceId;
-
-/*!
- @brief データソースにBLEの接続状態を要求する。
- 
- 実装されていない場合にはDConnectSystemProfileConnectStateNoneをレスポンスとして返却する。
- 
- @param[in] profile プロファイル
- @param[in] deviceId デバイスID
- 
- @retval DConnectSystemProfileConnectStateNone 非対応
- @retval DConnectSystemProfileConnectStateOn 接続ON
- @retval DConnectSystemProfileConnectStateOff 接続OFF
- */
-- (DConnectSystemProfileConnectState) profile:(DConnectSystemProfile *)profile
-                          bleStateForDeviceId:(NSString *)deviceId;
-
 @required
 
 /*!
@@ -324,14 +191,6 @@ typedef NS_ENUM(NSInteger, DConnectSystemProfileConnectState) {
 #pragma mark - Setter
 
 /*!
- @brief メッセージにバージョンを格納する。
- 
- @param[in] version バージョン名
- @param[in,out] message バージョンを格納するメッセージ
- */
-+ (void) setVersion:(NSString *)version target:(DConnectMessage *)message;
-
-/*!
  @brief メッセージにサポートしているI/Fの一覧を格納する。
  
  @param[in] supports サポートしているI/F一覧
@@ -362,46 +221,6 @@ typedef NS_ENUM(NSInteger, DConnectSystemProfileConnectState) {
  @param[in,out] message デバイスプラグイン名を格納するメッセージ
  */
 + (void) setName:(NSString *)name target:(DConnectMessage *)message;
-
-/*!
- @brief メッセージにデバイスの接続状態を設定する。
- 
- @param[in] connect デバイスの接続状態
- @param[in,out] message デバイスの接続状態を格納するメッセージ
- */
-+ (void) setConnect:(DConnectMessage *)connect target:(DConnectMessage *)message;
-
-/*!
- @brief メッセージにデバイスプラグインのWiFiの接続状態を設定する。
- 
- @param[in] state 接続状態
- @param[in,out] message WiFiの接続状態を格納するメッセージ
- */
-+ (void) setWiFiState:(DConnectSystemProfileConnectState)state target:(DConnectMessage *)message;
-
-/*!
- @brief メッセージにデバイスプラグインのBluetoothの接続状態を設定する。
- 
- @param[in] state 接続状態
- @param[in,out] message Bluetoothの接続状態を格納するメッセージ
- */
-+ (void) setBluetoothState:(DConnectSystemProfileConnectState)state target:(DConnectMessage *)message;
-
-/*!
- @brief メッセージにデバイスプラグインのNFCの接続状態を設定する。
- 
- @param[in] state 接続状態
- @param[in,out] message NFCの接続状態を格納するメッセージ
- */
-+ (void) setNFCState:(DConnectSystemProfileConnectState)state target:(DConnectMessage *)message;
-
-/*!
- @brief メッセージにデバイスプラグインのBLEの接続状態を設定する。
- 
- @param[in] state 接続状態
- @param[in,out] message BLEの接続状態を格納するメッセージ
- */
-+ (void) setBLEState:(DConnectSystemProfileConnectState)state target:(DConnectMessage *)message;
 
 #pragma mark - Getter
 

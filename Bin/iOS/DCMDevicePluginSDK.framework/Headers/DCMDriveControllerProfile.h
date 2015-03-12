@@ -1,6 +1,6 @@
 //
 //  DCMDriveControllerProfileName.h
-//  DConnectSDK
+//  DCMDevicePluginSDK
 //
 //  Copyright (c) 2014 NTT DOCOMO, INC.
 //  Released under the MIT license
@@ -54,12 +54,12 @@ extern NSString *const DCMDriveControllerProfileParamSpeed;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- POST http://{dConnectドメイン}/drive_controller/move?deviceId=xxxxx
+ POST http://{dConnectドメイン}/drive_controller/move?serviceId=xxxxx
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] angle 方向
  @param[in] speed 速度
  @retval YES レスポンスパラメータを返却する。
@@ -68,7 +68,7 @@ extern NSString *const DCMDriveControllerProfileParamSpeed;
 - (BOOL)                            profile:(DCMDriveControllerProfile *)profile
    didReceivePostDriveControllerMoveRequest:(DConnectRequestMessage *)request
                                    response:(DConnectResponseMessage *)response
-                                   deviceId:(NSString *)deviceId
+                                   serviceId:(NSString *)serviceId
                                       angle:(double)angle
                                       speed:(double)speed ;
 /*!
@@ -77,12 +77,12 @@ extern NSString *const DCMDriveControllerProfileParamSpeed;
  実装されない場合には、Not supportのエラーが返却される。
  <pre>
  [対応するRESTful]
- PUT http://{dConnectドメイン}/drive_controller/rotate?deviceId=xxxxx
+ PUT http://{dConnectドメイン}/drive_controller/rotate?serviceId=xxxxx
  </pre>
  @param[in] profile プロファイル
  @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @param[in] angle 回転方向
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
@@ -90,7 +90,7 @@ extern NSString *const DCMDriveControllerProfileParamSpeed;
 - (BOOL)                              profile:(DCMDriveControllerProfile *)profile
     didReceivePutDriveControllerRotateRequest:(DConnectRequestMessage *)request
                                      response:(DConnectResponseMessage *)response
-                                     deviceId:(NSString *)deviceId
+                                     serviceId:(NSString *)serviceId
                                         angle:(double)angle;
 /*!
  @brief デバイスを停止させる<br>
@@ -98,19 +98,19 @@ extern NSString *const DCMDriveControllerProfileParamSpeed;
  
  <pre>
  [対応するRESTful]
- DELETE http://{dConnectドメイン}/drive_controller/stop?deviceId=xxxxx
+ DELETE http://{dConnectドメイン}/drive_controller/stop?serviceId=xxxxx
  </pre>
  @param[in] profile プロファイル
 @param[in] request リクエスト
  @param[in,out] response レスポンス
- @param[in] deviceId デバイスID
+ @param[in] serviceId サービスID
  @retval YES レスポンスパラメータを返却する。
  @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
  */
 - (BOOL)                               profile:(DCMDriveControllerProfile *)profile
     didReceiveDeleteDriveControllerStopRequest:(DConnectRequestMessage *)request
                                       response:(DConnectResponseMessage *)response
-                                      deviceId:(NSString *)deviceId ;
+                                      serviceId:(NSString *)serviceId ;
 @end
 
 /*!
