@@ -89,7 +89,7 @@ _*Please do not use at network that can not be trusted because there is a securi
 
 4. Add the IP address of the operation target in URL of demoWebSite on the operation side terminal.
 ```
- e.g. "file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3"
+ e.g. "file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3#demo"
  ```
 
 

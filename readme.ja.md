@@ -114,7 +114,7 @@ Android root
 
 4. 操作する側（PC等）のdemoWebSiteからHTMLを開き、操作対象のIPアドレスのパラメータを付加してください。
 ```
-    [例] file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3
+    [例] file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3#demo
 ```
    _※遠隔で意図しない端末の操作およびデータ参照をされるリスクが伴います。信頼が出来ないローカルネットワーク環境に接続される可能性がある場合はDeviceConnectManagerのAllow External IPのチェックを無効化してください_
 
