@@ -15,23 +15,51 @@ Device Connectシステムは、マルチOS、マルチプラットフォーム�
 これにより、スマートデバイスとの接続方法・連携方法の利便性を向上することを目的としています。
  Device Connectシステムが提供する機能一覧は以下の通りです。
 
-- 連携可能な周辺機器一覧を表示する機能を提供
-- 接続I/F（Bluetooth, BLE, Wi-Fi, NFC）の違いのわかりにくさを解消
-- 機器プロファイルによる統一的なAPIの提供
-
+- 連携可能な周辺機器一覧を表示する機能
+- 接続I/F（Bluetooth, BLE, Wi-Fi, NFC）の違いのわかりにくさの解消
+- 機器プロファイルによる統一的なAPI
+- ユーザによるアプリケーション認可機能
 
 
 <center><a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" style="text-align:center" target="_blank">
 <img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" border="0"
  width="251" height="235" alt="" style="text-align:center"/></a></center>
+ 
+# アプリケーション側の要件
+## リクエストの発行元を明示すること
+OMA GotAPI 1.0の規定に従い、Device Connectシステム上のアプリケーションはその発行元に対して認可されます。よって、Device Connectシステムは発行元の明示されないHTTPリクエストに対してエラーレスポンスを返します。
+
+### HTMLアプリケーションの場合
+[RFC6454](https://www.ietf.org/rfc/rfc6454.txt)上で定義されるOriginを`Origin`ヘッダに指定します。
+
+例:
+
+```
+GET /gotapi/availability HTTP/1.1
+Host: 127.0.0.1:4035
+Origin: http://xxx.example.com/
+```
+
+なお、Chrome、Safari、Firefox等のWebブラウザ上で動作させる場合は自動的にOriginヘッダが付加されます。ただし、アドレスバーからGETリクエスト送信する場合を除きます。
+
+### ネイティブアプリケーションの場合
+`X-GotAPI-Origin`ヘッダにネイティブアプリケーションの識別子(パッケージ名等)を指定します。
+
+例:
+
+```
+GET /gotapi/availability HTTP/1.1
+Host: 127.0.0.1:4035
+X-GotAPI-Origin: com.example.android.app
+```
 
 # Device Connectへの接続
 
-Android版Device Connectでは、端末内のローカルに起動しているHTTPサーバ(DeviceConnectManager)に問い合わせを行う事で、ハードウェアの操作や、情報取得を行う事が可能です。
+アプリケーションからのハードウェア操作が可能にまるまでのシーケンスは下記のとおりです。
 
-<center><a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DeviceConnectApplicationManual/image1.png" target="_blank">
-<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DeviceConnectApplicationManual/image1.png" border="0"
- width="808" height="290" alt="" /></a><br></center>
+<center><a href="./assets/sequence_overview.png" target="_blank">
+<img src="./assets/sequence_overview.png" border="0"
+ width="100%" alt="" /></a><br></center>
 
 # DeviceConnectのレポジトリ
 
