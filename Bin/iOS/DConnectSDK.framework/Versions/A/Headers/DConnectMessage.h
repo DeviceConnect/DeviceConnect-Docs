@@ -140,6 +140,7 @@ typedef NS_ENUM(NSUInteger, DConnectMessageErrorCodeType) {
     DConnectMessageErrorCodeNotFoundClientId,         /*!< 認証時にclientIdが発見できなかった */
     DConnectMessageErrorCodeIllegalDeviceState,       /*!< デバイスの状態異常エラー */
     DConnectMessageErrorCodeIllegalServerState,       /*!< サーバーの状態異常エラー */
+    DConnectMessageErrorCodeInvalidOrigin,            /*!< 不正なオリジンからリクエストを受信した */
 };
 
 @class DConnectResponseMessage;
@@ -560,6 +561,37 @@ typedef void (^DConnectResponseBlocks)(DConnectResponseMessage *response);
  @return キーの一覧
  */
 - (NSArray *) allKeys;
+
+#pragma mark - Common Parameters
+
+/*!
+ @brief レスポンスにDeviceConnectManagerのバージョン名を設定する。
+ 
+ @param[in] version DeviceConnectManagerのバージョン名
+ */
+- (void) setVersion:(NSString *) version;
+
+/*!
+ @brief DeviceConnectManagerのバージョン名を取得する。
+ 
+ @return result DeviceConnectManagerのバージョン名
+ */
+- (NSString *) version;
+
+/*!
+ @brief レスポンスにDeviceConnectManagerの名前を設定する。
+ 
+ @param[in] product DeviceConnectManagerの名前
+ */
+- (void) setProduct:(NSString *) product;
+
+/*!
+ @brief DeviceConnectManagerの名前を取得する。
+ 
+ @return result DeviceConnectManagerの名前
+ */
+- (NSString *) product;
+
 
 @end
 

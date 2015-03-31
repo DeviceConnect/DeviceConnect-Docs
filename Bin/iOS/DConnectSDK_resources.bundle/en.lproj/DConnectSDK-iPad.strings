@@ -1,18 +1,66 @@
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "0p1-lT-eg4"; */
+"0p1-lT-eg4.text" = "Label";
+
+/* Class = "IBUIBarButtonItem"; title = "Item"; ObjectID = "2rp-Ml-laQ"; */
+"2rp-Ml-laQ.title" = "Item";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "3Du-Iy-sag"; */
+"3Du-Iy-sag.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "90Z-r2-3rO"; */
+"90Z-r2-3rO.text" = "Label";
+
 /* Class = "IBUILabel"; text = "このアプリは次への権限が必要です。"; ObjectID = "Cl0-oZ-6xy"; */
 "Cl0-oZ-6xy.text" = "This application needs the following permissions.";
+
+/* Class = "IBUIBarButtonItem"; title = "Close"; ObjectID = "ILO-sd-bJX"; */
+"ILO-sd-bJX.title" = "Close";
+
+/* Class = "IBUITextField"; placeholder = "Title"; ObjectID = "Le6-zQ-rYz"; */
+"Le6-zQ-rYz.placeholder" = "Title";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "N7N-fA-LPK"; */
 "N7N-fA-LPK.text" = "Access authority";
 
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "NuG-7S-1dW"; */
+"NuG-7S-1dW.text" = "Label";
+
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "OC4-Tj-L8Q"; */
 "OC4-Tj-L8Q.text" = "This app must have access authority following";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "Rs2-BA-NKS"; */
+"Rs2-BA-NKS.title" = "Back";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "TsG-tQ-Pn8"; */
+"TsG-tQ-Pn8.text" = "Subtitle";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "VVK-5B-k1f"; */
+"VVK-5B-k1f.text" = "Label";
 
 /* Class = "IBUIBarButtonItem"; title = "Item"; ObjectID = "asD-zR-Fth"; */
 "asD-zR-Fth.title" = "Close";
 
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "bi3-8R-Acg"; */
+"bi3-8R-Acg.text" = "Label";
+
+/* Class = "IBUITextField"; placeholder = "Origin (e.g. http://example.org:8080)"; ObjectID = "gJq-Ua-7Sg"; */
+"gJq-Ua-7Sg.placeholder" = "Origin (e.g. http://example.org:8080)";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "iDZ-ZI-zjh"; */
+"iDZ-ZI-zjh.text" = "Title";
+
 /* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "jyU-cg-FMy"; */
 "jyU-cg-FMy.normalTitle" = "ACCEPT";
+
+/* Class = "IBUINavigationItem"; title = "Whitelist"; ObjectID = "lRn-ip-hSq"; */
+"lRn-ip-hSq.title" = "Whitelist";
 
 /* Class = "IBUILabel"; text = "トークンがありません"; ObjectID = "ldN-WR-bgV"; */
 "ldN-WR-bgV.text" = "No Token.";
 
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "nor-I8-DgO"; */
+"nor-I8-DgO.title" = "Back";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "tBv-2q-BYW"; */
+"tBv-2q-BYW.text" = "Label";

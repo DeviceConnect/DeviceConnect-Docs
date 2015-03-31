@@ -116,4 +116,7 @@ typedef void (^DConnectAuthorizationFailBlock)(DConnectMessageErrorCodeType erro
  */
 + (void) showAccessTokenList;
 
+
++ (void) showOriginWhitelist;
+
 @end

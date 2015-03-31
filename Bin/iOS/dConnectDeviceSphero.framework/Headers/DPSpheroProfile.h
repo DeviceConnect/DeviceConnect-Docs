@@ -168,6 +168,26 @@ extern NSString *const DPSpheroProfileParamImpactTimestamp;
 @protocol DPSpheroProfileDelegate<NSObject>
 @optional
 
+
+/*!
+ @brief Quaternion値を取得する.<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ <pre>
+ [対応するRESTful]
+ GET http://{dConnectドメイン}/sphero/quaternion/onquaternion?serviceId=xxxxx
+ </pre>
+ @param[in] profile プロファイル
+ @param[in] request リクエスト
+ @param[in,out] response レスポンス
+ @param[in] serviceId サービスID
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL)                     profile:(DPSpheroProfile *)profile
+    didReceiveGetOnQuaternionRequest:(DConnectRequestMessage *)request
+                            response:(DConnectResponseMessage *)response
+                           serviceId:(NSString *)serviceId;
+
 /*!
  @brief Quaternionのイベントを登録できる.<br>
  実装されない場合には、Not supportのエラーが返却される。
@@ -209,6 +229,25 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
                            response:(DConnectResponseMessage *)response
                            serviceId:(NSString *)serviceId
                          sessionKey:(NSString *)sessionKey;
+
+/*!
+ @brief Locatorの値を取得できる.<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ <pre>
+ [対応するRESTful]
+ GET http://{dConnectドメイン}/sphero/locator/onlocator?serviceId=xxxxx
+ </pre>
+ @param[in] profile プロファイル
+ @param[in] request リクエスト
+ @param[in,out] response レスポンス
+ @param[in] serviceId サービスID
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL)                    profile:(DPSpheroProfile *)profile
+      didReceiveGetOnLocatorRequest:(DConnectRequestMessage *)request
+                           response:(DConnectResponseMessage *)response
+                          serviceId:(NSString *)serviceId;
 
 /*!
  @brief Locatorのイベントを登録できる.<br>
@@ -255,6 +294,26 @@ didReceiveDeleteOnQuaternionRequest:(DConnectRequestMessage *)request
                            response:(DConnectResponseMessage *)response
                            serviceId:(NSString *)serviceId
                          sessionKey:(NSString *)sessionKey;
+
+/*!
+ @brief Collisionの値を取得できる.<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ <pre>
+ [対応するRESTful]
+ PUT http://{dConnectドメイン}/sphero/collision/oncollision?serviceId=xxxxx&sessionKey=yyyyy
+ </pre>
+ @param[in] profile プロファイル
+ @param[in] request リクエスト
+ @param[in,out] response レスポンス
+ @param[in] serviceId サービスID
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL)                    profile:(DPSpheroProfile *)profile
+    didReceiveGetOnCollisionRequest:(DConnectRequestMessage *)request
+                           response:(DConnectResponseMessage *)response
+                          serviceId:(NSString *)serviceId;
+
 /*!
  @brief Collisionのイベントを登録できる.<br>
  実装されない場合には、Not supportのエラーが返却される。

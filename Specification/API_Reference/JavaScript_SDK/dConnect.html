@@ -88,7 +88,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line12">line 12</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -139,9 +139,6 @@
         <dl>
             <dt><a href="dConnect.constants.html">constants</a></dt>
             <dd></dd>
-        
-            <dt><a href="dConnect.oauth.html">oauth</a></dt>
-            <dd></dd>
         </dl>
     
 
@@ -154,7 +151,7 @@
             
 <dt>
     
-        <h4 class="name" id="addEventListener"><span class="type-signature">(static) </span>addEventListener<span class="signature">(uri, cb)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="addEventListener"><span class="type-signature">(static) </span>addEventListener<span class="signature">(uri, eventCallback, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -220,7 +217,7 @@
 
         <tr>
             
-                <td class="name"><code>cb</code></td>
+                <td class="name"><code>eventCallback</code></td>
             
 
             <td class="type">
@@ -237,6 +234,52 @@
             
 
             <td class="description last">登録したいイベント受領用コールバック。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">イベント登録成功コールバック</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">イベント登録失敗コールバック</td>
         </tr>
 
     
@@ -274,7 +317,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1250">line 1250</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1557">line 1557</a>
     </li></ul></dd>
     
 
@@ -301,11 +344,8 @@
     
         <h5>Example</h5>
         
-    <pre class="prettyprint"><code>var uri = "http://localhost:4035/gotapi/battery/onchargingchange";
-dConnect.addEventListener(uri, deviceid, sessionKey, function(message) {
-    // イベントメッセージが送られてくる
-    var json = JSON.parse(message);
-});</code></pre>
+    <pre class="prettyprint"><code>var uri = 'http://localhost:4035/gotapi/battery/onchargingchange?device=xxx&amp;sessionKey=yyy';
+dConnect.addEventListener(uri, eventCallback, successCallback, errorCallback);</code></pre>
 
     
 </dd>
@@ -314,7 +354,7 @@ dConnect.addEventListener(uri, deviceid, sessionKey, function(message) {
             
 <dt>
     
-        <h4 class="name" id="authorization"><span class="type-signature">(static) </span>authorization<span class="signature">(packageName, scopes, applicationName, success_cb, error_cb)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="authorization"><span class="type-signature">(static) </span>authorization<span class="signature">(scopes, applicationName, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -357,24 +397,6 @@ dConnect.addEventListener(uri, deviceid, sessionKey, function(message) {
 
         <tr>
             
-                <td class="name"><code>packageName</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">アプリを識別するためのURI</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>scopes</code></td>
             
 
@@ -411,7 +433,7 @@ dConnect.addEventListener(uri, deviceid, sessionKey, function(message) {
 
         <tr>
             
-                <td class="name"><code>success_cb</code></td>
+                <td class="name"><code>successCallback</code></td>
             
 
             <td class="type">
@@ -429,7 +451,7 @@ dConnect.addEventListener(uri, deviceid, sessionKey, function(message) {
 
         <tr>
             
-                <td class="name"><code>error_cb</code></td>
+                <td class="name"><code>errorCallback</code></td>
             
 
             <td class="type">
@@ -478,7 +500,7 @@ dConnect.addEventListener(uri, deviceid, sessionKey, function(message) {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1315">line 1315</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1612">line 1612</a>
     </li></ul></dd>
     
 
@@ -506,14 +528,14 @@ dConnect.addEventListener(uri, deviceid, sessionKey, function(message) {
         <h5>Example</h5>
         
     <pre class="prettyprint"><code>// アクセスするプロファイル一覧を定義
-var scopes = Array('network_service_discovery', 'sysytem', 'battery');
+var scopes = Array('servicediscovery', 'sysytem', 'battery');
 // 認可を実行
-dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
-    function(clientId, clientSecret, accessToken) {
-        // clientId, clientSecret, accessTokenを保存して、プロファイルにアクセス
+dConnect.authorization(scopes, 'サンプル',
+    function(clientId, accessToken) {
+        // clientId, accessTokenを保存して、プロファイルにアクセス
     },
     function(errorCode, errorMessage) {
-        alert("Failed to get accessToken.");
+        alert('Failed to get accessToken.');
     });</code></pre>
 
     
@@ -523,7 +545,7 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
             
 <dt>
     
-        <h4 class="name" id="checkDeviceConnect"><span class="type-signature">(static) </span>checkDeviceConnect<span class="signature">(redirectURL<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="checkDeviceConnect"><span class="type-signature">(static) </span>checkDeviceConnect<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -555,8 +577,6 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
         <th>Type</th>
 
         
-        <th>Attributes</th>
-        
 
         
 
@@ -569,33 +589,46 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
 
         <tr>
             
-                <td class="name"><code>redirectURL</code></td>
+                <td class="name"><code>successCallback</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">function</span>
 
 
             
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
 
-                
+            
 
+            <td class="description last">成功時コールバック。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
                 
-                </td>
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
             
 
             
 
-            <td class="description last">リダイレクト先URL。省略された場合は現在表示されているページがリダイレクト先となる。</td>
+            <td class="description last">失敗時コールバック。</td>
         </tr>
 
     
@@ -633,7 +666,7 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1191">line 1191</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1535">line 1535</a>
     </li></ul></dd>
     
 
@@ -761,7 +794,7 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1430">line 1430</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1705">line 1705</a>
     </li></ul></dd>
     
 
@@ -812,6 +845,12 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
     
     <div class="description">
         WebSocketを開く.
+<p>
+WebSocketは、一つしか接続することができない。
+dConnect.isConnectedWebSocket()を用いて、接続確認はできるので、
+接続されている場合には、一度、dConnect.disconnectWebSocket()で
+切断してから、再度接続処理を行って下さい。
+</p>
     </div>
     
 
@@ -879,7 +918,7 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
 
             
 
-            <td class="description last">dConnect Managerから送られてくるイベントを全て受け取るコールバック関数</td>
+            <td class="description last">WebSocketの開閉イベントを受け取るコールバック関数</td>
         </tr>
 
     
@@ -917,7 +956,7 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1484">line 1484</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1802">line 1802</a>
     </li></ul></dd>
     
 
@@ -945,7 +984,7 @@ dConnect.authorization('http://hogehoge.com/index.html', scopes, 'サンプル',
         <h5>Example</h5>
         
     <pre class="prettyprint"><code>// Websocketを開く
-dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
+dConnect.connectWebSocket(sessionKey, function(eventCode, message) {
 });</code></pre>
 
     
@@ -955,7 +994,7 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
             
 <dt>
     
-        <h4 class="name" id="createClient"><span class="type-signature">(static) </span>createClient<span class="signature">(pakcageName, success_cb, error_cb)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="createClient"><span class="type-signature">(static) </span>createClient<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -998,25 +1037,7 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
 
         <tr>
             
-                <td class="name"><code>pakcageName</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">ヘージを識別するための名前</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>success_cb</code></td>
+                <td class="name"><code>successCallback</code></td>
             
 
             <td class="type">
@@ -1034,7 +1055,7 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
 
         <tr>
             
-                <td class="name"><code>error_cb</code></td>
+                <td class="name"><code>errorCallback</code></td>
             
 
             <td class="type">
@@ -1083,7 +1104,7 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1342">line 1342</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1640">line 1640</a>
     </li></ul></dd>
     
 
@@ -1110,9 +1131,9 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
     
         <h5>Example</h5>
         
-    <pre class="prettyprint"><code>dConnect.createClient(packageName,
-    function(clientId, clientSecret) {
-        // clientId, clientSecretを保存して、アクセストークンの取得に使用する
+    <pre class="prettyprint"><code>dConnect.createClient(
+    function(clientId) {
+        // clientIdを保存して、アクセストークンの取得に使用する
     },
     function(errorCode, errorMessage) {
     }
@@ -1174,7 +1195,7 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1528">line 1528</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1866">line 1866</a>
     </li></ul></dd>
     
 
@@ -1205,7 +1226,7 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
             
 <dt>
     
-        <h4 class="name" id="discoverDevices"><span class="type-signature">(static) </span>discoverDevices<span class="signature">(success_cb, error_cb)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="discoverDevices"><span class="type-signature">(static) </span>discoverDevices<span class="signature">(accessToken, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -1214,7 +1235,7 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
 
     
     <div class="description">
-        Network Service Discovery APIへの簡易アクセスを提供する。
+        Service Discovery APIへの簡易アクセスを提供する。
     </div>
     
 
@@ -1248,13 +1269,36 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
 
         <tr>
             
-                <td class="name"><code>success_cb</code></td>
+                <td class="name"><code>accessToken</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="dConnect.html#HTTPSuccessCallback">dConnect.HTTPSuccessCallback</a></span>
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">アクセストークン</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
 
 
             
@@ -1271,13 +1315,13 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
 
         <tr>
             
-                <td class="name"><code>error_cb</code></td>
+                <td class="name"><code>errorCallback</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="dConnect.html#HTTPFailCallback">dConnect.HTTPFailCallback</a></span>
+<span class="param-type">function</span>
 
 
             
@@ -1325,7 +1369,7 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1164">line 1164</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1486">line 1486</a>
     </li></ul></dd>
     
 
@@ -1353,11 +1397,11 @@ dConnect.connectWebSocket(sessionKey, function(errorCode, errorMessage) {
         <h5>Example</h5>
         
     <pre class="prettyprint"><code>// デバイスの検索
-dConnect.discoverDevices(
-    function(status, headerMap, responseText) {
-        var json = JSON.parse(responseText);
+dConnect.discoverDevices(accessToken,
+    function(json) {
+        var devices = json.services;
     },
-    function(readyState, status) {
+    function(errorCode, errorMessage) {
     });</code></pre>
 
     
@@ -1367,7 +1411,7 @@ dConnect.discoverDevices(
             
 <dt>
     
-        <h4 class="name" id="execute"><span class="type-signature">(static) </span>execute<span class="signature">(method, uri, headers, data, success_cb, error_cb)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="execute"><span class="type-signature">(static) </span>execute<span class="signature">(method, uri, header, data, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -1456,7 +1500,7 @@ dConnect.discoverDevices(
 
         <tr>
             
-                <td class="name"><code>headers</code></td>
+                <td class="name"><code>header</code></td>
             
 
             <td class="type">
@@ -1497,7 +1541,7 @@ dConnect.discoverDevices(
 
         <tr>
             
-                <td class="name"><code>success_cb</code></td>
+                <td class="name"><code>successCallback</code></td>
             
 
             <td class="type">
@@ -1520,7 +1564,7 @@ dConnect.discoverDevices(
 
         <tr>
             
-                <td class="name"><code>error_cb</code></td>
+                <td class="name"><code>errorCallback</code></td>
             
 
             <td class="type">
@@ -1574,12 +1618,19 @@ dConnect.discoverDevices(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1100">line 1100</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1417">line 1417</a>
     </li></ul></dd>
     
 
     
 
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>sendRequest</li>
+        </ul>
+    </dd>
     
 
     
@@ -1654,7 +1705,7 @@ dConnect.discoverDevices(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1467">line 1467</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1779">line 1779</a>
     </li></ul></dd>
     
 
@@ -1707,7 +1758,7 @@ dConnect.discoverDevices(
             
 <dt>
     
-        <h4 class="name" id="getSystemInfo"><span class="type-signature">(static) </span>getSystemInfo<span class="signature">(success_cb, error_cb)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="getSystemDeviceInfo"><span class="type-signature">(static) </span>getSystemDeviceInfo<span class="signature">(serviceId, accessToken, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -1716,7 +1767,7 @@ dConnect.discoverDevices(
 
     
     <div class="description">
-        System APIへの簡易アクセスを提供する。
+        Service Information APIへの簡易アクセスを提供する。
     </div>
     
 
@@ -1750,7 +1801,53 @@ dConnect.discoverDevices(
 
         <tr>
             
-                <td class="name"><code>success_cb</code></td>
+                <td class="name"><code>serviceId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">サービスID</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>accessToken</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">アクセストークン</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
             
 
             <td class="type">
@@ -1773,7 +1870,7 @@ dConnect.discoverDevices(
 
         <tr>
             
-                <td class="name"><code>error_cb</code></td>
+                <td class="name"><code>errorCallback</code></td>
             
 
             <td class="type">
@@ -1827,7 +1924,7 @@ dConnect.discoverDevices(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1178">line 1178</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1503">line 1503</a>
     </li></ul></dd>
     
 
@@ -1858,7 +1955,1177 @@ dConnect.discoverDevices(
             
 <dt>
     
-        <h4 class="name" id="removeEventListener"><span class="type-signature">(static) </span>removeEventListener<span class="signature">(uri)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="getSystemInfo"><span class="type-signature">(static) </span>getSystemInfo<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        System APIへの簡易アクセスを提供する。
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">成功時コールバック。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">失敗時コールバック。</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1520">line 1520</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="isEnabledAntiSpoofing"><span class="type-signature">(static) </span>isEnabledAntiSpoofing<span class="signature">()</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        サーバからのレスポンス受信時にサーバの認証を行うかどうかのフラグを取得する.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1206">line 1206</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    サーバの認証を行う場合はtrue、そうでない場合はfalse
+</div>
+
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="isSSLEnabled"><span class="type-signature">(static) </span>isSSLEnabled<span class="signature">()</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        HTTPおよびWebSocket通信でSSLを使用するかどうかを取得する.
+<p>
+デフォルト設定ではSSLは使用しない。
+</p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1738">line 1738</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    SSLを使用する場合はtrue、使用しない場合はfalse
+</div>
+
+
+
+        
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="parent.delete"><span class="type-signature">(static) </span>parent.delete<span class="signature">(uri, header, success, error)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect RESTful APIのDELETEメソッドを実行する.
+<p>
+   + レスポンスの受信に成功した場合でも、サーバの認証に失敗した場合はエラーコールバックを実行する.
+</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>uri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">URI</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストヘッダー。Key-Valueマップで渡す。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>success</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">成功時コールバック</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">失敗時コールバック</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1402">line 1402</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="parent.get"><span class="type-signature">(static) </span>parent.get<span class="signature">(uri, headers, success, error)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect RESTful APIのGETメソッドを実行する.
+<p>
+   + レスポンスの受信に成功した場合でも、サーバの認証に失敗した場合はエラーコールバックを実行する.
+</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>uri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">URI</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>headers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストヘッダー。Key-Valueマップで渡す。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>success</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">成功時コールバック</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">失敗時コールバック</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1355">line 1355</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="parent.post"><span class="type-signature">(static) </span>parent.post<span class="signature">(uri, header, data, success, error)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect RESTful APIのPOSTメソッドを実行する.
+<p>
+   + レスポンスの受信に成功した場合でも、サーバの認証に失敗した場合はエラーコールバックを実行する.
+</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>uri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">URI</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストヘッダー。Key-Valueマップで渡す。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">コンテンツデータ</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>success</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">成功時コールバック</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">失敗時コールバック</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1387">line 1387</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="parent.put"><span class="type-signature">(static) </span>parent.put<span class="signature">(uri, header, data, success, error)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect RESTful APIのPUTメソッドを実行する.
+<p>
+   + レスポンスの受信に成功した場合でも、サーバの認証に失敗した場合はエラーコールバックを実行する.
+</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>uri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">URI</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストヘッダー。Key-Valueマップで渡す。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">コンテンツデータ</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>success</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">成功時コールバック</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">失敗時コールバック</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1371">line 1371</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="removeEventListener"><span class="type-signature">(static) </span>removeEventListener<span class="signature">(uri, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -1921,6 +3188,52 @@ dConnect.discoverDevices(
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>successCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">イベント登録解除成功コールバック</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errorCallback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">イベント登録解除失敗コールバック</td>
+        </tr>
+
+    
     </tbody>
 </table>
     
@@ -1955,7 +3268,7 @@ dConnect.discoverDevices(
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1279">line 1279</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1582">line 1582</a>
     </li></ul></dd>
     
 
@@ -1982,8 +3295,8 @@ dConnect.discoverDevices(
     
         <h5>Example</h5>
         
-    <pre class="prettyprint"><code>var uri = "http://localhost:4035/gotapi/battery/onchargingchange";
-dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
+    <pre class="prettyprint"><code>var uri = 'http://localhost:4035/gotapi/battery/onchargingchange?device=xxx&amp;sessionKey=yyy';
+dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
 
     
 </dd>
@@ -1992,7 +3305,7 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
             
 <dt>
     
-        <h4 class="name" id="requestAccessToken"><span class="type-signature">(static) </span>requestAccessToken<span class="signature">(clientId, clientSecret, scopes, applicationName, success_cb, error_cb)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="requestAccessToken"><span class="type-signature">(static) </span>requestAccessToken<span class="signature">(clientId, scopes, applicationName, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
 
         
     
@@ -2053,24 +3366,6 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
 
         <tr>
             
-                <td class="name"><code>clientSecret</code></td>
-            
-
-            <td class="type">
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">クライアントシークレット</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>scopes</code></td>
             
 
@@ -2107,7 +3402,7 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
 
         <tr>
             
-                <td class="name"><code>success_cb</code></td>
+                <td class="name"><code>successCallback</code></td>
             
 
             <td class="type">
@@ -2125,7 +3420,7 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
 
         <tr>
             
-                <td class="name"><code>error_cb</code></td>
+                <td class="name"><code>errorCallback</code></td>
             
 
             <td class="type">
@@ -2174,7 +3469,7 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1389">line 1389</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1674">line 1674</a>
     </li></ul></dd>
     
 
@@ -2201,13 +3496,506 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
     
         <h5>Example</h5>
         
-    <pre class="prettyprint"><code>dConnect.requestAccessToken(clientId, clientSecret, scopes, 'アプリ名',
+    <pre class="prettyprint"><code>dConnect.requestAccessToken(clientId, scopes, 'アプリ名',
     function(accessToken) {
         // アクセストークンの保存して、プロファイルのアクセスを行う
     },
     function(errorCode, errorMessage) {
     }
 );</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="sendRequest"><span class="type-signature">(static) </span>sendRequest<span class="signature">(method, uri, header, data, success, error)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect RESTful APIを実行する.
+<p>
+   + レスポンスの受信に成功した場合でも、サーバの認証に失敗した場合はエラーコールバックを実行する.
+</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>method</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">メソッド</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>uri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">URI</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストヘッダー。Key-Valueマップで渡す。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">コンテンツデータ</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>success</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">成功時コールバック</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">失敗時コールバック</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1310">line 1310</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="setAntiSpoofing"><span class="type-signature">(static) </span>setAntiSpoofing<span class="signature">(enable)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        サーバからのレスポンス受信時にサーバの認証を行うかどうかを設定する.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>enable</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">サーバの認証を行う場合はtrue、そうでない場合はfalse</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1196">line 1196</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="setExtendedOrigin"><span class="type-signature">(static) </span>setExtendedOrigin<span class="signature">(o)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        オリジンを設定する.
+ハイブリッドアプリとして動作させる場合には本メソッドでオリジンを設定する.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>o</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">オリジン</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1759">line 1759</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 </dd>
@@ -2313,7 +4101,134 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1447">line 1447</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1748">line 1748</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="setLaunchListener"><span class="type-signature">(static) </span>setLaunchListener<span class="signature">(listener)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect Managerの起動通知を受信するリスナーを設定する.
+<p>
+注意: Device Connect Managerの起動はアプリケーションの表示状態が非表示から表示へ
+遷移したタイミングで確認される.
+</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リスナー</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1220">line 1220</a>
     </li></ul></dd>
     
 
@@ -2441,7 +4356,218 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1457">line 1457</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1769">line 1769</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="setSSLEnabled"><span class="type-signature">(static) </span>setSSLEnabled<span class="signature">(enabled)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        HTTPおよびWebSocket通信でSSLを使用するかどうかを設定する.
+<p>
+デフォルト設定ではSSLは使用しない。
+</p>
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>enabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">SSLを使用する場合はtrue、使用しない場合はfalse</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1725">line 1725</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="startManager"><span class="type-signature">(static) </span>startManager<span class="signature">()</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect Managerを起動する.
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1272">line 1272</a>
     </li></ul></dd>
     
 
@@ -2618,7 +4744,7 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1083">line 1083</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1142">line 1142</a>
     </li></ul></dd>
     
 
@@ -2792,7 +4918,7 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line1075">line 1075</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1134">line 1134</a>
     </li></ul></dd>
     
 
@@ -2833,13 +4959,13 @@ dConnect.removeEventListener(uri, deviceId, sessionKey);</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="dConnect.html">dConnect</a></li><li><a href="dConnect.URIBuilder.html">URIBuilder</a></li></ul><h3>Namespaces</h3><ul><li><a href="dConnect.constants.html">constants</a></li><li><a href="dConnect.constants.authorization.html">authorization</a></li><li><a href="dConnect.constants.battery.html">battery</a></li><li><a href="dConnect.constants.common.html">common</a></li><li><a href="dConnect.constants.connect.html">connect</a></li><li><a href="dConnect.constants.device_orientation.html">device_orientation</a></li><li><a href="dConnect.constants.file.html">file</a></li><li><a href="dConnect.constants.file_descriptor.html">file_descriptor</a></li><li><a href="dConnect.constants.media_player.html">media_player</a></li><li><a href="dConnect.constants.media_stream_recording.html">media_stream_recording</a></li><li><a href="dConnect.constants.network_service_discovery.html">network_service_discovery</a></li><li><a href="dConnect.constants.notification.html">notification</a></li><li><a href="dConnect.constants.phone.html">phone</a></li><li><a href="dConnect.constants.proximity.html">proximity</a></li><li><a href="dConnect.constants.settings.html">settings</a></li><li><a href="dConnect.constants.system.html">system</a></li><li><a href="dConnect.constants.vibration.html">vibration</a></li><li><a href="dConnect.oauth.html">oauth</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="dConnect.html">dConnect</a></li><li><a href="dConnect.URIBuilder.html">URIBuilder</a></li></ul><h3>Namespaces</h3><ul><li><a href="dConnect.constants.html">constants</a></li><li><a href="dConnect.constants.authorization.html">authorization</a></li><li><a href="dConnect.constants.availability.html">availability</a></li><li><a href="dConnect.constants.battery.html">battery</a></li><li><a href="dConnect.constants.canvas.html">canvas</a></li><li><a href="dConnect.constants.common.html">common</a></li><li><a href="dConnect.constants.connect.html">connect</a></li><li><a href="dConnect.constants.device_orientation.html">device_orientation</a></li><li><a href="dConnect.constants.file.html">file</a></li><li><a href="dConnect.constants.file_descriptor.html">file_descriptor</a></li><li><a href="dConnect.constants.keyevent.html">keyevent</a></li><li><a href="dConnect.constants.media_player.html">media_player</a></li><li><a href="dConnect.constants.media_stream_recording.html">media_stream_recording</a></li><li><a href="dConnect.constants.notification.html">notification</a></li><li><a href="dConnect.constants.phone.html">phone</a></li><li><a href="dConnect.constants.proximity.html">proximity</a></li><li><a href="dConnect.constants.servicediscovery.html">servicediscovery</a></li><li><a href="dConnect.constants.serviceinformation.html">serviceinformation</a></li><li><a href="dConnect.constants.settings.html">settings</a></li><li><a href="dConnect.constants.system.html">system</a></li><li><a href="dConnect.constants.touch.html">touch</a></li><li><a href="dConnect.constants.vibration.html">vibration</a></li></ul>
 </nav>
 
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-dev</a> on Thu Sep 25 2014 01:22:43 GMT+0900 (JST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-dev</a> on Wed Mar 25 2015 20:33:49 GMT+0900 (JST)
 </footer>
 
 <script> prettyPrint(); </script>

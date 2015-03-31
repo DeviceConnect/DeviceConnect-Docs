@@ -73,6 +73,28 @@ extern NSString *const DPDiceProfileParamZ;
  */
 @protocol DPDiceProfileDelegate<NSObject>
 @optional
+
+
+/*!
+ Diceのダイスの目を取得する.<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ <pre>
+ [対応するRESTful]
+ GET http://{dConnectドメイン}/dice/ondice?serviceId=xxxxx&sessionKey=yyyyy
+ </pre>
+ @param[in] profile プロファイル
+ @param[in] request リクエスト
+ @param[in,out] response レスポンス
+ @param[in] serviceId デバイスID
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL)               profile:(DPDiceProfile *)profile
+    didReceiveGetOnDiceRequest:(DConnectRequestMessage *)request
+                      response:(DConnectResponseMessage *)response
+                     serviceId:(NSString *)serviceId;
+
+
 /*!
  Diceのイベントを登録できる.<br>
  実装されない場合には、Not supportのエラーが返却される。
@@ -114,6 +136,25 @@ extern NSString *const DPDiceProfileParamZ;
                        response:(DConnectResponseMessage *)response
                        serviceId:(NSString *)serviceId
                      sessionKey:(NSString *)sessionKey;
+
+/*!
+ Magnetometerの値を取得する.<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ <pre>
+ [対応するRESTful]
+ GET http://{dConnectドメイン}/dice/magnetometer/onmagnetmeter?serviceId=xxxxx&sessionKey=yyyyy
+ </pre>
+ @param[in] profile プロファイル
+ @param[in] request リクエスト
+ @param[in,out] response レスポンス
+ @param[in] serviceId デバイスID
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL)                   profile:(DPDiceProfile *)profile
+didReceiveGetOnMagnetometerRequest:(DConnectRequestMessage *)request
+                          response:(DConnectResponseMessage *)response
+                         serviceId:(NSString *)serviceId;
 
 /*!
  Magnetometerのイベントを登録できる.<br>

@@ -71,6 +71,55 @@ extern NSString *const DConnectProximityProfileParamNear;
 @protocol DConnectProximityProfileDelegate <NSObject>
 @optional
 
+#pragma mark - Get Methods
+
+/*!
+ 
+ @brief ondeviceproximity値取得リクエストを受け取ったことをデリゲートに通知する。
+ 
+ profileがondeviceproximity値取得リクエストを受け取ったことをデリゲートに通知する。<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ 
+ <p>
+ [対応するAPI] Proximity Device Event API [GET]
+ </p>
+ 
+ @param[in] profile プロファイル
+ @param[in] request リクエストパラメータ
+ @param[in,out] response レスポンスパラメータ
+ @param[in] serviceId サービスID
+ 
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL) profile:(DConnectProximityProfile *)profile didReceiveGetOnDeviceProximityRequest:(DConnectRequestMessage *)request
+        response:(DConnectResponseMessage *)response
+       serviceId:(NSString *)serviceId;
+
+/*!
+ 
+ @brief onuserproximity値取得リクエストを受け取ったことをデリゲートに通知する。
+ 
+ profileがonuserproximity値取得リクエストを受け取ったことをデリゲートに通知する。<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ 
+ <p>
+ [対応するAPI] Proximity User Event API [GET]
+ </p>
+ 
+ @param[in] profile プロファイル
+ @param[in] request リクエストパラメータ
+ @param[in,out] response レスポンスパラメータ
+ @param[in] serviceId サービスID
+ 
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL) profile:(DConnectProximityProfile *)profile didReceiveGetOnUserProximityRequest:(DConnectRequestMessage *)request
+        response:(DConnectResponseMessage *)response
+       serviceId:(NSString *)serviceId;
+
+
 #pragma mark - Put Methods
 #pragma mark Event Registration
 

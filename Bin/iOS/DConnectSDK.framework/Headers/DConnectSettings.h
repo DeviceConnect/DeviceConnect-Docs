@@ -60,4 +60,11 @@
  */
 @property (nonatomic) BOOL useLocalOAuth;
 
+/*!
+ @brief Originブロック機能のON/OFF。
+ 
+ デフォルトではNO。
+ */
+@property (nonatomic) BOOL useOriginBlocking;
+
 @end

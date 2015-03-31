@@ -141,4 +141,11 @@
  */
 - (NSString *) accessToken;
 
+/*!
+ @brief オリジンを取得する。
+ @retval オリジン
+ @retval nil オリジンが設定されていない場合
+ */
+- (NSString *) origin;
+
 @end
