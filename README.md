@@ -9,23 +9,51 @@ Device Connect system is a multi-OS, on the run-time environment of multi-platfo
 Thus, it is intended to improve the convenience of the connection and cooperation method between the smart device.<br>
 <br> Function list Device Connect system provides is as follows.
 
-- Provides the ability to display the peripheral list of possible cooperation
-- Connection I / F eliminate (Bluetooth, BLE, Wi-Fi, NFC) a descriptive difficulty of the difference of
-- Provide unified API by equipment profile
-
+- Service discovery
+- Connection I/F eliminate (Bluetooth, BLE, Wi-Fi, NFC) a descriptive difficulty of the difference of
+- Uniform API provided by equipment profiles
+- Application authorization by users
 
 
 <a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_en.png" style="text-align:center" ">
 <img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_en.png" border="0"
  width="251" height="235" alt="" style="text-align:center"/></a>
 
+# Application Requirements
+## Application must specify the origin of requests
+According to OMA GotAPI 1.0, applications of Device Connect are authorized for each their origin. That is why Device Connect system returns error responses for requests which are not specified its origin.
+
+### For HTML Applications
+HTML application must specify `Origin` header defined by [RFC6454](https://www.ietf.org/rfc/rfc6454.txt) in HTTP request header.
+
+Example:
+
+```
+GET /gotapi/availability HTTP/1.1
+Host: 127.0.0.1:4035
+Origin: http://xxx.example.com/
+```
+
+The `Origin` header is specified automatically by Chrome, Safari and Firefox browsers, except for cases that GET request is sent from the address bar.
+
+### For OS-native Applications
+OS-native application must specify the identifier of the application (its package name) in `X-GotAPI-Origin` header.
+
+Example:
+
+```
+GET /gotapi/availability HTTP/1.1
+Host: 127.0.0.1:4035
+X-GotAPI-Origin: com.example.android.app
+```
+
 # Connecting to Device Connect
 
-In Android version Device Connect, and that make an inquiry to the HTTP server (DeviceConnectManager) you are running in the local in the terminal, it is possible to perform hardware operations and, the information acquisition.
+The basic sequence of Device Connect is shown below.
 
-<a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DeviceConnectApplicationManual/image1.png" >
-<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DeviceConnectApplicationManual/image1.png" border="0"
- width="808" height="290" alt="" /></a><br>
+<a href="./assets/sequence_overview.png" >
+<img src="./assets/sequence_overview.png" border="0"
+ width="100%" alt="" /></a><br>
 
 # Repository of DeviceConnect
 
@@ -37,7 +65,7 @@ In Android terminal, if you want to operate the DeviceConnect, please check out 
 It is a repository that sample implement DeviceConnect platform on iOS.<br>
 In iOS terminal, if you want to operate the DeviceConnect, please check out from this repository.<br>
 <br>
-* [DeviceConnect-JS](http://github/DeviceConnect-JS)
+* [DeviceConnect-JS](http://github/DeviceConnect-JS)<br>
 It is a repository that implements the SDK for calling DeviceConnect from HTML.
 
 # Example for Android

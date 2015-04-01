@@ -262,4 +262,16 @@
  */
 - (void) setErrorToIllegalServerStateWithMessage:(NSString *)message;
 
+/*!
+ @brief レスポンスエラーを不正オリジンエラーに設定する。
+ */
+- (void) setErrorToInvalidOrigin;
+
+/*!
+ @brief レスポンスエラーを不正オリジンエラーに設定し、指定された文字列をエラーメッセージに設定する。
+ 
+ @param[in] message エラーメッセージ
+ */
+- (void) setErrorToInvalidOriginWithMessage:(NSString *)message;
+
 @end

@@ -74,7 +74,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line232">line 232</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line134">line 134</a>
     </li></ul></dd>
     
 
@@ -105,7 +105,13 @@
             <dt><a href="dConnect.constants.authorization.html">authorization</a></dt>
             <dd></dd>
         
+            <dt><a href="dConnect.constants.availability.html">availability</a></dt>
+            <dd></dd>
+        
             <dt><a href="dConnect.constants.battery.html">battery</a></dt>
+            <dd></dd>
+        
+            <dt><a href="dConnect.constants.canvas.html">canvas</a></dt>
             <dd></dd>
         
             <dt><a href="dConnect.constants.common.html">common</a></dt>
@@ -123,13 +129,13 @@
             <dt><a href="dConnect.constants.file_descriptor.html">file_descriptor</a></dt>
             <dd></dd>
         
+            <dt><a href="dConnect.constants.keyevent.html">keyevent</a></dt>
+            <dd></dd>
+        
             <dt><a href="dConnect.constants.media_player.html">media_player</a></dt>
             <dd></dd>
         
             <dt><a href="dConnect.constants.media_stream_recording.html">media_stream_recording</a></dt>
-            <dd></dd>
-        
-            <dt><a href="dConnect.constants.network_service_discovery.html">network_service_discovery</a></dt>
             <dd></dd>
         
             <dt><a href="dConnect.constants.notification.html">notification</a></dt>
@@ -141,10 +147,19 @@
             <dt><a href="dConnect.constants.proximity.html">proximity</a></dt>
             <dd></dd>
         
+            <dt><a href="dConnect.constants.servicediscovery.html">servicediscovery</a></dt>
+            <dd></dd>
+        
+            <dt><a href="dConnect.constants.serviceinformation.html">serviceinformation</a></dt>
+            <dd></dd>
+        
             <dt><a href="dConnect.constants.settings.html">settings</a></dt>
             <dd></dd>
         
             <dt><a href="dConnect.constants.system.html">system</a></dt>
+            <dd></dd>
+        
+            <dt><a href="dConnect.constants.touch.html">touch</a></dt>
             <dd></dd>
         
             <dt><a href="dConnect.constants.vibration.html">vibration</a></dt>
@@ -156,6 +171,568 @@
         <h3 class="subsection-title">Members</h3>
 
         <dl>
+            
+<dt>
+    <h4 class="name" id="ErrorCode"><span class="type-signature">(static, readonly) </span>ErrorCode<span class="type-signature"> :Number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        エラーコードを定義する列挙型.
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Number</span>
+
+
+            </li>
+        </ul>
+    
+
+    
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ACCESS_FAILED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: Device Connectへのアクセスに失敗した.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>INVALID_SERVER</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: 不正なサーバからのレスポンスを受信した.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNKNOWN</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: 原因不明のエラー.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NOT_SUPPORT_PROFILE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: サポートされていないプロファイルにアクセスされた.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NOT_SUPPORT_ACTION</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: サポートされていないアクションが指定された.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NOT_SUPPORT_ATTRIBUTE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: サポートされていない属性・インターフェースが指定された.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EMPTY_SERVICE_ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: serviceIdが設定されていない.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NOT_FOUND_SERVICE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: サービスが発見できなかった.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TIMEOUT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: タイムアウトが発生した.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UNKNOWN_ATTRIBUTE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: 未知の属性・インターフェースにアクセスされた.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LOW_BATTERY</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: バッテリー低下で操作不能.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>INVALID_REQUEST_PARAMETER</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: 不正なパラメータを受信した.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AUTHORIZATION</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: 認証エラー.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EXPIRED_ACCESS_TOKEN</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: アクセストークンの有効期限切れ.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EMPTY_ACCESS_TOKEN</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: アクセストークンが設定されていない.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SCOPE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: スコープ外にアクセス要求がなされた.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NOT_FOUND_CLIENT_ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: 認証時にclientIdが発見できなかった.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ILLEGAL_DEVICE_STATE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: デバイスの状態異常エラー.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ILLEGAL_SERVER_STATE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: サーバの状態異常エラー.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>INVALID_ORIGIN</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">エラーコード: 不正オリジンエラー.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line153">line 153</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+</dd>
+
+        
             
 <dt>
     <h4 class="name" id="RESULT_ERROR"><span class="type-signature">(static, constant) </span>RESULT_ERROR<span class="type-signature"> :Number</span></h4>
@@ -211,7 +788,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line244">line 244</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line146">line 146</a>
     </li></ul></dd>
     
 
@@ -284,7 +861,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-1.0.0.js.html">dconnectsdk-1.0.0.js</a>, <a href="dconnectsdk-1.0.0.js.html#line238">line 238</a>
+        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line140">line 140</a>
     </li></ul></dd>
     
 
@@ -319,13 +896,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="dConnect.html">dConnect</a></li><li><a href="dConnect.URIBuilder.html">URIBuilder</a></li></ul><h3>Namespaces</h3><ul><li><a href="dConnect.constants.html">constants</a></li><li><a href="dConnect.constants.authorization.html">authorization</a></li><li><a href="dConnect.constants.battery.html">battery</a></li><li><a href="dConnect.constants.common.html">common</a></li><li><a href="dConnect.constants.connect.html">connect</a></li><li><a href="dConnect.constants.device_orientation.html">device_orientation</a></li><li><a href="dConnect.constants.file.html">file</a></li><li><a href="dConnect.constants.file_descriptor.html">file_descriptor</a></li><li><a href="dConnect.constants.media_player.html">media_player</a></li><li><a href="dConnect.constants.media_stream_recording.html">media_stream_recording</a></li><li><a href="dConnect.constants.network_service_discovery.html">network_service_discovery</a></li><li><a href="dConnect.constants.notification.html">notification</a></li><li><a href="dConnect.constants.phone.html">phone</a></li><li><a href="dConnect.constants.proximity.html">proximity</a></li><li><a href="dConnect.constants.settings.html">settings</a></li><li><a href="dConnect.constants.system.html">system</a></li><li><a href="dConnect.constants.vibration.html">vibration</a></li><li><a href="dConnect.oauth.html">oauth</a></li></ul>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="dConnect.html">dConnect</a></li><li><a href="dConnect.URIBuilder.html">URIBuilder</a></li></ul><h3>Namespaces</h3><ul><li><a href="dConnect.constants.html">constants</a></li><li><a href="dConnect.constants.authorization.html">authorization</a></li><li><a href="dConnect.constants.availability.html">availability</a></li><li><a href="dConnect.constants.battery.html">battery</a></li><li><a href="dConnect.constants.canvas.html">canvas</a></li><li><a href="dConnect.constants.common.html">common</a></li><li><a href="dConnect.constants.connect.html">connect</a></li><li><a href="dConnect.constants.device_orientation.html">device_orientation</a></li><li><a href="dConnect.constants.file.html">file</a></li><li><a href="dConnect.constants.file_descriptor.html">file_descriptor</a></li><li><a href="dConnect.constants.keyevent.html">keyevent</a></li><li><a href="dConnect.constants.media_player.html">media_player</a></li><li><a href="dConnect.constants.media_stream_recording.html">media_stream_recording</a></li><li><a href="dConnect.constants.notification.html">notification</a></li><li><a href="dConnect.constants.phone.html">phone</a></li><li><a href="dConnect.constants.proximity.html">proximity</a></li><li><a href="dConnect.constants.servicediscovery.html">servicediscovery</a></li><li><a href="dConnect.constants.serviceinformation.html">serviceinformation</a></li><li><a href="dConnect.constants.settings.html">settings</a></li><li><a href="dConnect.constants.system.html">system</a></li><li><a href="dConnect.constants.touch.html">touch</a></li><li><a href="dConnect.constants.vibration.html">vibration</a></li></ul>
 </nav>
 
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-dev</a> on Thu Sep 25 2014 01:22:43 GMT+0900 (JST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-dev</a> on Wed Mar 25 2015 20:33:49 GMT+0900 (JST)
 </footer>
 
 <script> prettyPrint(); </script>

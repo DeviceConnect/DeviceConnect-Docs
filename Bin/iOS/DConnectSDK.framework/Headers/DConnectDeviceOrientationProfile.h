@@ -90,6 +90,30 @@ extern NSString *const DConnectDeviceOrientationProfileParamAccelerationIncludin
 @protocol DConnectDeviceOrientationProfileDelegate <NSObject>
 @optional
 
+#pragma mark - Get Methods
+
+/*!
+ @brief ondeviceorientation取得リクエストを受け取ったことをデリゲートに通知する。
+ 
+ profileがondeviceorientation取得リクエストを受け取ったことをデリゲートに通知する。<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ 
+ <p>
+ [対応するAPI] Device Orientation API [GET]
+ </p>
+ 
+ @param[in] profile このイベントを通知するDConnectDeviceOrientationProfileのオブジェクト
+ @param[in] request リクエスト
+ @param[in,out] response レスポンス
+ @param[in] serviceId サービスID
+ @retval YES レスポンスパラメータを返却する
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL) profile:(DConnectDeviceOrientationProfile *)profile didReceiveGetOnDeviceOrientationRequest:(DConnectRequestMessage *)request
+        response:(DConnectResponseMessage *)response
+       serviceId:(NSString *)serviceId;
+
+
 #pragma mark - Put Methods
 #pragma mark Event Registration
 
