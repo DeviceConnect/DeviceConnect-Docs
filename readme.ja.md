@@ -321,7 +321,7 @@ Android root
     <td>○</td>
     <td>Google Cast SDK Developer ConsoleのページでデバイスとReceiverアプリの登録が必要</td>
   </tr>
-  <tr>
+ <!-- <tr>
     <td>エー・アンド・ディー</td>
     <td>UA-767PBT-C</td>
     <td>血圧計</td>
@@ -501,24 +501,33 @@ Android root
     <td>○</td>
     <td>×</td>
     <td>ソースコード開示なし ※対応予定</td>
-  </tr>
+  </tr>-->
   <tr>
     <td>Polar</td>
     <td>H7</td>
     <td>心拍計</td>
-    <td>mHealth プラグイン</td>
+    <td>BLE HeartRate プラグイン</td>
     <td>○</td>
     <td>×</td>
-    <td>ソースコード開示なし</td>
+    <td></td>
   </tr>
   <tr>
     <td>Mio Global</td>
     <td>Mio Alpha</td>
     <td>心拍計</td>
-    <td>mHealth プラグイン</td>
+    <td>BLE HeartRate プラグイン</td>
     <td>○</td>
     <td>×</td>
-    <td>ソースコード開示なし</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>OMRON</td>
+    <td>HVC-C</td>
+    <td>Human Vision Components</td>
+    <td>HVC プラグイン</td>
+    <td>○</td>
+    <td>×</td>
+    <td></td>
   </tr>
 </table>
 
