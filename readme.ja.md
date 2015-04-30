@@ -521,10 +521,10 @@ Android root
     <td></td>
   </tr>
   <tr>
-    <td>Mio Global</td>
-    <td>Mio Alpha</td>
-    <td>心拍計</td>
-    <td>BLE HeartRate プラグイン</td>
+    <td>OMRON</td>
+    <td>HVC-C</td>
+    <td>Human Vision Components</td>
+    <td>HVC プラグイン</td>
     <td>○</td>
     <td>×</td>
     <td></td>
