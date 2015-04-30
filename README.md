@@ -257,7 +257,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Chromecast</td>
     <td>Need to register the Receiver Apps and device on Google Cast SDK Developer Console.</td>
   </tr>
-  <tr>
+  
+<!--  <tr>
     <td>AND</td>
     <td>UA-767PBT-C</td>
     <td>Sphygmomanometer</td>
@@ -397,18 +398,25 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>mHealth</td>
     <td>In preparation</td>
   </tr>
-  <tr>
+-->  <tr>
     <td>Polar</td>
     <td>H7</td>
     <td>Heart rate meter</td>
-    <td>mHealth</td>
+    <td>BLE Heart Rate</td>
     <td></td>
   </tr>
   <tr>
     <td>Mio Global</td>
     <td>Mio Alpha</td>
     <td>Heart rate meter</td>
-    <td>mHealth</td>
+    <td>BLE Heart Rate</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>OMRON</td>
+    <td>HVC-C</td>
+    <td>Human Vision Components</td>
+    <td>HVC</td>
     <td></td>
   </tr>
 </table>
