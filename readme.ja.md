@@ -139,11 +139,11 @@ Android root
 
 2. DeviceConnectManagerをAndroidのランチャーから起動し、DeviceConnectManagerを一旦OFFにしてください。
 
-3. Allow External IPのチェックを有効化し、DeviceConnectManagerをONにしてください。
+3. 外部IPを許可のチェックを有効化し、DeviceConnectManagerをONにしてください。
 
 4. 操作する側（PC等）のdemoWebSiteからHTMLを開き、操作対象のIPアドレスのパラメータを付加してください。
 ```
-    [例] file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3#demo
+    [例] http://192.168.101.13:8080/d/index.html?ip=192.168.101.13#demo
 ```
    _※遠隔で意図しない端末の操作およびデータ参照をされるリスクが伴います。信頼が出来ないローカルネットワーク環境に接続される可能性がある場合はDeviceConnectManagerの外部IPを許可のチェックを無効化してください_
 
