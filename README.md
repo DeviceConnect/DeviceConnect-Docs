@@ -117,7 +117,7 @@ _*Please do not use at network that can not be trusted because there is a securi
 
 4. Add the IP address of the operation target in URL of demoWebSite on the operation side terminal.
 ```
- e.g. http://192.168.101.13:8080/d/index.html?ip=192.168.101.13#demo"
+ e.g. http://192.168.101.13:8080/demoWebSite/index.html?ip=192.168.101.13#demo"
  ```
 
 
