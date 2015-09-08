@@ -87,13 +87,13 @@ _Please reinstall by following procedure if you would check this sample again._
 Android root
    └── mnt
        └── sdcard
-           └── dConnect
+           └── org.deviceconnect.manager
                 └── demoWebSite
 ```
 
 2.Access the internal file URI with Chrome browser.
 ```
-  file:///sdcard/dConnect/demoWebSite/index.html
+  [例] http://localhost:8080/demoWebSite/index.html
 ```
 
 3.Install the Manager APK and the Android Host APK from "Download APK".
