@@ -90,7 +90,7 @@ DeviceConnect-Android、およびDeviceConnect-iOSと連携するデバイス上
   adbコマンドが使える場合は、以下のようなコマンドでファイルをコピーすることができます。
   
 ```
-adb push demoWebSite /sdcard/org.deviceconnect.manager/demoWebSite
+adb push demoWebSite /sdcard/org.deviceconnect.android.manager/demoWebSite
 ```
   
   
@@ -98,7 +98,7 @@ adb push demoWebSite /sdcard/org.deviceconnect.manager/demoWebSite
 Android root
    └── mnt
        └── sdcard
-             └── org.deviceconnect.manager
+             └── org.deviceconnect.android.manager
                       └──demoWebSite #ここにjavaScriptのサンプルをコピー
 ```
 

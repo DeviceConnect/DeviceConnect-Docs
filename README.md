@@ -87,7 +87,7 @@ _Please reinstall by following procedure if you would check this sample again._
 Android root
    └── mnt
        └── sdcard
-           └── org.deviceconnect.manager
+           └── org.deviceconnect.android.manager
                 └── demoWebSite
 ```
 
