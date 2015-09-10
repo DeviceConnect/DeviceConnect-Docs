@@ -12,3 +12,4 @@
 #import "DCMTemperatureProfile.h"
 #import "DCMDriveControllerProfile.h"
 #import "DCMLightProfile.h"
+#import "DCMTVProfile.h"
