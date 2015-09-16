@@ -87,13 +87,12 @@ _Please reinstall by following procedure if you would check this sample again._
 Android root
    └── mnt
        └── sdcard
-           └── org.deviceconnect.android.manager
-                └── demoWebSite
+           └── demoWebSite
 ```
 
-2.Access the internal file URI with Chrome browser.
+2.Access the internal file URI with Firefox browser.
 ```
-  [例] http://localhost:8080/demoWebSite/index.html
+  [例] file:///sdcard/demoWebSite/index.html
 ```
 
 3.Install the Manager APK and the Android Host APK from "Download APK".
@@ -117,7 +116,7 @@ _*Please do not use at network that can not be trusted because there is a securi
 
 4. Add the IP address of the operation target in URL of demoWebSite on the operation side terminal.
 ```
- e.g. http://192.168.101.13:8080/demoWebSite/index.html?ip=192.168.101.13#demo"
+ e.g. file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3#demo
  ```
 
 
