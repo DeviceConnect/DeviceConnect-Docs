@@ -83,14 +83,14 @@ DeviceConnect-Android、およびDeviceConnect-iOSと連携するデバイス上
 1. 内部ストレージのdemoWebSite.zipから展開したファイルを削除
 2. DeviceConnect ManagerおよびPlug-inのAPKをアンインストール
 
-## Android端末でのChromeブラウザからの動作確認
+## Android端末でのFirefoxブラウザからの動作確認
 
 1\. Androidの内部ストレージにデモコンテンツ用フォルダを作成し（[例]"demoWebSite"）、  
   そこにサンプルのdemoWebSiteフォルダ以下のすべてのファイルをコピーしてください。
   adbコマンドが使える場合は、以下のようなコマンドでファイルをコピーすることができます。
   
 ```
-adb push demoWebSite /sdcard/org.deviceconnect.android.manager/demoWebSite
+adb push demoWebSite /sdcard/demoWebSite
 ```
   
   
@@ -98,15 +98,16 @@ adb push demoWebSite /sdcard/org.deviceconnect.android.manager/demoWebSite
 Android root
    └── mnt
        └── sdcard
-             └── org.deviceconnect.android.manager
-                      └──demoWebSite #ここにjavaScriptのサンプルをコピー
+            └──demoWebSite #ここにjavaScriptのサンプルをコピー
 ```
 
-2\. Chromeブラウザのアドレス欄に内部ストレージのURIを記入し、  
+2\. Firefoxブラウザのアドレス欄に内部ストレージのURIを記入し、  
   内部ストレージにあるWebコンテンツにアクセスしてください。
-   
+  
+  _※ChromeブラウザVer.45以降、Fileスキーム(file:///)でのデモの動作確認が出来なくなっております。_
+  
 ```
-    [例] http://localhost:8080/demoWebSite/index.html
+    [例] file:///sdcard/demoWebSite/index.html
 ```
 
 3\. "Download APK"のリンクから、Device Connect本体の"DeviceConnectManager"、  
@@ -142,8 +143,11 @@ Android root
 3. 外部IPを許可のチェックを有効化し、DeviceConnectManagerをONにしてください。
 
 4. 操作する側（PC等）のdemoWebSiteからHTMLを開き、操作対象のIPアドレスのパラメータを付加してください。
+
+  _※ChromeブラウザVer.45以降、Fileスキーム(file:///)でのデモの動作確認が出来なくなっております。_
+
 ```
-    [例] http://192.168.101.13:8080/demoWebSite/index.html?ip=192.168.101.13#demo
+    [例] file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3#demo
 ```
    _※遠隔で意図しない端末の操作およびデータ参照をされるリスクが伴います。信頼が出来ないローカルネットワーク環境に接続される可能性がある場合はDeviceConnectManagerの外部IPを許可のチェックを無効化してください_
 
