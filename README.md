@@ -487,3 +487,10 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>White 800 can not change color.</td>
   </tr>
 </table>
+
+* This project is not a formal service provision as NTT docomo. It is an experimental source code disclosure. The purpose is consideration of specifications and security.
+* Each manufacturer does not guarantee the operation.
+* Available functions vary with each device.
+* The source code of the plug-in will be disclosed about some equipment by convenience of development for the library to be used.
+* We will advance sequentially that updating documents and expanding enabled devices.
+* Specifications may be changed by improvement of security or other reasons.
