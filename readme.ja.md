@@ -1,6 +1,5 @@
 # DeviceConnect WebAPI について
 
-
 Device Connect WebAPIはスマートフォン上で仮想サーバとして動作するWebAPIで、様々なウェアラブルデバイスやIoTデバイスをWebブラウザやアプリから統一的な記述で簡単に利用することができます。
 
 * 動作環境として、Android、iOSに対応しています。WebブラウザとしてはChrome、Safari(擬似的な仕組み)、Firefoxで動作を確認しています。  
@@ -20,11 +19,10 @@ Device Connectシステムは、マルチOS、マルチプラットフォーム�
 - 機器プロファイルによる統一的なAPI
 - ユーザによるアプリケーション認可機能
 
-
 <center><a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" style="text-align:center" target="_blank">
 <img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" border="0"
  width="251" height="235" alt="" style="text-align:center"/></a></center>
- 
+
 # アプリケーション側の要件
 ## リクエストの発行元を明示すること
 OMA GotAPI 1.0の規定に従い、Device Connectシステム上のアプリケーションはその発行元に対して認可されます。よって、Device Connectシステムは発行元の明示されないHTTPリクエストに対してエラーレスポンスを返します。
@@ -88,12 +86,12 @@ DeviceConnect-Android、およびDeviceConnect-iOSと連携するデバイス上
 1\. Androidの内部ストレージにデモコンテンツ用フォルダを作成し（[例]"demoWebSite"）、  
   そこにサンプルのdemoWebSiteフォルダ以下のすべてのファイルをコピーしてください。
   adbコマンドが使える場合は、以下のようなコマンドでファイルをコピーすることができます。
-  
+
 ```
 adb push demoWebSite /sdcard/demoWebSite
 ```
-  
-  
+
+
 ```
 Android root
    └── mnt
@@ -103,9 +101,9 @@ Android root
 
 2\. Firefoxブラウザのアドレス欄に内部ストレージのURIを記入し、  
   内部ストレージにあるWebコンテンツにアクセスしてください。
-  
+
   _※ChromeブラウザVer.45以降、Fileスキーム(file:///)でのデモの動作確認が出来なくなっております。_
-  
+
 ```
     [例] file:///sdcard/demoWebSite/index.html
 ```
@@ -128,8 +126,6 @@ Android root
   * HOSTを選ぶと利用できる機能の一覧（Profile List）が表示されます。
   * そこから、vibrationを選び、Vibrateを選ぶと端末が振動します（最初の利用時にプラグイン利用の許可が必要です）。
 
-
-
 ##外部からのアクセスについて
 
 * demoWebSiteのURLにIPアドレスのパラメータを付加することで、ローカルネットワーク上の他の端末で動作するDeviceConnect WebAPIの操作も可能になります。ただし、操作される側の端末に以下の設定が必要です。
@@ -150,7 +146,6 @@ Android root
     [例] file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3#demo
 ```
    _※遠隔で意図しない端末の操作およびデータ参照をされるリスクが伴います。信頼が出来ないローカルネットワーク環境に接続される可能性がある場合はDeviceConnectManagerの外部IPを許可のチェックを無効化してください_
-
 
 # 対応デバイス
 
@@ -530,6 +525,15 @@ Android root
     <td>HVC-C</td>
     <td>Human Vision Components</td>
     <td>HVC プラグイン</td>
+    <td>○</td>
+    <td>×</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>FUJITSU</td>
+    <td>F-PLUG</td>
+    <td>スマートメーター</td>
+    <td>F-PLUG プラグイン</td>
     <td>○</td>
     <td>×</td>
     <td></td>

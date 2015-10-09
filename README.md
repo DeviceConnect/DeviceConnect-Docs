@@ -2,7 +2,7 @@
 https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/readme.ja.md
 
 # About DeviceConnect WebAPI
-"DeviceConnect WebAPI" is WebAPI which operates as a virtual server on a smart phone. It can use easily various wearable devices and an IoT device by unific description from a web browser or an application. 
+"DeviceConnect WebAPI" is WebAPI which operates as a virtual server on a smart phone. It can use easily various wearable devices and an IoT device by unific description from a web browser or an application.
 
 # Introduction
 Device Connect system is a multi-OS, on the run-time environment of multi-platform, provides API (RESTful) for connection to a smart device.<br>
@@ -75,10 +75,10 @@ _Updated some package names of the sample for Android at 2014/10/15._
 _Please reinstall by following procedure if you would check this sample again._
 
 ```
-  1. Delete files that are related to the demoWebSite.zip on internal storage. 
-  2. Uninstall a APK of old Manager and plugins. 
-  3. Choose "CLEAR BROWSING DATA..." in "history" on Chrome Browser menu. 
-  4. Choose "Clear" button with "Clear the cache" check box. 
+  1. Delete files that are related to the demoWebSite.zip on internal storage.
+  2. Uninstall a APK of old Manager and plugins.
+  3. Choose "CLEAR BROWSING DATA..." in "history" on Chrome Browser menu.
+  4. Choose "Clear" button with "Clear the cache" check box.
   5. Refer to the procedure for "Example for Android" in "Readme.md".
 ```
 
@@ -102,24 +102,21 @@ Android root
 
 5.Try the prototype GotAPI behavior from "Launch UI-App".
 
-
 ##About access from the external devices
 
 By adding the parameter of the IP address to the demoWebSite URL, can control the external device  by DeviceConnect WebAPI  at a local network. However, the following settings are required for terminal on the operation side.
 
 _*Please do not use at network that can not be trusted because there is a security risk._
 
-1. By the procedure as above , set up the DeviceConnect WebAPI to the terminal of the operation target. 
+1. By the procedure as above , set up the DeviceConnect WebAPI to the terminal of the operation target.
 
-2. Start the DeviceConnectManager from the launcher of Android,and turn off the slide toggle for DeviceConnectManager  service. 
-3. Enable "Allow External IP" checkbox, and turn on the slide toggle for DeviceConnectManager  service. 
+2. Start the DeviceConnectManager from the launcher of Android,and turn off the slide toggle for DeviceConnectManager  service.
+3. Enable "Allow External IP" checkbox, and turn on the slide toggle for DeviceConnectManager  service.
 
 4. Add the IP address of the operation target in URL of demoWebSite on the operation side terminal.
 ```
  e.g. file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3#demo
  ```
-
-
 
 #Supported devices
 <table>
@@ -256,7 +253,7 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Chromecast</td>
     <td>Need to register the Receiver Apps and device on Google Cast SDK Developer Console.</td>
   </tr>
-  
+
 <!--  <tr>
     <td>AND</td>
     <td>UA-767PBT-C</td>
@@ -416,6 +413,15 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>HVC-C</td>
     <td>Human Vision Components</td>
     <td>HVC</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>FUJITSU</td>
+    <td>F-PLUG</td>
+    <td>Smart Meter</td>
+    <td>F-PLUG</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
 </table>
