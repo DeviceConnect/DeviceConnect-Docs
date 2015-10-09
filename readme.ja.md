@@ -538,6 +538,24 @@ Android root
     <td>×</td>
     <td></td>
   </tr>
+  <tr>
+    <td>RICOH</td>
+    <td>THETA m15</td>
+    <td>Spherical Camera</td>
+    <td>THETAデバイスプラグイン</td>
+    <td>○</td>
+    <td>○</td>
+    <td>RICOH THETA Developersにて開発者登録、およびSDKのダウンロードが必要。</td>
+  </tr>
+  <tr>
+    <td>LIFX</td>
+    <td>White 800</td>
+    <td>ライト</td>
+    <td>AllJoynデバイスプラグイン</td>
+    <td>○</td>
+    <td>○</td>
+    <td>White 800の色は変えられない。</td>
+  </tr>
 </table>
 
 * 本プロジェクトはＮＴＴドコモとしての正式なサービス提供ではなく、実験的なソースコード開示です。仕様やセキュリティの検討を目的としております。

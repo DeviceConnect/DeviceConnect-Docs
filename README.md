@@ -468,4 +468,22 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>×</td>
     <td></td>
   </tr>
+  <tr>
+    <td>RICOH</td>
+    <td>THETA m15</td>
+    <td>Spherical Camera</td>
+    <td>THETA</td>
+    <td>○</td>
+    <td>○</td>
+    <td>Need to register developer and download SDK at RICHO THETA Developers.</td>
+  </tr>
+  <tr>
+    <td>LIFX</td>
+    <td>White 800</td>
+    <td>Light</td>
+    <td>AllJoyn</td>
+    <td>○</td>
+    <td>○</td>
+    <td>White 800 can not change color.</td>
+  </tr>
 </table>
