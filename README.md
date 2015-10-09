@@ -125,6 +125,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Product name</td>
     <td>Device type</td>
     <td>Plug-in</td>
+    <td>Android</td>
+    <td>iOS</td>
     <td>Remarks</td>
   </tr>
   <tr>
@@ -132,6 +134,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>SmartWatchMN2</td>
     <td>Watch</td>
     <td>MN2/SW2</td>
+    <td>○</td>
+    <td>×</td>
     <td>Need the app launch on SmartWatch</td>
   </tr>
   <tr>
@@ -139,6 +143,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>SmartWatchSW2</td>
     <td>Watch</td>
     <td>MN2/SW2</td>
+    <td>○</td>
+    <td>×</td>
     <td>Need the app launch on SmartWatch</td>
   </tr>
   <tr>
@@ -146,6 +152,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Sphero 2.0</td>
     <td>Toy</td>
     <td>Sphero</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -153,6 +161,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>DICE+</td>
     <td>Toy</td>
     <td>DICE+</td>
+    <td>○</td>
+    <td>○</td>
     <td>Need the firmware for development</td>
   </tr>
   <tr>
@@ -160,6 +170,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>hue</td>
     <td>Light</td>
     <td>hue</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -167,6 +179,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Bloom Lamp</td>
     <td>Light</td>
     <td>hue</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -174,6 +188,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>LightStrips</td>
     <td>Light</td>
     <td>hue</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -181,6 +197,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>IRKit</td>
     <td>Infrared remote control</td>
     <td>IRKit</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -188,6 +206,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Moverio BT-200</td>
     <td>Glasses</td>
     <td>Android Host</td>
+    <td>○</td>
+    <td>×</td>
     <td>The future works; Support the extension</td>
   </tr>
   <tr>
@@ -195,6 +215,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>M100 Smart Glass</td>
     <td>Glasses</td>
     <td>Android Host</td>
+    <td>○</td>
+    <td>×</td>
     <td>The future works; Support the extension</td>
   </tr>
   <tr>
@@ -202,6 +224,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Inforod</td>
     <td>Glasses</td>
     <td>Android Host</td>
+    <td>○</td>
+    <td>×</td>
     <td>The future works; Support the extension</td>
   </tr>
   <tr>
@@ -209,6 +233,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>DSC-QX100</td>
     <td>Camera</td>
     <td>SonyCamera</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -216,6 +242,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>DSC-QX10</td>
     <td>Camera</td>
     <td>SonyCamera</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -223,6 +251,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Pebble</td>
     <td>Watch</td>
     <td>Pebble</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -230,6 +260,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Android Ver4.0</td>
     <td>Android</td>
     <td>Android Host</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
   <tr>
@@ -237,6 +269,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>G Watch</td>
     <td>Android  Wear</td>
     <td>Wear</td>
+    <td>○</td>
+    <td>×</td>
     <td>Provisional support</td>
   </tr>
   <tr>
@@ -244,6 +278,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Gear Live</td>
     <td>Android  Wear</td>
     <td>Wear</td>
+    <td>○</td>
+    <td>×</td>
     <td>Provisional support</td>
   </tr>
   <tr>
@@ -251,6 +287,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>ChromeCast</td>
     <td>ChromeCast</td>
     <td>Chromecast</td>
+    <td>○</td>
+    <td>○</td>
     <td>Need to register the Receiver Apps and device on Google Cast SDK Developer Console.</td>
   </tr>
 
@@ -399,6 +437,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>H7</td>
     <td>Heart rate meter</td>
     <td>BLE Heart Rate</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
   <tr>
@@ -406,6 +446,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Mio Alpha</td>
     <td>Heart rate meter</td>
     <td>BLE Heart Rate</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
   <tr>
@@ -413,6 +455,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>HVC-C</td>
     <td>Human Vision Components</td>
     <td>HVC</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
   <tr>
