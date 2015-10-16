@@ -78,6 +78,10 @@ extern NSString *const DConnectMediaStreamRecordingProfileAttrOnRecordingChange;
  @brief アトリビュート: ondataavailable。
  */
 extern NSString *const DConnectMediaStreamRecordingProfileAttrOnDataAvailable;
+/*!
+ @brief アトリビュート: preview。
+ */
+extern NSString *const DConnectMediaStreamRecordingProfileAttrPreview;
 
 
 /*!
@@ -577,6 +581,31 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
         serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
 
+/*!
+ 
+ @brief previewイベント登録リクエストを受け取ったことをデリゲートに通知する。
+ 
+ profileがpreviewイベント登録リクエストを受け取ったことをデリゲートに通知する。<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ 
+ <p>
+ [対応するAPI] MediaStream Recording Preview Event API [PUT]
+ </p>
+ 
+ @param[in] profile プロファイル
+ @param[in] request リクエスト
+ @param[in,out] response レスポンス
+ @param[in] serviceId サービスID
+ 
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceivePutPreviewRequest:(DConnectRequestMessage *)request
+        response:(DConnectResponseMessage *)response
+       serviceId:(NSString *)serviceId;
+
+
+
 #pragma mark - Delete Methods
 #pragma mark Event Unregstration
 
@@ -653,6 +682,29 @@ extern NSString *const DConnectMediaStreamRecordingProfileRecordingStateWarning;
         response:(DConnectResponseMessage *)response
         serviceId:(NSString *)serviceId
       sessionKey:(NSString *)sessionKey;
+
+/*!
+ 
+ @brief previewイベント解除リクエストを受け取ったことをデリゲートに通知する。
+ 
+ profileがpreviewイベント解除リクエストを受け取ったことをデリゲートに通知する。<br>
+ 実装されない場合には、Not supportのエラーが返却される。
+ 
+ <p>
+ [対応するAPI] MediaStream Recording Prevew API [DELETE]
+ </p>
+ 
+ @param[in] profile プロファイル
+ @param[in] request リクエスト
+ @param[in,out] response レスポンス
+ @param[in] serviceId サービスID
+ 
+ @retval YES レスポンスパラメータを返却する。
+ @retval NO レスポンスパラメータを返却しないので、@link DConnectManager::sendResponse: @endlinkで返却すること。
+ */
+- (BOOL) profile:(DConnectMediaStreamRecordingProfile *)profile didReceiveDeletePreviewRequest:(DConnectRequestMessage *)request
+        response:(DConnectResponseMessage *)response
+       serviceId:(NSString *)serviceId;
 
 @end
 

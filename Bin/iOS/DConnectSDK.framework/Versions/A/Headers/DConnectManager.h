@@ -18,16 +18,6 @@
 #import <DConnectSDk/DConnectSettings.h>
 
 /*!
- @brief Device Connect Managerの表示用の名前。
- */
-extern NSString *const DConnectManagerName;
-
-/*!
- @brief Device Connect Managerのバージョン名。
- */
-extern NSString *const DConnectManagerVersion;
-
-/*!
  @brief アプリケーションがホームボタン押下で一時停止されたことを通知するイベント名。
  */
 extern NSString *const DConnectApplicationDidEnterBackground;
@@ -86,6 +76,16 @@ extern NSString *const DConnectApplicationWillEnterForeground;
  @attention WebSocket経由でイベントを受け取る場合はnilを設定する必要がある。
  */
 @property (nonatomic, weak) id<DConnectManagerDelegate> delegate;
+
+/*!
+ @brief DConnectManagerの製品名。
+ */
+@property (nonatomic) NSString *productName;
+
+/*!
+ @brief DConnectManagerのバージョン名。
+ */
+@property (nonatomic) NSString *versionName;
 
 /*!
  @brief DConnectManagerのインスタンスを取得する。

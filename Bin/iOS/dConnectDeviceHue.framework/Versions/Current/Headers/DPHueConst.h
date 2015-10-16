@@ -11,8 +11,8 @@
 #ifndef Hue_defines_h
 #define Hue_defines_h
 
-#define DPHUE_SETTING_PAGE_COUNT_IPHONE 3
-#define DPHUE_SETTING_PAGE_COUNT_IPAD 3
+#define DPHUE_SETTING_PAGE_COUNT_IPHONE 4
+#define DPHUE_SETTING_PAGE_COUNT_IPAD 4
 
 extern NSString *const DPHueBundleName;
 
