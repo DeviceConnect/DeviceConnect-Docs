@@ -67,6 +67,11 @@ extern NSString *const DConnectSystemProfileParamId;
  */
 extern NSString *const DConnectSystemProfileParamName;
 
+/*!
+ @brief パラメータ: version。
+ */
+extern NSString *const DConnectSystemProfileParamVersion;
+
 @class DConnectSystemProfile;
 
 /*!
