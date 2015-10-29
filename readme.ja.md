@@ -23,9 +23,45 @@ Device Connectシステムは、マルチOS、マルチプラットフォーム�
 <img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" border="0"
  width="251" height="235" alt="" style="text-align:center"/></a></center>
 
+# セキュリティ
+
+DeviceConnectシステムは OMA GotAPI v1.0 上で定義されているセキュリティ機能を実装しています。
+
+## アプリケーション認可機能
+
+ユーザーの認可しないアプリケーションからのアクセスをブロックする機能です。
+
+Device Connectアプリケーションは、初めてDevice Connectシステムにアクセスする際、ユーザーからの認可とともに、アクセストークンを取得する必要があります。アクセストークンなしでデバイスにアクセスしようとした場合、Device Connectシステムはアプリケーションに対してエラーを返却します。
+
+なお、本機能はDevice Connect Managerの設定画面上でOFFにすることができます。
+
+## サーバなりすまし検知
+
+※現在、本機能はAndroid版のみでサポートされています。
+
+Device Connectシステムが他のアプリケーションによってなりすまされているかどうかを、アプリケーション側で検知機能です。
+
+以下、本機能を使用する場合のシーケンスの概要です。
+
+まず、アプリケーションは、Device Connectシステムに対してレスポンスメッセージに署名を付けるように要求します。その要求はURLスキームで送信します。また、その要求には署名の生成キーとなる文字列を含まれます。
+
+もし、その後アプリケーションが受信したレスポンスに有効な署名が付加されていなかった場合、そのレスポンスは正常なDeviceConnectシステムから送信されたものではないと判断されます。
+
+詳細なシーケンスについては OMA GotAPI v1.0 の仕様書をご確認ください。
+
+## アクセス制限
+
+ホワイトリストに含まれないアプリケーションからのアクセスを禁止する機能です。
+
+本機能がONになっている場合、Device Connectシステムはアプリケーションから受信したリクエストメッセージのOriginヘッダをチェックします。Originがホワイトリストに含まれていない場合、Device Connectシステムはアプリケーションに対してエラーを返却します。
+
+ユーザーはDevice Connect Managerの設定画面上で特定のOriginからのアクセスを許可するように設定することができます。
+
+なお、本機能はDevice Connect Managerの設定画面上でOFFにすることができます。
+
 # アプリケーション側の要件
 ## リクエストの発行元を明示すること
-OMA GotAPI 1.0の規定に従い、Device Connectシステム上のアプリケーションはその発行元に対して認可されます。よって、Device Connectシステムは発行元の明示されないHTTPリクエストに対してエラーレスポンスを返します。
+OMA GotAPI v1.0の規定に従い、Device Connectシステム上のアプリケーションはその発行元に対して認可されます。よって、Device Connectシステムは発行元の明示されないHTTPリクエストに対してエラーレスポンスを返します。
 
 ### HTMLアプリケーションの場合
 [RFC6454](https://www.ietf.org/rfc/rfc6454.txt)上で定義されるOriginを`Origin`ヘッダに指定します。
