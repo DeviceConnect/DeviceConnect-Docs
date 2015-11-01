@@ -53,6 +53,13 @@
 @property (nonatomic) NSString *pluginName;
 
 /*!
+ @brief デバイスプラグインのバージョン名。
+ 
+ プラグインのバージョンを変更したい場合には、この変数に値を代入すること。
+ */
+@property (nonatomic) NSString *pluginVersionName;
+
+/*!
  @brief Local OAuth認証を行うフラグ。
  
  <p>
