@@ -2,7 +2,7 @@
 https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/readme.ja.md
 
 # About DeviceConnect WebAPI
-"DeviceConnect WebAPI" is WebAPI which operates as a virtual server on a smart phone. It can use easily various wearable devices and an IoT device by unific description from a web browser or an application. 
+"DeviceConnect WebAPI" is WebAPI which operates as a virtual server on a smart phone. It can use easily various wearable devices and an IoT device by unific description from a web browser or an application.
 
 # Introduction
 Device Connect system is a multi-OS, on the run-time environment of multi-platform, provides API (RESTful) for connection to a smart device.<br>
@@ -75,10 +75,10 @@ _Updated some package names of the sample for Android at 2014/10/15._
 _Please reinstall by following procedure if you would check this sample again._
 
 ```
-  1. Delete files that are related to the demoWebSite.zip on internal storage. 
-  2. Uninstall a APK of old Manager and plugins. 
-  3. Choose "CLEAR BROWSING DATA..." in "history" on Chrome Browser menu. 
-  4. Choose "Clear" button with "Clear the cache" check box. 
+  1. Delete files that are related to the demoWebSite.zip on internal storage.
+  2. Uninstall a APK of old Manager and plugins.
+  3. Choose "CLEAR BROWSING DATA..." in "history" on Chrome Browser menu.
+  4. Choose "Clear" button with "Clear the cache" check box.
   5. Refer to the procedure for "Example for Android" in "Readme.md".
 ```
 
@@ -102,24 +102,21 @@ Android root
 
 5.Try the prototype GotAPI behavior from "Launch UI-App".
 
-
 ##About access from the external devices
 
 By adding the parameter of the IP address to the demoWebSite URL, can control the external device  by DeviceConnect WebAPI  at a local network. However, the following settings are required for terminal on the operation side.
 
 _*Please do not use at network that can not be trusted because there is a security risk._
 
-1. By the procedure as above , set up the DeviceConnect WebAPI to the terminal of the operation target. 
+1. By the procedure as above , set up the DeviceConnect WebAPI to the terminal of the operation target.
 
-2. Start the DeviceConnectManager from the launcher of Android,and turn off the slide toggle for DeviceConnectManager  service. 
-3. Enable "Allow External IP" checkbox, and turn on the slide toggle for DeviceConnectManager  service. 
+2. Start the DeviceConnectManager from the launcher of Android,and turn off the slide toggle for DeviceConnectManager  service.
+3. Enable "Allow External IP" checkbox, and turn on the slide toggle for DeviceConnectManager  service.
 
 4. Add the IP address of the operation target in URL of demoWebSite on the operation side terminal.
 ```
  e.g. file:///C:/demoWebSite/demo/index.html?ip=192.168.13.3#demo
  ```
-
-
 
 #Supported devices
 <table>
@@ -128,6 +125,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Product name</td>
     <td>Device type</td>
     <td>Plug-in</td>
+    <td>Android</td>
+    <td>iOS</td>
     <td>Remarks</td>
   </tr>
   <tr>
@@ -135,6 +134,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>SmartWatchMN2</td>
     <td>Watch</td>
     <td>MN2/SW2</td>
+    <td>○</td>
+    <td>×</td>
     <td>Need the app launch on SmartWatch</td>
   </tr>
   <tr>
@@ -142,6 +143,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>SmartWatchSW2</td>
     <td>Watch</td>
     <td>MN2/SW2</td>
+    <td>○</td>
+    <td>×</td>
     <td>Need the app launch on SmartWatch</td>
   </tr>
   <tr>
@@ -149,6 +152,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Sphero 2.0</td>
     <td>Toy</td>
     <td>Sphero</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -156,6 +161,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>DICE+</td>
     <td>Toy</td>
     <td>DICE+</td>
+    <td>○</td>
+    <td>○</td>
     <td>Need the firmware for development</td>
   </tr>
   <tr>
@@ -163,6 +170,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>hue</td>
     <td>Light</td>
     <td>hue</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -170,6 +179,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Bloom Lamp</td>
     <td>Light</td>
     <td>hue</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -177,6 +188,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>LightStrips</td>
     <td>Light</td>
     <td>hue</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -184,6 +197,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>IRKit</td>
     <td>Infrared remote control</td>
     <td>IRKit</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -191,6 +206,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Moverio BT-200</td>
     <td>Glasses</td>
     <td>Android Host</td>
+    <td>○</td>
+    <td>×</td>
     <td>The future works; Support the extension</td>
   </tr>
   <tr>
@@ -198,6 +215,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>M100 Smart Glass</td>
     <td>Glasses</td>
     <td>Android Host</td>
+    <td>○</td>
+    <td>×</td>
     <td>The future works; Support the extension</td>
   </tr>
   <tr>
@@ -205,6 +224,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Inforod</td>
     <td>Glasses</td>
     <td>Android Host</td>
+    <td>○</td>
+    <td>×</td>
     <td>The future works; Support the extension</td>
   </tr>
   <tr>
@@ -212,6 +233,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>DSC-QX100</td>
     <td>Camera</td>
     <td>SonyCamera</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -219,6 +242,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>DSC-QX10</td>
     <td>Camera</td>
     <td>SonyCamera</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -226,6 +251,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Pebble</td>
     <td>Watch</td>
     <td>Pebble</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
   </tr>
   <tr>
@@ -233,6 +260,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Android Ver4.0</td>
     <td>Android</td>
     <td>Android Host</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
   <tr>
@@ -240,6 +269,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>G Watch</td>
     <td>Android  Wear</td>
     <td>Wear</td>
+    <td>○</td>
+    <td>×</td>
     <td>Provisional support</td>
   </tr>
   <tr>
@@ -247,6 +278,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Gear Live</td>
     <td>Android  Wear</td>
     <td>Wear</td>
+    <td>○</td>
+    <td>×</td>
     <td>Provisional support</td>
   </tr>
   <tr>
@@ -254,9 +287,11 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>ChromeCast</td>
     <td>ChromeCast</td>
     <td>Chromecast</td>
+    <td>○</td>
+    <td>○</td>
     <td>Need to register the Receiver Apps and device on Google Cast SDK Developer Console.</td>
   </tr>
-  
+
 <!--  <tr>
     <td>AND</td>
     <td>UA-767PBT-C</td>
@@ -402,6 +437,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>H7</td>
     <td>Heart rate meter</td>
     <td>BLE Heart Rate</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
   <tr>
@@ -409,6 +446,8 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>Mio Alpha</td>
     <td>Heart rate meter</td>
     <td>BLE Heart Rate</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
   <tr>
@@ -416,6 +455,42 @@ _*Please do not use at network that can not be trusted because there is a securi
     <td>HVC-C</td>
     <td>Human Vision Components</td>
     <td>HVC</td>
+    <td>○</td>
+    <td>×</td>
     <td></td>
   </tr>
+  <tr>
+    <td>FUJITSU</td>
+    <td>F-PLUG</td>
+    <td>Smart Meter</td>
+    <td>F-PLUG</td>
+    <td>○</td>
+    <td>×</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>RICOH</td>
+    <td>THETA m15</td>
+    <td>Spherical Camera</td>
+    <td>THETA</td>
+    <td>○</td>
+    <td>○</td>
+    <td>Need to register developer and download SDK at RICHO THETA Developers.</td>
+  </tr>
+  <tr>
+    <td>LIFX</td>
+    <td>White 800</td>
+    <td>Light</td>
+    <td>AllJoyn</td>
+    <td>○</td>
+    <td>○</td>
+    <td>White 800 can not change color.</td>
+  </tr>
 </table>
+
+* This project is not a formal service provision as NTT docomo. It is an experimental source code disclosure. The purpose is consideration of specifications and security.
+* Each manufacturer does not guarantee the operation.
+* Available functions vary with each device.
+* The source code of the plug-in will be disclosed about some equipment by convenience of development for the library to be used.
+* We will advance sequentially that updating documents and expanding enabled devices.
+* Specifications may be changed by improvement of security or other reasons.
