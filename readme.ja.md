@@ -61,8 +61,8 @@ Device Connectシステムが他のアプリケーションによってなりす
 
 # アプリケーション側の要件
 ## リクエストの発行元を明示すること
-Device Connect アプリケーションは、Device Connect システムより、リクエストの発行元に対して認可されます。 よって、Device Connect システムは発行元の明示されないリクエストに対してエラーを返却します。
-Device Connect アプリケーションは、下記のようにリクエスト時に発行元を明示する必要があります。
+OMA GotAPI v1.0 の規定に従い、Device Connect アプリケーションは、自身が HTTP リクエストの発行元である場合に、Device Connect システムよりアクセス認可されます。 つまり、Device Connect システムは発行元の明示されないHTTP リクエストに対してエラーを返却します。
+Device Connect アプリケーションは、HTTP リクエスト時に自身が発行元であることを明示する必要があります。 
 
 ### HTMLアプリケーションの場合
 [RFC6454](https://www.ietf.org/rfc/rfc6454.txt)上で定義されるOriginを`Origin`ヘッダに指定します。
