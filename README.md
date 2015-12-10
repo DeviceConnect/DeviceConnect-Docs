@@ -20,46 +20,38 @@ Thus, it is intended to improve the convenience of the connection and cooperatio
  width="251" height="235" alt="" style="text-align:center"/></a>
 
 # Security
-
-Device Connect system implements the security features that are defined on the OMA GotAPI v1.0.
-
+Device Connect system implements the security features that are defined in OMA GotAPI v1.0.
+ 
 ## Application approval feature
-
 It is the feature to block accesses from applications which are not authorized by user.
-
-When a Device Connect application accesses the Device Connect system at first, the application should get an access token with authorization. If an application tries to access the device without access token, the Device Connect system will return an error to the application.
-
-In addition, this feature can be turned OFF in the setting window of the Device Connect Manager.
-
+ 
+When a Device Connect application accesses the Device Connect system for the first time, the application should get an access token with user’s authorization. If the application tries to access the device without access token, the Device Connect system will return error to the application.
+ 
+In addition, this feature can be turned OFF on the setting window of Device Connect Manager.
+ 
 ## Server spoofing detection
-
 NOTE: This feature is currently supported by only Android version.
-
-It is the feature to detect by applications whether Device Connect system is the spoofed by other applications or not.
-
-The following is a summary of the sequence of this feature.
-
-First, an application will ask the Device Connect system to sign the response message. The request should be sent in the URL scheme. In addition, the request contains the string which is a key of the signature of response messages.
-
-If a response messages does not have a valid signature subsequently, the application which has received the response message should determine that the response message is not be sent by the valid Device Connect system.
-
-Please refer the specifications of the OMA GotAPI v1.0 for a detailed sequence.
-
+It is the feature to allow the application to detect whether Device Connect system is spoofed by other applications or not.
+ 
+The following is summary of the sequence of this feature.
+First, the application requests the Device Connect system to set a signature to response message. The request should be sent as URL scheme. In addition, the request contains a string which is key to generate signature of response message.
+ 
+If the response message does not have a valid signature the application subsequently received, the application judges that the response message should not be sent from genuine Device Connect system.
+ 
+Please refer the specifications of the OMA GotAPI v1.0 for details of sequence.
+ 
 ## Access restrictions
-
 It is the feature to prohibit accesses from applications which are not included in the white list.
-
-If this feature is turned ON, the Device Connect system checks the Origin header of the request message received from the application. If 'Origin' is not included in the white list, the Device Connect system will return an error to the application.
-
-Users can configure the Device Connect Manager to allow accesses from specific origins in the setting window of the Device Connect Manager.
-
-In addition, this feature can be turned OFF in the setting window of the Device Connect Manager.
-
-# Application Requirements
+ 
+If this feature is turned ON, the Device Connect system checks Origin header of the request message received from the application. If 'Origin' is not included in the white list, the Device Connect system will return error to the application.
+ 
+User can configure to accept accesses from the specific Origins in the settings of Device Connect Manager.
+ 
+In addition, this feature can be turned OFF on the setting window of Device Connect Manager.
+ 
+#Application Requirements
 ## Application must specify the origin of requests
-According to OMA GotAPI 1.0, the access from an Device Connect application will be authorized by the Device Connect system if the application has sent a HTTP request.
-That is why the Device Connect system returns an error response for the request which does not specify its origin.
-A Device Connect application should specify the origin of a HTTP request when the application sends the HTTP request.
+In accordance with OMA GotAPI v1.0, the access from a Device Connect application is authorized by the Device Connect system only if the application itself is the Origin of the HTTP request. The Device Connect system returns error response for HTTP request without specified Origin. Device Connect applications should specify its Origin when HTTP request.
 
 ### For HTML Applications
 HTML application must specify `Origin` header defined by [RFC6454](https://www.ietf.org/rfc/rfc6454.txt) in HTTP request header.
