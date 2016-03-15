@@ -19,8 +19,8 @@ Device Connectシステムは、マルチOS、マルチプラットフォーム�
 - 機器プロファイルによる統一的なAPI
 - ユーザによるアプリケーション認可機能
 
-<center><a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" style="text-align:center" target="_blank">
-<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_2.png" border="0"
+<center><a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/studio1_2.png" style="text-align:center" target="_blank">
+<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/studio1_2.png" border="0"
  width="251" height="235" alt="" style="text-align:center"/></a></center>
 
 # セキュリティ
