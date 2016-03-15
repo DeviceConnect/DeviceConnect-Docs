@@ -15,8 +15,8 @@ Thus, it is intended to improve the convenience of the connection and cooperatio
 - Application authorization by users
 
 
-<a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_en.png" style="text-align:center" ">
-<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/image1_en.png" border="0"
+<a href="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/studio1_en.png" style="text-align:center" ">
+<img src="https://raw.githubusercontent.com/wiki/DeviceConnect/DeviceConnect-Android/DevicePluginManual/studio1_en.png" border="0"
  width="251" height="235" alt="" style="text-align:center"/></a>
 
 # Security
