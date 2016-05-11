@@ -98,18 +98,18 @@ X-GotAPI-Origin: com.example.android.app
 
 # DeviceConnectのレポジトリ
 
-* [DeviceConnect-Android](https://github.com/DeviceConnect-Android)<br>
+* [DeviceConnect-Android](https://github.com/DeviceConnect/DeviceConnect-Android)<br>
 Android上にDeviceConnectプラットホームをサンプル実装したレポジトリです。<br>
 Android端末で、DeviceConnectを動作させたい場合には、このレポジトリからチェックアウトしてください。<br>
 <br>
-* [DeviceConnect-iOS](https://github.com/DeviceConnect-iOS)<br>
+* [DeviceConnect-iOS](https://github.com/DeviceConnect/DeviceConnect-iOS)<br>
 iOS上にDeviceConnectプラットホームをサンプル実装したレポジトリです。<br>
 iOS端末で、DeviceConnectを動作させたい場合には、このレポジトリからチェックアウトしてください。<br>
 <br>
-* [DeviceConnect-JS](https://github.com/DeviceConnect-JS)<br>
+* [DeviceConnect-JS](https://github.com/DeviceConnect/DeviceConnect-JS)<br>
 HTMLからDeviceConnectを呼び出すためのSDKを実装したレポジトリです。<br>
 <br>
-* [DeviceConnect-Common](https://github.com/DeviceConnect-Common)<br>
+* [DeviceConnect-Common](https://github.com/DeviceConnect/DeviceConnect-Common)<br>
 DeviceConnect-Android、およびDeviceConnect-iOSと連携するデバイス上で動作するアプリのレポジトリです。
 
 # サンプルでの動作確認
