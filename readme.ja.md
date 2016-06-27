@@ -479,7 +479,7 @@ Android root
   <tr>
     <td>RICOH</td>
     <td>THETA m15</td>
-    <td>Spherical Camera</td>
+    <td>全天球カメラ</td>
     <td>THETAプラグイン</td>
     <td>○</td>
     <td>○</td>
@@ -488,7 +488,7 @@ Android root
     <tr>
     <td>RICOH</td>
     <td>THETA S</td>
-    <td>Spherical Camera</td>
+    <td>全天球カメラ</td>
     <td>THETAプラグイン</td>
     <td>○</td>
     <td>○</td>
@@ -505,8 +505,17 @@ Android root
     <td>White 800の色は変えられない。</td>
   </tr>
   <tr>
-    <td>EchonetLite</td>
+    <td>LIFX</td>
+    <td>Color 1000</td>
+    <td>ライト</td>
+    <td>AllJoynプラグイン</td>
+    <td>○</td>
+    <td>○</td>
     <td></td>
+  </tr>
+  <tr>
+    <td>EchonetLite</td>
+    <td>規格準拠機器全般</td>
     <td>家電製品制御</td>
     <td>EchoneLiteプラグイン</td>
     <td>○</td>
@@ -515,7 +524,7 @@ Android root
   </tr>
   <tr>
     <td>Linking</td>
-    <td></td>
+    <td>Tomoru</td>
     <td>BLE連携デバイス</td>
     <td>Linkingプラグイン</td>
     <td>○</td>
@@ -523,18 +532,18 @@ Android root
     <td>準拠機器全般。開発中</td>
   </tr>
   <tr>
-    <td></td>
+    <td>－</td>
     <td>UVC(USB Video Class)</td>
-    <td>Webカメラ</td>
+    <td>USBカメラ</td>
     <td>UVCプラグイン</td>
     <td>○</td>
     <td>×</td>
     <td></td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td>テレビ会議</td>
+    <td>－</td>
+    <td>モバイルカメラ</td>
+    <td>テレビ会議、遠隔作業支援</td>
     <td>WebRTCプラグイン</td>
     <td>○</td>
     <td>×</td>
