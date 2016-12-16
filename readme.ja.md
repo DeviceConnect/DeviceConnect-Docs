@@ -113,7 +113,7 @@ HTMLからDeviceConnectを呼び出すためのSDKを実装したレポジトリ
 DeviceConnect-Android、およびDeviceConnect-iOSと連携するデバイス上で動作するアプリのレポジトリです。
 
 # サンプルでの動作確認
-* https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/Bin/demoWebSite.zip
+* https://github.com/DeviceConnectUsers/deviceconnectusers.github.io/releases/download/v2.0.0/demoWebSite.zip
 
 1. 内部ストレージのdemoWebSite.zipから展開したファイルを削除
 2. DeviceConnect ManagerおよびPlug-inのAPKをアンインストール
