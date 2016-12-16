@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yfromrequest_3a',['yFromRequest:',['../interface_d_connect_canvas_profile.html#af9c91a1dcc0d42c5e43f626308fa4412',1,'DConnectCanvasProfile']]]
+  ['xfromrequest_3a',['xFromRequest:',['../interface_d_connect_canvas_profile.html#a79e2f1594776b4d77c4ae1b62aa5bd58',1,'DConnectCanvasProfile']]]
 ];

@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['unregisteralleventswithaccesstoken_3a',['unregisterAllEventsWithAccessToken:',['../interface_d_connect_event_helper.html#aebb6cb5478f23b3c0ef57cd39033e5dd',1,'DConnectEventHelper']]],
-  ['unregistereventwithrequest_3aresponsehandler_3a',['unregisterEventWithRequest:responseHandler:',['../interface_d_connect_event_helper.html#a74d46e61f60d6607e46f5c29a6cd2573',1,'DConnectEventHelper']]],
-  ['updatefileforpath_3anewpath_3anewcontents_3a',['updateFileForPath:newPath:newContents:',['../interface_d_connect_file_manager.html#a08035a31271bc3f86919d336d4bd634d',1,'DConnectFileManager']]],
-  ['url',['URL',['../interface_d_connect_file_manager.html#a7364c53610fa09023e0773e5d005ed9e',1,'DConnectFileManager']]]
+  ['tagfromrequest_3a',['tagFromRequest:',['../interface_d_connect_notification_profile.html#a795bec451a7ed76f1de04157cdcb7676',1,'DConnectNotificationProfile']]],
+  ['targetfromrequest_3a',['targetFromRequest:',['../interface_d_connect_media_stream_recording_profile.html#a48fee4dce22c7d0db87b02b32216a357',1,'DConnectMediaStreamRecordingProfile']]],
+  ['timefromrequest_3a',['timeFromRequest:',['../interface_d_connect_settings_profile.html#a64dc327535da1eb86d3921d12795e9e8',1,'DConnectSettingsProfile']]],
+  ['timeslicefromrequest_3a',['timesliceFromRequest:',['../interface_d_connect_media_stream_recording_profile.html#ab08d437262a90bd049bfc30c621d32d0',1,'DConnectMediaStreamRecordingProfile']]],
+  ['tobundle',['toBundle',['../interface_d_connect_profile_spec.html#a76d8127ef8f2d7e7b406332078ebbca6',1,'DConnectProfileSpec']]],
+  ['typefromrequest_3a',['typeFromRequest:',['../interface_d_connect_notification_profile.html#a8225fea1ba6c0492d9d132cd77dc41d7',1,'DConnectNotificationProfile']]]
 ];
