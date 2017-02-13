@@ -2,6 +2,7 @@ var searchData=
 [
   ['checkparameterofevent_3a',['checkParameterOfEvent:',['../interface_d_connect_base_cache_controller.html#a4a8c80944eb5b5c4f7c101a6c4c0b2ff',1,'DConnectBaseCacheController']]],
   ['code',['code',['../interface_d_connect_response_message.html#abc090d399533d2fa444310d99fd05d87',1,'DConnectResponseMessage']]],
+  ['colorfromrequest_3a',['colorFromRequest:',['../interface_d_connect_light_profile.html#ab9a16c3c689c26fe61843e7741bf948f',1,'DConnectLightProfile']]],
   ['combinescopes_3a',['combineScopes:',['../interface_d_connect_util.html#a5e52e0ca2238d55264a2a4fccbfdc5c3',1,'DConnectUtil']]],
   ['containsobject_3a',['containsObject:',['../interface_d_connect_array.html#aa1e44b333ea30fd0f6ff411baa2476ff',1,'DConnectArray']]],
   ['controllerwithclass_3a',['controllerWithClass:',['../interface_d_connect_d_b_cache_controller.html#ac4fe8beb906a5ef87b8c7191b23a139c',1,'DConnectDBCacheController::controllerWithClass:()'],['../interface_d_connect_file_cache_controller.html#a61f4cb777f8a1eda20c0ecdc5c5138f9',1,'DConnectFileCacheController::controllerWithClass:()']]],

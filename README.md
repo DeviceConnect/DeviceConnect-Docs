@@ -99,7 +99,7 @@ In iOS terminal, if you want to operate the DeviceConnect, please check out from
 It is a repository that implements the SDK for calling DeviceConnect from HTML.
 
 # Example for Android
-* https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/Bin/demoWebSite.zip
+* https://github.com/DeviceConnectUsers/deviceconnectusers.github.io/releases/download/v2.0.0/demoWebSite.zip
 
 _Updated some package names of the sample for Android at 2014/10/15._
 _Please reinstall by following procedure if you would check this sample again._

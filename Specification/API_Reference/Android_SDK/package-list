@@ -1,4 +1,5 @@
 org.deviceconnect.android.cipher.signature
+org.deviceconnect.android.logger
 org.deviceconnect.message
 org.deviceconnect.message.basic
 org.deviceconnect.message.basic.client

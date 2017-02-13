@@ -88,7 +88,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line12">line 12</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -151,7 +151,7 @@
             
 <dt>
     
-        <h4 class="name" id="addEventListener"><span class="type-signature">(static) </span>addEventListener<span class="signature">(uri, eventCallback, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="addEventListener"><span class="type-signature">(static) </span>addEventListener<span class="signature">(uri, event_cb, {Function], {Function])</span><span class="type-signature"></span></h4>
 
         
     
@@ -217,7 +217,7 @@
 
         <tr>
             
-                <td class="name"><code>eventCallback</code></td>
+                <td class="name"><code>event_cb</code></td>
             
 
             <td class="type">
@@ -240,15 +240,10 @@
 
         <tr>
             
-                <td class="name"><code>successCallback</code></td>
+                <td class="name"><code>{Function]</code></td>
             
 
             <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
             
             </td>
 
@@ -256,22 +251,17 @@
 
             
 
-            <td class="description last">イベント登録成功コールバック</td>
+            <td class="description last">success_cb イベント登録成功コールバック</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>errorCallback</code></td>
+                <td class="name"><code>{Function]</code></td>
             
 
             <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
             
             </td>
 
@@ -279,7 +269,7 @@
 
             
 
-            <td class="description last">イベント登録失敗コールバック</td>
+            <td class="description last">error_cb イベント登録失敗コールバック</td>
         </tr>
 
     
@@ -317,7 +307,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1557">line 1557</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1731">line 1731</a>
     </li></ul></dd>
     
 
@@ -344,8 +334,8 @@
     
         <h5>Example</h5>
         
-    <pre class="prettyprint"><code>var uri = 'http://localhost:4035/gotapi/battery/onchargingchange?device=xxx&amp;sessionKey=yyy';
-dConnect.addEventListener(uri, eventCallback, successCallback, errorCallback);</code></pre>
+    <pre class="prettyprint"><code>var uri = "http://localhost:4035/gotapi/battery/onchargingchange?device=xxx&amp;clientId=yyy&amp;accessToken=zzz";
+dConnect.addEventListener(uri, event_cb, success_cb, error_cb);</code></pre>
 
     
 </dd>
@@ -354,7 +344,7 @@ dConnect.addEventListener(uri, eventCallback, successCallback, errorCallback);</
             
 <dt>
     
-        <h4 class="name" id="authorization"><span class="type-signature">(static) </span>authorization<span class="signature">(scopes, applicationName, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="authorization"><span class="type-signature">(static) </span>authorization<span class="signature">(scopes, applicationName, success_cb, error_cb)</span><span class="type-signature"></span></h4>
 
         
     
@@ -433,7 +423,7 @@ dConnect.addEventListener(uri, eventCallback, successCallback, errorCallback);</
 
         <tr>
             
-                <td class="name"><code>successCallback</code></td>
+                <td class="name"><code>success_cb</code></td>
             
 
             <td class="type">
@@ -451,7 +441,7 @@ dConnect.addEventListener(uri, eventCallback, successCallback, errorCallback);</
 
         <tr>
             
-                <td class="name"><code>errorCallback</code></td>
+                <td class="name"><code>error_cb</code></td>
             
 
             <td class="type">
@@ -500,7 +490,7 @@ dConnect.addEventListener(uri, eventCallback, successCallback, errorCallback);</
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1612">line 1612</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1785">line 1785</a>
     </li></ul></dd>
     
 
@@ -531,8 +521,8 @@ dConnect.addEventListener(uri, eventCallback, successCallback, errorCallback);</
 var scopes = Array('servicediscovery', 'sysytem', 'battery');
 // 認可を実行
 dConnect.authorization(scopes, 'サンプル',
-    function(clientId, accessToken) {
-        // clientId, accessTokenを保存して、プロファイルにアクセス
+    function(clientId, clientSecret, accessToken) {
+        // clientId, clientSecret, accessTokenを保存して、プロファイルにアクセス
     },
     function(errorCode, errorMessage) {
         alert('Failed to get accessToken.');
@@ -545,7 +535,7 @@ dConnect.authorization(scopes, 'サンプル',
             
 <dt>
     
-        <h4 class="name" id="checkDeviceConnect"><span class="type-signature">(static) </span>checkDeviceConnect<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="checkDeviceConnect"><span class="type-signature">(static) </span>checkDeviceConnect<span class="signature">(success_cb, error_cb)</span><span class="type-signature"></span></h4>
 
         
     
@@ -589,7 +579,7 @@ dConnect.authorization(scopes, 'サンプル',
 
         <tr>
             
-                <td class="name"><code>successCallback</code></td>
+                <td class="name"><code>success_cb</code></td>
             
 
             <td class="type">
@@ -612,7 +602,7 @@ dConnect.authorization(scopes, 'サンプル',
 
         <tr>
             
-                <td class="name"><code>errorCallback</code></td>
+                <td class="name"><code>error_cb</code></td>
             
 
             <td class="type">
@@ -666,7 +656,7 @@ dConnect.authorization(scopes, 'サンプル',
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1535">line 1535</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1709">line 1709</a>
     </li></ul></dd>
     
 
@@ -794,7 +784,7 @@ dConnect.authorization(scopes, 'サンプル',
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1705">line 1705</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1878">line 1878</a>
     </li></ul></dd>
     
 
@@ -835,7 +825,7 @@ dConnect.authorization(scopes, 'サンプル',
             
 <dt>
     
-        <h4 class="name" id="connectWebSocket"><span class="type-signature">(static) </span>connectWebSocket<span class="signature">(sessionKey<span class="signature-attributes">non-null</span>, cb)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="connectWebSocket"><span class="type-signature">(static) </span>connectWebSocket<span class="signature">(accessToken<span class="signature-attributes">non-null</span>, cb)</span><span class="type-signature"></span></h4>
 
         
     
@@ -884,7 +874,7 @@ dConnect.isConnectedWebSocket()を用いて、接続確認はできるので、
 
         <tr>
             
-                <td class="name"><code>sessionKey</code></td>
+                <td class="name"><code>accessToken</code></td>
             
 
             <td class="type">
@@ -900,7 +890,7 @@ dConnect.isConnectedWebSocket()を用いて、接続確認はできるので、
 
             
 
-            <td class="description last">Device Connect側に要求したいイベント用WebSocketの識別子</td>
+            <td class="description last">Device Connectシステムから取得したアクセストークン</td>
         </tr>
 
     
@@ -956,7 +946,7 @@ dConnect.isConnectedWebSocket()を用いて、接続確認はできるので、
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1802">line 1802</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1986">line 1986</a>
     </li></ul></dd>
     
 
@@ -984,7 +974,7 @@ dConnect.isConnectedWebSocket()を用いて、接続確認はできるので、
         <h5>Example</h5>
         
     <pre class="prettyprint"><code>// Websocketを開く
-dConnect.connectWebSocket(sessionKey, function(eventCode, message) {
+dConnect.connectWebSocket(accessToken, function(eventCode, message) {
 });</code></pre>
 
     
@@ -1104,7 +1094,7 @@ dConnect.connectWebSocket(sessionKey, function(eventCode, message) {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1640">line 1640</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1813">line 1813</a>
     </li></ul></dd>
     
 
@@ -1195,7 +1185,7 @@ dConnect.connectWebSocket(sessionKey, function(eventCode, message) {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1866">line 1866</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line2074">line 2074</a>
     </li></ul></dd>
     
 
@@ -1369,7 +1359,7 @@ dConnect.connectWebSocket(sessionKey, function(eventCode, message) {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1486">line 1486</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1613">line 1613</a>
     </li></ul></dd>
     
 
@@ -1400,6 +1390,214 @@ dConnect.connectWebSocket(sessionKey, function(eventCode, message) {
 dConnect.discoverDevices(accessToken,
     function(json) {
         var devices = json.services;
+    },
+    function(errorCode, errorMessage) {
+    });</code></pre>
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="discoverDevicesFromProfile"><span class="type-signature">(static) </span>discoverDevicesFromProfile<span class="signature">(profileName, accessToken, success_cb, error_cb)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        プロファイル名からサービス一覧を取得するためのAPIを提供する。
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>profileName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">プロファイル名</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>accessToken</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">アクセストークン</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>success_cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">成功時コールバック。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error_cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">失敗時コールバック。</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1637">line 1637</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>// サービスの検索
+discoverDevicesFromProfile('battery', accessToken,
+    function(json) {
+        var services = json.services;
     },
     function(errorCode, errorMessage) {
     });</code></pre>
@@ -1618,7 +1816,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1417">line 1417</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1518">line 1518</a>
     </li></ul></dd>
     
 
@@ -1705,7 +1903,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1779">line 1779</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1963">line 1963</a>
     </li></ul></dd>
     
 
@@ -1758,7 +1956,7 @@ dConnect.discoverDevices(accessToken,
             
 <dt>
     
-        <h4 class="name" id="getSystemDeviceInfo"><span class="type-signature">(static) </span>getSystemDeviceInfo<span class="signature">(serviceId, accessToken, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="getSystemDeviceInfo"><span class="type-signature">(static) </span>getSystemDeviceInfo<span class="signature">(serviceId, accessToken, success_cb, error_cb)</span><span class="type-signature"></span></h4>
 
         
     
@@ -1847,7 +2045,7 @@ dConnect.discoverDevices(accessToken,
 
         <tr>
             
-                <td class="name"><code>successCallback</code></td>
+                <td class="name"><code>success_cb</code></td>
             
 
             <td class="type">
@@ -1870,7 +2068,7 @@ dConnect.discoverDevices(accessToken,
 
         <tr>
             
-                <td class="name"><code>errorCallback</code></td>
+                <td class="name"><code>error_cb</code></td>
             
 
             <td class="type">
@@ -1924,7 +2122,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1503">line 1503</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1678">line 1678</a>
     </li></ul></dd>
     
 
@@ -1955,7 +2153,7 @@ dConnect.discoverDevices(accessToken,
             
 <dt>
     
-        <h4 class="name" id="getSystemInfo"><span class="type-signature">(static) </span>getSystemInfo<span class="signature">(successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="getSystemInfo"><span class="type-signature">(static) </span>getSystemInfo<span class="signature">(accessToken, success_cb, error_cb)</span><span class="type-signature"></span></h4>
 
         
     
@@ -1998,7 +2196,30 @@ dConnect.discoverDevices(accessToken,
 
         <tr>
             
-                <td class="name"><code>successCallback</code></td>
+                <td class="name"><code>accessToken</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">アクセストークン</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>success_cb</code></td>
             
 
             <td class="type">
@@ -2021,7 +2242,7 @@ dConnect.discoverDevices(accessToken,
 
         <tr>
             
-                <td class="name"><code>errorCallback</code></td>
+                <td class="name"><code>error_cb</code></td>
             
 
             <td class="type">
@@ -2075,7 +2296,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1520">line 1520</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1694">line 1694</a>
     </li></ul></dd>
     
 
@@ -2155,7 +2376,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1206">line 1206</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1244">line 1244</a>
     </li></ul></dd>
     
 
@@ -2248,7 +2469,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1738">line 1738</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1913">line 1913</a>
     </li></ul></dd>
     
 
@@ -2458,7 +2679,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1402">line 1402</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1503">line 1503</a>
     </li></ul></dd>
     
 
@@ -2658,7 +2879,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1355">line 1355</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1456">line 1456</a>
     </li></ul></dd>
     
 
@@ -2876,7 +3097,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1387">line 1387</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1488">line 1488</a>
     </li></ul></dd>
     
 
@@ -3094,7 +3315,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1371">line 1371</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1472">line 1472</a>
     </li></ul></dd>
     
 
@@ -3125,7 +3346,7 @@ dConnect.discoverDevices(accessToken,
             
 <dt>
     
-        <h4 class="name" id="removeEventListener"><span class="type-signature">(static) </span>removeEventListener<span class="signature">(uri, successCallback, errorCallback)</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="removeEventListener"><span class="type-signature">(static) </span>removeEventListener<span class="signature">(uri, {Function], {Function])</span><span class="type-signature"></span></h4>
 
         
     
@@ -3191,15 +3412,10 @@ dConnect.discoverDevices(accessToken,
 
         <tr>
             
-                <td class="name"><code>successCallback</code></td>
+                <td class="name"><code>{Function]</code></td>
             
 
             <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
             
             </td>
 
@@ -3207,22 +3423,17 @@ dConnect.discoverDevices(accessToken,
 
             
 
-            <td class="description last">イベント登録解除成功コールバック</td>
+            <td class="description last">success_cb イベント登録解除成功コールバック</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>errorCallback</code></td>
+                <td class="name"><code>{Function]</code></td>
             
 
             <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
             
             </td>
 
@@ -3230,7 +3441,7 @@ dConnect.discoverDevices(accessToken,
 
             
 
-            <td class="description last">イベント登録解除失敗コールバック</td>
+            <td class="description last">error_cb イベント登録解除失敗コールバック</td>
         </tr>
 
     
@@ -3268,7 +3479,7 @@ dConnect.discoverDevices(accessToken,
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1582">line 1582</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1755">line 1755</a>
     </li></ul></dd>
     
 
@@ -3295,8 +3506,8 @@ dConnect.discoverDevices(accessToken,
     
         <h5>Example</h5>
         
-    <pre class="prettyprint"><code>var uri = 'http://localhost:4035/gotapi/battery/onchargingchange?device=xxx&amp;sessionKey=yyy';
-dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
+    <pre class="prettyprint"><code>var uri = "http://localhost:4035/gotapi/battery/onchargingchange?device=xxx&amp;clientId=yyy&amp;accessToken=zzz";
+dConnect.removeEventListener(uri, success_cb, error_cb);</code></pre>
 
     
 </dd>
@@ -3469,7 +3680,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1674">line 1674</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1847">line 1847</a>
     </li></ul></dd>
     
 
@@ -3721,7 +3932,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1310">line 1310</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1402">line 1402</a>
     </li></ul></dd>
     
 
@@ -3844,7 +4055,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1196">line 1196</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1234">line 1234</a>
     </li></ul></dd>
     
 
@@ -3973,7 +4184,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1759">line 1759</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1943">line 1943</a>
     </li></ul></dd>
     
 
@@ -4101,7 +4312,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1748">line 1748</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1932">line 1932</a>
     </li></ul></dd>
     
 
@@ -4228,7 +4439,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1220">line 1220</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1258">line 1258</a>
     </li></ul></dd>
     
 
@@ -4356,7 +4567,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1769">line 1769</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1953">line 1953</a>
     </li></ul></dd>
     
 
@@ -4487,7 +4698,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1725">line 1725</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1900">line 1900</a>
     </li></ul></dd>
     
 
@@ -4518,7 +4729,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
             
 <dt>
     
-        <h4 class="name" id="startManager"><span class="type-signature">(static) </span>startManager<span class="signature">()</span><span class="type-signature"></span></h4>
+        <h4 class="name" id="setURISchemeName"><span class="type-signature">(static) </span>setURISchemeName<span class="signature">(name)</span><span class="type-signature"></span></h4>
 
         
     
@@ -4527,7 +4738,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
 
     
     <div class="description">
-        Device Connect Managerを起動する.
+        Manager起動用URIスキームの名前を設定する.
     </div>
     
 
@@ -4535,6 +4746,54 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
 
     
 
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Manager起動用URIスキームの名前</td>
+        </tr>
+
+    
+    </tbody>
+</table>
     
 
     
@@ -4567,7 +4826,253 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1272">line 1272</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1923">line 1923</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="startManager"><span class="type-signature">(static) </span>startManager<span class="signature">(state)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect Managerを起動する.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>state</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">起動画面を出すか出さないか</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1315">line 1315</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<dt>
+    
+        <h4 class="name" id="stopManager"><span class="type-signature">(static) </span>stopManager<span class="signature">(state)</span><span class="type-signature"></span></h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Device Connect Managerを停止する.
+    </div>
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>state</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">停止画面を出すか出さないか</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1364">line 1364</a>
     </li></ul></dd>
     
 
@@ -4744,7 +5249,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1142">line 1142</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1180">line 1180</a>
     </li></ul></dd>
     
 
@@ -4918,7 +5423,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dconnectsdk-2.0.0.js.html">dconnectsdk-2.0.0.js</a>, <a href="dconnectsdk-2.0.0.js.html#line1134">line 1134</a>
+        <a href="dconnectsdk-2.1.0.js.html">dconnectsdk-2.1.0.js</a>, <a href="dconnectsdk-2.1.0.js.html#line1172">line 1172</a>
     </li></ul></dd>
     
 
@@ -4965,7 +5470,7 @@ dConnect.removeEventListener(uri, successCallback, errorCallback);</code></pre>
 <br clear="both">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-dev</a> on Wed Mar 25 2015 20:33:49 GMT+0900 (JST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-dev</a> on Wed Sep 28 2016 07:06:46 GMT+0900 (JST)
 </footer>
 
 <script> prettyPrint(); </script>

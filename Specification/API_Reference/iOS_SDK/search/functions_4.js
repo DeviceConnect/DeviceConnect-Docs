@@ -2,7 +2,7 @@ var searchData=
 [
   ['enumeratorwithoptions_3adirpath_3a',['enumeratorWithOptions:dirPath:',['../interface_d_connect_file_manager.html#afab03ddc4d1fde6594510a2cd7e0cea6',1,'DConnectFileManager']]],
   ['errorcode',['errorCode',['../interface_d_connect_response_message.html#a2ea3428063b6594ac178792766f140a3',1,'DConnectResponseMessage']]],
-  ['eventforserviceid_3aprofile_3ainterface_3aattribute_3asessionkey_3a',['eventForServiceId:profile:interface:attribute:sessionKey:',['../protocol_d_connect_event_cache_controller-p.html#ac228df6338a726d3ac0a690b9ea1cb5c',1,'DConnectEventCacheController-p']]],
+  ['eventforserviceid_3aprofile_3ainterface_3aattribute_3aorigin_3a',['eventForServiceId:profile:interface:attribute:origin:',['../protocol_d_connect_event_cache_controller-p.html#a1fd7e529442988fc78465aa9ef15948b',1,'DConnectEventCacheController-p']]],
   ['eventlistforprofile_3aattribute_3a',['eventListForProfile:attribute:',['../interface_d_connect_event_manager.html#afc26b42d9c3c37be4acfe47a91321551',1,'DConnectEventManager']]],
   ['eventlistforprofile_3ainterface_3aattribute_3a',['eventListForProfile:interface:attribute:',['../interface_d_connect_event_manager.html#ad820cb67b679b3da2c03c6ad433df128',1,'DConnectEventManager']]],
   ['eventlistforserviceid_3aprofile_3aattribute_3a',['eventListForServiceId:profile:attribute:',['../interface_d_connect_event_manager.html#a1c4c040ca219f7b75214fca8cba974c6',1,'DConnectEventManager']]],
