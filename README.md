@@ -98,6 +98,23 @@ In iOS terminal, if you want to operate the DeviceConnect, please check out from
 * [DeviceConnect-JS](https://github.com/DeviceConnect/DeviceConnect-JS)<br>
 It is a repository that implements the SDK for calling DeviceConnect from HTML.
 
+* [DeviceConnect-Common](https://github.com/DeviceConnect/DeviceConnect-Common)<br>
+DeviceConnect-Android, and a repository of applications that run on devices that work with DeviceConnect-iOS.
+<br>
+* [DeviceConnect-NodeJS](https://github.com/DeviceConnect/DeviceConnect-NodeJS)<br>
+It is a repository that implements DeviceConnect platform on RaspberryPi.
+<br>
+* [DeviceConnect-Experiments](https://github.com/DeviceConnect/DeviceConnect-Experiments)<br>
+It is a repository that arranges experimental applications such as DeviceConnect.
+<br>
+* [DeviceConnect-PodSpecs](https://github.com/DeviceConnect/DeviceConnect-PodSpecs)<br>
+It is a repository that manages configuration files for importing DeviceConnect-iOS libraries using CocoaPod.
+<br>
+* [DeviceConnect-Spec](https://github.com/DeviceConnect/DeviceConnect-PodSpecs)<br>
+It is a repository that manages the specification of DeviceConnect API for each profile.<br>
+It is defined based on Swagger 2.0.
+<br>
+
 # Example for Android
 * https://github.com/DeviceConnectUsers/deviceconnectusers.github.io/releases/download/v2.0.0/demoWebSite.zip
 
