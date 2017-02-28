@@ -89,26 +89,23 @@ The basic sequence of Device Connect is shown below.
 
 * [DeviceConnect-Android](https://github.com/DeviceConnect/DeviceConnect-Android)<br>
 It is a repository that sample implement DeviceConnect platform on Android.<br>
-In Android terminal, if you want to operate the DeviceConnect, please check out from this repository.<br>
-<br>
+In Android terminal, if you want to operate the DeviceConnect, please check out from this repository.<br><br>
 * [DeviceConnect-iOS](https://github.com/DeviceConnect/DeviceConnect-iOS)<br>
 It is a repository that sample implement DeviceConnect platform on iOS.<br>
-In iOS terminal, if you want to operate the DeviceConnect, please check out from this repository.<br>
-<br>
+In iOS terminal, if you want to operate the DeviceConnect, please check out from this repository.<br><br>
 * [DeviceConnect-JS](https://github.com/DeviceConnect/DeviceConnect-JS)<br>
-It is a repository that implements the SDK for calling DeviceConnect from HTML.
-
+It is a repository that implements the SDK for calling DeviceConnect from HTML.<br>
 * [DeviceConnect-Common](https://github.com/DeviceConnect/DeviceConnect-Common)<br>
-DeviceConnect-Android, and a repository of applications that run on devices that work with DeviceConnect-iOS.
+DeviceConnect-Android, and a repository of applications that run on devices that work with DeviceConnect-iOS.<br>
 <br>
 * [DeviceConnect-NodeJS](https://github.com/DeviceConnect/DeviceConnect-NodeJS)<br>
-It is a repository that implements DeviceConnect platform on RaspberryPi.
+It is a repository that implements DeviceConnect platform on RaspberryPi.<br>
 <br>
 * [DeviceConnect-Experiments](https://github.com/DeviceConnect/DeviceConnect-Experiments)<br>
-It is a repository that arranges experimental applications such as DeviceConnect.
+It is a repository that arranges experimental applications such as DeviceConnect.<br>
 <br>
 * [DeviceConnect-PodSpecs](https://github.com/DeviceConnect/DeviceConnect-PodSpecs)<br>
-It is a repository that manages configuration files for importing DeviceConnect-iOS libraries using CocoaPod.
+It is a repository that manages configuration files for importing DeviceConnect-iOS libraries using CocoaPod.<br>
 <br>
 * [DeviceConnect-Spec](https://github.com/DeviceConnect/DeviceConnect-PodSpecs)<br>
 It is a repository that manages the specification of DeviceConnect API for each profile.<br>

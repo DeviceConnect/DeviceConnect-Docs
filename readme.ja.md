@@ -110,21 +110,22 @@ iOS端末で、DeviceConnectを動作させたい場合には、このレポジ�
 HTMLからDeviceConnectを呼び出すためのSDKを実装したレポジトリです。<br>
 <br>
 * [DeviceConnect-Common](https://github.com/DeviceConnect/DeviceConnect-Common)<br>
-DeviceConnect-Android、およびDeviceConnect-iOSと連携するデバイス上で動作するアプリのレポジトリです。
+DeviceConnect-Android、およびDeviceConnect-iOSと連携するデバイス上で動作するアプリのレポジトリです。<br>
 <br>
 * [DeviceConnect-NodeJS](https://github.com/DeviceConnect/DeviceConnect-NodeJS)<br>
 RaspberryPi上にDeviceConnectプラットホームをサンプル実装したレポジトリです。<br>
 <br>
 * [DeviceConnect-Experiments](https://github.com/DeviceConnect/DeviceConnect-Experiments)<br>
-DeviceConnectの実験的なアプリなどを配置するレポジトリです。
+DeviceConnectの実験的なアプリなどを配置するレポジトリです。<br>
 <br>
 * [DeviceConnect-PodSpecs](https://github.com/DeviceConnect/DeviceConnect-PodSpecs)<br>
-DeviceConnect-iOSのライブラリをCocoaPodを利用してインポートするための設定ファイルを管理するレポジトリです。
+DeviceConnect-iOSのライブラリをCocoaPodを利用してインポートするための設定ファイルを管理するレポジトリです。<br>
 <br>
 * [DeviceConnect-Spec](https://github.com/DeviceConnect/DeviceConnect-PodSpecs)<br>
 DeviceConnectAPIの仕様をプロファイルごとに管理するレポジトリです。<br>
 Swagger2.0を元に定義されています。<br>
 <br>
+
 # サンプルでの動作確認
 * https://github.com/DeviceConnectUsers/deviceconnectusers.github.io/releases/download/v2.0.0/demoWebSite.zip
 
