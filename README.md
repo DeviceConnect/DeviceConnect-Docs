@@ -90,11 +90,9 @@ The basic sequence of Device Connect is shown below.
 * [DeviceConnect-Android](https://github.com/DeviceConnect/DeviceConnect-Android)<br>
 It is a repository that sample implement DeviceConnect platform on Android.<br>
 In Android terminal, if you want to operate the DeviceConnect, please check out from this repository.<br>
-<br>
 * [DeviceConnect-iOS](https://github.com/DeviceConnect/DeviceConnect-iOS)<br>
 It is a repository that sample implement DeviceConnect platform on iOS.<br>
 In iOS terminal, if you want to operate the DeviceConnect, please check out from this repository.<br>
-<br>
 * [DeviceConnect-JS](https://github.com/DeviceConnect/DeviceConnect-JS)<br>
 It is a repository that implements the SDK for calling DeviceConnect from HTML.
 

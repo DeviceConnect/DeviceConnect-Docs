@@ -125,6 +125,7 @@ DeviceConnect-iOSのライブラリをCocoaPodを利用してインポートす�
 DeviceConnectAPIの仕様をプロファイルごとに管理するレポジトリです。<br>
 Swagger2.0を元に定義されています。<br>
 <br>
+
 # サンプルでの動作確認
 * https://github.com/DeviceConnectUsers/deviceconnectusers.github.io/releases/download/v2.0.0/demoWebSite.zip
 
