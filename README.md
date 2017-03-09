@@ -1,5 +1,4 @@
-Click [here](https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/readme.en.md)
- for description of English. 
+Click [here](readme.en.md) for description of English. 
  
 # Device Connectシステムについて
 
