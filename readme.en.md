@@ -1,10 +1,7 @@
-* 日本語説明は[こちら](https://github.com/DeviceConnect/DeviceConnect-Docs/blob/master/README.md)
+* 日本語説明は[こちら](README.md)
 
 # About DeviceConnect System
 Device Connect system is a Web API that run as a virtual server on a smartphone, and easy to use the wearable device and IoT device from Browser or application.
-
-* It corresponds to Android, iOS.
-* 
 
 Click [here](https://github.com/DeviceConnect/DeviceConnect-Docs/wiki)
  about DeviceConnect System. 
