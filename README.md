@@ -15,7 +15,7 @@ Device Connect システムはスマートフォン上で仮想サーバとし�
 
 # DeviceConnectのレポジトリ
 
-* [DeviceConnect-Spec](https://github.com/DeviceConnect/DeviceConnect-Specs)<br>
+* [DeviceConnect-Spec](https://github.com/DeviceConnect/DeviceConnect-Spec)<br>
 DeviceConnectAPIの仕様をプロファイルごとに管理するレポジトリです。<br>
 各プロファイルの仕様は、[Swagger2.0](http://swagger.io/specification/)を元に定義されています。
 
