@@ -8,7 +8,7 @@ Click [here](https://github.com/DeviceConnect/DeviceConnect-Docs/wiki)
 
 # Repository of DeviceConnect
 
-* [DeviceConnect-Spec](https://github.com/DeviceConnect/DeviceConnect-PodSpecs)<br>
+* [DeviceConnect-Spec](https://github.com/DeviceConnect/DeviceConnect-Spec)<br>
 It is a repository that manages the specification of DeviceConnect API for each profile.<br>
 It is defined based on Swagger 2.0.
 
