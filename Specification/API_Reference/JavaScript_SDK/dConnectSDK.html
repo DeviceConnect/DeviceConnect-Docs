@@ -1,0 +1,5385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: dConnectSDK</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: dConnectSDK</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>dConnectSDK<span class="signature">(settings)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">Device Connect SDK</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="dConnectSDK"><span class="type-signature"></span>new dConnectSDK<span class="signature">(settings)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>settings</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストの設定値.以下の値が設定できる.値は省略可能.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const sdk = new dConnectSDK({
+ sslEnabled: false,
+ uriSchemeName: 'gotapi',
+ host: '192.168.0.24',
+ port: 4035,
+ extendedOrigin: 'http://localhost:4035/',
+ isEnabledAntiSpoofing: false
+});
+
+sslEnabled: HTTPおよびWebSocket通信でSSLを使用するかどうかを指定するフラグ.
+uriSchemeName: Manager起動用URIスキームの名前.
+host: ホスト名.
+port: ポート番号.
+extendedOrigin: ハイブリッドアプリとしてのオリジン.
+isEnabledAntiSpoofing: HMACによるサーバ認証を行うかどうかのフラグ.
+appName: LocalOAuth用のアプリケーション名.
+scopes: LocalOAuthで許可を得たいプロファイル名の配列.</code></pre>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="dConnectSDK.URIBuilder.html">URIBuilder</a></dt>
+            <dd></dd>
+        
+            <dt><a href="dConnectSDK-AndroidURISchemeBuilder.html">AndroidURISchemeBuilder</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Namespaces</h3>
+
+        <dl>
+            <dt><a href="dConnectSDK.constants.html">constants</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".HEADER_EXTENDED_ORIGIN"><span class="type-signature">(static) </span>HEADER_EXTENDED_ORIGIN<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    ハイブリッドアプリのオリジンを指定するリクエストヘッダ名.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1811">line 1811</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".HMAC_KEY_BYTES"><span class="type-signature">(static) </span>HMAC_KEY_BYTES<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Device Connect Managerへ送信するHMAC生成キーの長さ. 単位はバイト.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1820">line 1820</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".INIT_SCOPES"><span class="type-signature">(static) </span>INIT_SCOPES<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Device Connectでサポートしているすべてのプロファイル.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1825">line 1825</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".NONCE_BYTES"><span class="type-signature">(static) </span>NONCE_BYTES<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    Device Connect Managerへ送信するリクエストのnonceの長さ. 単位はバイト.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1815">line 1815</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="~self"><span class="type-signature">(inner) </span>self<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    内部クラスで循環参照を防ぐ.
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line190">line 190</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.appendScope"><span class="type-signature">(static) </span>this.appendScope<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    scopesにプロファイルを追加する.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line195">line 195</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.authorization"><span class="type-signature">(static) </span>this.authorization<span class="signature">(scopes, applicationName)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    dConnectManagnerに認可を求める.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scopes</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">使用するスコープの配列</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>applicationName</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">アプリ名</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1313">line 1313</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 初期化
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+// アクセスするプロファイル一覧を定義
+const scopes = Array('servicediscovery', 'sysytem', 'battery');
+// 認可を実行
+sdk.authorization(scopes, 'サンプル')
+     .then(accessToken => {
+        // accessTokenを保存して、プロファイルにアクセス
+    }).catch(e => {
+        alert('Failed to get accessToken.');
+    });</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.checkDeviceConnect"><span class="type-signature">(static) </span>this.checkDeviceConnect<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Device Connect Managerが起動しているチェックする。そもそもインストールされていなければ、インストール
+画面へと進ませる。
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1126">line 1126</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.combineScope"><span class="type-signature">(static) </span>this.combineScope<span class="signature">(scopes)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    スコープの配列を文字列に置換する.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scopes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">スコープ一覧</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1443">line 1443</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <String> 連結されたスコープ一覧
+</div>
+
+
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.connectWebSocket"><span class="type-signature">(static) </span>this.connectWebSocket<span class="signature">(cb)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    WebSocketを開く.
+<p>
+WebSocketは、一つしか接続することができない。
+sdk.isConnectedWebSocket()を用いて、接続確認はできるので、
+接続されている場合には、一度、sdk.disconnectWebSocket()で
+切断してから、再度接続処理を行って下さい。
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">WebSocketの開閉イベントを受け取るコールバック関数</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1550">line 1550</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// Websocketを開く
+sdk.connectWebSocket(s => {
+  // WebSocketの接続状態のオブジェクトが返ってくる.
+}).catch(e => {
+  // エラーコードを返す.
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.containsScope"><span class="type-signature">(static) </span>this.containsScope<span class="signature">()</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    scopesにすでに指定したプロファイルが追加されているか.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line214">line 214</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    true:すでにscopesに指定したプロファイルが追加されている.<br>
+                  false: プロファイルが追加されていない.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.converObjToUri"><span class="type-signature">(static) </span>this.converObjToUri<span class="signature">()</span><span class="type-signature"> &rarr; {object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    オブジェクトの引数をURIBuilderに変換する.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line821">line 821</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    パラメータ
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.createClient"><span class="type-signature">(static) </span>this.createClient<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    クライアントを作成する.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1381">line 1381</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 初期化
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.createClient()
+    .then(clientId => {
+        // clientIdを保存して、アクセストークンの取得に使用する
+    }).catch(e => {
+    }
+);</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.delete"><span class="type-signature">(static) </span>this.delete<span class="signature">(request, header)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    HTTPリクエストのDELETEメソッドへの簡易アクセスを提供する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>request</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストパラメータのJavaScriptのオブジェクト.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">HTTPリクエストのヘッダーに含める項目</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1116">line 1116</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 初期化
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.delete({
+  profile: "test",
+  interface: "test",
+  attribute: "test",
+  params : {
+   serviceId: "testId"
+  }
+})
+.then(json => {
+
+}).catch(e => {
+
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.disconnectWebSocket"><span class="type-signature">(static) </span>this.disconnectWebSocket<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    WebSocketを切断する.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1667">line 1667</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.discoverDevices"><span class="type-signature">(static) </span>this.discoverDevices<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Service Discovery APIへの簡易アクセスを提供する。
+アクセストークンが取得されていない場合は自動で取得処理を行います。
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1157">line 1157</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 初期化
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.discoverDevices()
+    .then(json => {
+        let devices = json.services;
+    }).catch(e => {
+    });</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.discoverDevicesFromProfile"><span class="type-signature">(static) </span>this.discoverDevicesFromProfile<span class="signature">(profileName)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    プロファイル名からサービス一覧を取得するためのAPIを提供する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>profileName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">プロファイル名</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1255">line 1255</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 初期化
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+// サービスの検索
+sdk.discoverDevicesFromProfile('battery')
+    .then(json => {
+        let services = json.services;
+    }.catch(e => {
+    });</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.execute"><span class="type-signature">(static) </span>this.execute<span class="signature">(method, uri, header, body)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    REST API呼び出し.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>method</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">HTTPメソッド</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>uri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">URI</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">HTTPリクエストヘッダー。Key-Valueマップで渡す。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>body</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">コンテンツデータ</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line895">line 895</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>sendRequest</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.get"><span class="type-signature">(static) </span>this.get<span class="signature">(request, header)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    HTTPリクエストのGETメソッドへの簡易アクセスを提供する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>request</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストパラメータのJavaScriptのオブジェクト.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">HTTPリクエストのヘッダーに含める項目</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1023">line 1023</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// デバイスの検索
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.get({
+  profile: "test",
+  interface: "test",
+  attribute: "test",
+  params: {
+    serviceId: "testId"
+  }
+})
+.then(json => {
+
+}).catch(e => {
+
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.getAccessToken"><span class="type-signature">(static) </span>this.getAccessToken<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    アクセストークンを取得する.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line813">line 813</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    アクセストークン
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.getBaseDomain"><span class="type-signature">(static) </span>this.getBaseDomain<span class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    ベースとなるドメイン名を取得する.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line805">line 805</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    ドメイン名
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.getSystemDeviceInfo"><span class="type-signature">(static) </span>this.getSystemDeviceInfo<span class="signature">(serviceId)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Service Information APIへの簡易アクセスを提供する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>serviceId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">サービスID</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1190">line 1190</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 初期化
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.getSystemDeviceInfo()
+    .then(json => {
+
+    }).catch(e => {
+    });</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.getSystemInfo"><span class="type-signature">(static) </span>this.getSystemInfo<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    System APIへの簡易アクセスを提供する。
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1222">line 1222</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 初期化
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.getSystemInfo()
+    .then(json => {
+
+    }).catch(e => {
+    });</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.isEnabledAntiSpoofing"><span class="type-signature">(static) </span>this.isEnabledAntiSpoofing<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    サーバからのレスポンス受信時にサーバの認証を行うかどうかのフラグを取得する.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line684">line 684</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    サーバの認証を行う場合はtrue、そうでない場合はfalse
+</div>
+
+
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.isSSLEnabled"><span class="type-signature">(static) </span>this.isSSLEnabled<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    HTTPおよびWebSocket通信でSSLを使用するかどうかを取得する.
+<p>
+デフォルト設定ではSSLは使用しない。
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line759">line 759</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    SSLを使用する場合はtrue、使用しない場合はfalse
+</div>
+
+
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.post"><span class="type-signature">(static) </span>this.post<span class="signature">(request, header)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    HTTPリクエストのPOSTメソッドへの簡易アクセスを提供する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>request</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストパラメータのJavaScriptのオブジェクト(URIにパラメータを付加する場合).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">HTTPリクエストのヘッダーに含める項目</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1054">line 1054</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// デバイスの検索
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.post({
+  profile: "test",
+  interface: "test",
+  attribute: "test"
+  body: {
+   serviceId: "testId"
+  }
+})
+.then(json => {
+
+}).catch(e => {
+
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.put"><span class="type-signature">(static) </span>this.put<span class="signature">(request, header)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    HTTPリクエストのPUTメソッドへの簡易アクセスを提供する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>request</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストパラメータのJavaScriptのオブジェクト(URIにパラメータを付加する場合).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">HTTPリクエストのヘッダーに含める項目</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1085">line 1085</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// デバイスの検索
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.put({
+  profile: "test",
+  interface: "test",
+  attribute: "test"
+  body: {
+   serviceId: "testId"
+  }
+})
+.then(json => {
+
+}).catch(e => {
+
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.removeEventListener"><span class="type-signature">(static) </span>this.removeEventListener<span class="signature">(request)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    指定されたDevice Connect Event APIからイベントリスナーを削除する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>request</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">特定のDevice Connect Event APIを表すURI（オブジェクト）</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1516">line 1516</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const sdk = new dConnectSDK({
+ host: '192.168.0.24',
+  port: 4035
+});
+sdk.removeEventListener({
+  profile: 'deviceorientation',
+  attribute: 'ondeviceorientation',
+  serviceId: 'Host.xxxxxxx.localhost.deviceconnect.org'
+}).then(json => {
+  sdk.disconnectWebSocket(); //WebSocketの切断
+}).catch (e => {
+
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.requestAccessToken"><span class="type-signature">(static) </span>this.requestAccessToken<span class="signature">(clientId, scopes, applicationName)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    アクセストークンを要求する.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>clientId</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">クライアントID</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scopes</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">スコープ一覧(配列)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>applicationName</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">アプリ名</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1417">line 1417</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// 初期化
+const sdk = new dConnectSDK({
+  host:"192.168.0.xx",
+  port: 4035
+});
+sdk.requestAccessToken(clientId, scopes, 'アプリ名')
+    .then(accessToken => {
+        // アクセストークンの保存して、プロファイルのアクセスを行う
+    }).catch(e => {
+    }
+);</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.sendRequest"><span class="type-signature">(static) </span>this.sendRequest<span class="signature">(method, request, header)</span><span class="type-signature"> &rarr; {Promise.&lt;object>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Device Connect RESTful APIを実行する.
+<p>
+   + レスポンスの受信に成功した場合でも、サーバの認証に失敗した場合はエラーコールバックを実行する.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>method</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">メソッド</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>request</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストパラメータのJavaScriptのオブジェクト.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>header</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object.&lt;String, String></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リクエストヘッダー。Key-Valueマップで渡す。</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line839">line 839</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;object></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.setAntiSpoofing"><span class="type-signature">(static) </span>this.setAntiSpoofing<span class="signature">(enable)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    サーバからのレスポンス受信時にサーバの認証を行うかどうかを設定する.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>enable</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">サーバの認証を行う場合はtrue、そうでない場合はfalse</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line675">line 675</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.setExtendedOrigin"><span class="type-signature">(static) </span>this.setExtendedOrigin<span class="signature">(o)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    オリジンを設定する.
+ハイブリッドアプリとして動作させる場合には本メソッドでオリジンを設定する.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>o</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">オリジン</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line787">line 787</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.setLaunchListener"><span class="type-signature">(static) </span>this.setLaunchListener<span class="signature">(listener)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Device Connect Managerの起動通知を受信するリスナーを設定する.
+<p>
+注意: Device Connect Managerの起動はアプリケーションの表示状態が非表示から表示へ
+遷移したタイミングで確認される.
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>listener</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">リスナー</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line697">line 697</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.setPort"><span class="type-signature">(static) </span>this.setPort<span class="signature">(p)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    ポート番号を設定する.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">ポート番号</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line796">line 796</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.setSSLEnabled"><span class="type-signature">(static) </span>this.setSSLEnabled<span class="signature">(enabled)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    HTTPおよびWebSocket通信でSSLを使用するかどうかを設定する.
+<p>
+デフォルト設定ではSSLは使用しない。
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>enabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">SSLを使用する場合はtrue、使用しない場合はfalse</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line747">line 747</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.setURISchemeName"><span class="type-signature">(static) </span>this.setURISchemeName<span class="signature">(name)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Manager起動用URIスキームの名前を設定する.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Manager起動用URIスキームの名前</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line768">line 768</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.startManager"><span class="type-signature">(static) </span>this.startManager<span class="signature">(state)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Device Connect Managerを起動する.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>state</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">起動画面を出すか出さないか</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1741">line 1741</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".this.stopManager"><span class="type-signature">(static) </span>this.stopManager<span class="signature">(state)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Device Connect Managerを停止する.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>state</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">停止画面を出すか出さないか</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="placeHolder"><li>
+        <a href="dconnectsdk-2.3.0.js.html">dconnectsdk-2.3.0.js</a>, <a href="dconnectsdk-2.3.0.js.html#line1797">line 1797</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="dConnectSDK.constants.html">constants</a></li><li><a href="dConnectSDK.constants.authorization.html">authorization</a></li><li><a href="dConnectSDK.constants.availability.html">availability</a></li><li><a href="dConnectSDK.constants.battery.html">battery</a></li><li><a href="dConnectSDK.constants.canvas.html">canvas</a></li><li><a href="dConnectSDK.constants.common.html">common</a></li><li><a href="dConnectSDK.constants.connection.html">connection</a></li><li><a href="dConnectSDK.constants.deviceOrientation.html">deviceOrientation</a></li><li><a href="dConnectSDK.constants.file.html">file</a></li><li><a href="dConnectSDK.constants.geolocation.html">geolocation</a></li><li><a href="dConnectSDK.constants.keyEvent.html">keyEvent</a></li><li><a href="dConnectSDK.constants.mediaPlayer.html">mediaPlayer</a></li><li><a href="dConnectSDK.constants.mediaStreamRecording.html">mediaStreamRecording</a></li><li><a href="dConnectSDK.constants.notification.html">notification</a></li><li><a href="dConnectSDK.constants.phone.html">phone</a></li><li><a href="dConnectSDK.constants.proximity.html">proximity</a></li><li><a href="dConnectSDK.constants.serviceDiscovery.html">serviceDiscovery</a></li><li><a href="dConnectSDK.constants.serviceInformation.html">serviceInformation</a></li><li><a href="dConnectSDK.constants.setting.html">setting</a></li><li><a href="dConnectSDK.constants.system.html">system</a></li><li><a href="dConnectSDK.constants.touch.html">touch</a></li><li><a href="dConnectSDK.constants.vibration.html">vibration</a></li></ul><h3>Classes</h3><ul><li><a href="dConnectSDK.html">dConnectSDK</a></li><li><a href="dConnectSDK.URIBuilder.html">URIBuilder</a></li><li><a href="dConnectSDK-AndroidURISchemeBuilder.html">AndroidURISchemeBuilder</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_currentHmacKey">_currentHmacKey</a></li><li><a href="global.html#_isEnabledAntiSpoofing">_isEnabledAntiSpoofing</a></li><li><a href="global.html#_isStartedManager">_isStartedManager</a></li><li><a href="global.html#_launchListener">_launchListener</a></li><li><a href="global.html#addRequestParameter">addRequestParameter</a></li><li><a href="global.html#appName">appName</a></li><li><a href="global.html#checkHmac">checkHmac</a></li><li><a href="global.html#data">data</a></li><li><a href="global.html#eventListener">eventListener</a></li><li><a href="global.html#extendedOrigin">extendedOrigin</a></li><li><a href="global.html#generateRandom">generateRandom</a></li><li><a href="global.html#host">host</a></li><li><a href="global.html#isConnectedWebSocket">isConnectedWebSocket</a></li><li><a href="global.html#isEstablishedWebSocket">isEstablishedWebSocket</a></li><li><a href="global.html#isFirefox">isFirefox</a></li><li><a href="global.html#isOpenedWebSocket">isOpenedWebSocket</a></li><li><a href="global.html#isWebSocketReady">isWebSocketReady</a></li><li><a href="global.html#makeErrorObject">makeErrorObject</a></li><li><a href="global.html#port">port</a></li><li><a href="global.html#reconnectingTimerId">reconnectingTimerId</a></li><li><a href="global.html#retryRequest">retryRequest</a></li><li><a href="global.html#scopes">scopes</a></li><li><a href="global.html#sslEnabled">sslEnabled</a></li><li><a href="global.html#startManagerForAndroid">startManagerForAndroid</a></li><li><a href="global.html#startManagerForIOS">startManagerForIOS</a></li><li><a href="global.html#stopManagerForAndroid">stopManagerForAndroid</a></li><li><a href="global.html#stopManagerForIOS">stopManagerForIOS</a></li><li><a href="global.html#storage">storage</a></li><li><a href="global.html#uriSchemeName">uriSchemeName</a></li><li><a href="global.html#websocket">websocket</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Jul 06 2020 12:53:33 GMT+0900 (GMT+09:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

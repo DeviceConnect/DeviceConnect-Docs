@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: DConnectSDK/DConnectSDK/DConnectDBCacheController.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_3a716b816bb65351320f7ae51d116280.html">DConnectSDK</a></li><li class="navelem"><a class="el" href="../../dir_cca6906d69a669ec4a0eae7745354c7a.html">DConnectSDK</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DConnectDBCacheController.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d6/d69/_d_connect_d_b_cache_controller_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  DConnectDBCacheController.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  DConnectSDK</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Copyright (c) 2014 NTT DOCOMO,INC.</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Released under the MIT license</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  http://opensource.org/licenses/mit-license.php</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../d4/d4f/_d_connect_base_cache_controller_8h.html">DConnectSDK/DConnectBaseCacheController.h</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../db/d0e/interface_d_connect_d_b_cache_controller.html">   27</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="../../db/d0e/interface_d_connect_d_b_cache_controller.html">DConnectDBCacheController</a> : <a class="code" href="../../d9/dfa/interface_d_connect_base_cache_controller.html">DConnectBaseCacheController</a></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;- (id) initWithClass:(Class)clazz;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;- (id) initWithKey:(NSString *)key;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;+ (<a class="code" href="../../db/d0e/interface_d_connect_d_b_cache_controller.html">DConnectDBCacheController</a> *) controllerWithClass:(Class)clazz;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;+ (<a class="code" href="../../db/d0e/interface_d_connect_d_b_cache_controller.html">DConnectDBCacheController</a> *) controllerWithKey:(NSString *)key;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="interface_d_connect_base_cache_controller_html"><div class="ttname"><a href="../../d9/dfa/interface_d_connect_base_cache_controller.html">DConnectBaseCacheController</a></div><div class="ttdoc">キャッシュコントローラーのベース機能を提供する。 </div><div class="ttdef"><b>Definition:</b> DConnectBaseCacheController.h:22</div></div>
+<div class="ttc" id="interface_d_connect_d_b_cache_controller_html"><div class="ttname"><a href="../../db/d0e/interface_d_connect_d_b_cache_controller.html">DConnectDBCacheController</a></div><div class="ttdoc">イベントデータをDBに永続化し、キャッシュの操作機能を提供する。 </div><div class="ttdef"><b>Definition:</b> DConnectDBCacheController.h:27</div></div>
+<div class="ttc" id="_d_connect_base_cache_controller_8h_html"><div class="ttname"><a href="../../d4/d4f/_d_connect_base_cache_controller_8h.html">DConnectBaseCacheController.h</a></div><div class="ttdoc">キャッシュコントローラーのベース機能を提供する。 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

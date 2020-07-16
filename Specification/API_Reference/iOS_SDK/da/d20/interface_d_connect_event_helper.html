@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: DConnectEventHelper クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">実体メソッド</a> &#124;
+<a href="#pub-static-methods">クラスメソッド</a> &#124;
+<a href="../../d4/df1/interface_d_connect_event_helper-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">DConnectEventHelper クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>イベントメッセージの登録、解除、受信を行うヘルパークラス。  
+ <a href="../../da/d20/interface_d_connect_event_helper.html#details">[詳解]</a></p>
+
+<p><code>#import &lt;<a class="el" href="../../d9/d49/_d_connect_event_helper_8h_source.html">DConnectEventHelper.h</a>&gt;</code></p>
+<div class="dynheader">
+DConnectEventHelper の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../da/d20/interface_d_connect_event_helper.png" usemap="#DConnectEventHelper_map" alt=""/>
+  <map id="DConnectEventHelper_map" name="DConnectEventHelper_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+実体メソッド</h2></td></tr>
+<tr class="memitem:adc56ee6b08ce436c5ff8a8eff23623bf"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../da/d20/interface_d_connect_event_helper.html#adc56ee6b08ce436c5ff8a8eff23623bf">registerEventWithRequest:responseHandler:messageHandler:</a></td></tr>
+<tr class="memdesc:adc56ee6b08ce436c5ff8a8eff23623bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたリクエストを実行し、イベントを登録する。  <a href="#adc56ee6b08ce436c5ff8a8eff23623bf">[詳解]</a><br /></td></tr>
+<tr class="separator:adc56ee6b08ce436c5ff8a8eff23623bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2aba052e16df209a2149466ac09fb00"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../da/d20/interface_d_connect_event_helper.html#aa2aba052e16df209a2149466ac09fb00">unregisterEventWithRequest:responseHandler:</a></td></tr>
+<tr class="memdesc:aa2aba052e16df209a2149466ac09fb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたリクエストを実行し、イベントを解除する。  <a href="#aa2aba052e16df209a2149466ac09fb00">[詳解]</a><br /></td></tr>
+<tr class="separator:aa2aba052e16df209a2149466ac09fb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb6cb5478f23b3c0ef57cd39033e5dd"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../da/d20/interface_d_connect_event_helper.html#aebb6cb5478f23b3c0ef57cd39033e5dd">unregisterAllEventsWithAccessToken:</a></td></tr>
+<tr class="memdesc:aebb6cb5478f23b3c0ef57cd39033e5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントを全て解除する。  <a href="#aebb6cb5478f23b3c0ef57cd39033e5dd">[詳解]</a><br /></td></tr>
+<tr class="separator:aebb6cb5478f23b3c0ef57cd39033e5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+クラスメソッド</h2></td></tr>
+<tr class="memitem:a936d3abc78886b2bbaaf2d9dae888da3"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="../../da/d20/interface_d_connect_event_helper.html">DConnectEventHelper</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="../../da/d20/interface_d_connect_event_helper.html#a936d3abc78886b2bbaaf2d9dae888da3">sharedHelper</a></td></tr>
+<tr class="memdesc:a936d3abc78886b2bbaaf2d9dae888da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">DConnectEventHelperのインスタンスを取得する。  <a href="#a936d3abc78886b2bbaaf2d9dae888da3">[詳解]</a><br /></td></tr>
+<tr class="separator:a936d3abc78886b2bbaaf2d9dae888da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>イベントメッセージの登録、解除、受信を行うヘルパークラス。 </p>
+<p>このクラスによってイベント登録される場合は <a class="el" href="../../d0/d4e/interface_d_connect_manager.html#a59f01554d8b345f97fceb72bfbe7e59b">DConnectManager::delegate</a> を占有するため 他のオブジェクトと競合しないように管理する必要がある。 </p>
+</div><h2 class="groupheader">メソッド詳解</h2>
+<a id="adc56ee6b08ce436c5ff8a8eff23623bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc56ee6b08ce436c5ff8a8eff23623bf">&#9670;&nbsp;</a></span>registerEventWithRequest:responseHandler:messageHandler:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) registerEventWithRequest: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a> *)&#160;</td>
+          <td class="paramname"><em>request</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">responseHandler:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../d9/d49/_d_connect_event_helper_8h.html#a9256951d5fe8f31f468a1c8e0c7852cc">DConnectResponseHandler</a>)&#160;</td>
+          <td class="paramname"><em>responseHandler</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">messageHandler:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../d9/d49/_d_connect_event_helper_8h.html#a8898e03065d4fc67284af59ff565df1e">DConnectEventHandler</a>)&#160;</td>
+          <td class="paramname"><em>messageHandler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定されたリクエストを実行し、イベントを登録する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">request</td><td>イベント登録用のリクエスト </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">responseHandler</td><td>リクエストへのレスポンスを受け取るblocks </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">messageHandler</td><td>登録したイベントのメッセージを受け取るblocks </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a936d3abc78886b2bbaaf2d9dae888da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a936d3abc78886b2bbaaf2d9dae888da3">&#9670;&nbsp;</a></span>sharedHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="../../da/d20/interface_d_connect_event_helper.html">DConnectEventHelper</a> *) sharedHelper </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DConnectEventHelperのインスタンスを取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>DConnectEventHelperのインスタンス </dd></dl>
+
+</div>
+</div>
+<a id="aebb6cb5478f23b3c0ef57cd39033e5dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebb6cb5478f23b3c0ef57cd39033e5dd">&#9670;&nbsp;</a></span>unregisterAllEventsWithAccessToken:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) unregisterAllEventsWithAccessToken: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>accessToken</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>イベントを全て解除する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">accessToken</td><td>DConnectManagerのLocalOAuthが有効になっている場合、各イベント解除APIへアクセスするためのアクセストークンが必要となる。LocalOAuthが無効となっている場合は指定する必要はない。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa2aba052e16df209a2149466ac09fb00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2aba052e16df209a2149466ac09fb00">&#9670;&nbsp;</a></span>unregisterEventWithRequest:responseHandler:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) unregisterEventWithRequest: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a> *)&#160;</td>
+          <td class="paramname"><em>request</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">responseHandler:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../d9/d49/_d_connect_event_helper_8h.html#a9256951d5fe8f31f468a1c8e0c7852cc">DConnectResponseHandler</a>)&#160;</td>
+          <td class="paramname"><em>responseHandler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定されたリクエストを実行し、イベントを解除する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">request</td><td>イベント解除用のリクエスト </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">responseHandler</td><td>リクエストへのレスポンスを受け取るblocks </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DConnectSDK/DConnectSDK/<a class="el" href="../../d9/d49/_d_connect_event_helper_8h_source.html">DConnectEventHelper.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

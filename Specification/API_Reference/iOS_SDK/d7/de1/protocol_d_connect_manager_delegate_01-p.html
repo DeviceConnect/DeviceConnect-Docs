@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: &lt;DConnectManagerDelegate &gt; プロトコル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">実体メソッド</a> &#124;
+<a href="../../d5/db4/protocol_d_connect_manager_delegate_01-p-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">&lt;DConnectManagerDelegate &gt; プロトコル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+&lt;DConnectManagerDelegate &gt; の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d7/de1/protocol_d_connect_manager_delegate_01-p.png" usemap="#_3CDConnectManagerDelegate_20_3E_map" alt=""/>
+  <map id="_3CDConnectManagerDelegate_20_3E_map" name="_3CDConnectManagerDelegate_20_3E_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+実体メソッド</h2></td></tr>
+<tr class="memitem:af40bf0cb45f2f545000e2fbd21db286b"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../d7/de1/protocol_d_connect_manager_delegate_01-p.html#af40bf0cb45f2f545000e2fbd21db286b">manager:didReceiveDConnectMessage:</a></td></tr>
+<tr class="memdesc:af40bf0cb45f2f545000e2fbd21db286b"><td class="mdescLeft">&#160;</td><td class="mdescRight">各デバイスからのイベントをデリゲートに通知する。  <a href="#af40bf0cb45f2f545000e2fbd21db286b">[詳解]</a><br /></td></tr>
+<tr class="separator:af40bf0cb45f2f545000e2fbd21db286b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="af40bf0cb45f2f545000e2fbd21db286b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af40bf0cb45f2f545000e2fbd21db286b">&#9670;&nbsp;</a></span>manager:didReceiveDConnectMessage:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void <a class="el" href="../../df/d8c/protocol_d_connect_manager_delegate-p.html">DConnectManagerDelegate</a>) manager: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../d0/d4e/interface_d_connect_manager.html">DConnectManager</a> *)&#160;</td>
+          <td class="paramname"><em>manager</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">didReceiveDConnectMessage:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../d1/d81/interface_d_connect_message.html">DConnectMessage</a> *)&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>各デバイスからのイベントをデリゲートに通知する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">manager</td><td>マネジャー </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>イベントメッセージ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このプロトコル詳解は次のファイルから抽出されました:<ul>
+<li>DConnectSDK/DConnectSDK/<a class="el" href="../../df/d2a/_d_connect_manager_8h_source.html">DConnectManager.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

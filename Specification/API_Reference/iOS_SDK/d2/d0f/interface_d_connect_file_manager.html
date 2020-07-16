@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: DConnectFileManager クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">実体メソッド</a> &#124;
+<a href="#pub-static-methods">クラスメソッド</a> &#124;
+<a href="../../da/d33/interface_d_connect_file_manager-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">DConnectFileManager クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>デバイスプラグイン用のファイル管理クラス。  
+ <a href="../../d2/d0f/interface_d_connect_file_manager.html#details">[詳解]</a></p>
+
+<p><code>#import &lt;<a class="el" href="../../db/d5d/_d_connect_file_manager_8h_source.html">DConnectFileManager.h</a>&gt;</code></p>
+<div class="dynheader">
+DConnectFileManager の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d0f/interface_d_connect_file_manager.png" usemap="#DConnectFileManager_map" alt=""/>
+  <map id="DConnectFileManager_map" name="DConnectFileManager_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+実体メソッド</h2></td></tr>
+<tr class="memitem:aeefbd08c8aabddb99d6d0939625205a1"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="../../d7/d5a/interface_d_connect_device_plugin.html">DConnectDevicePlugin</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#aeefbd08c8aabddb99d6d0939625205a1">plugin</a></td></tr>
+<tr class="memdesc:aeefbd08c8aabddb99d6d0939625205a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスプラグインのインスタンスを取得する。  <a href="#aeefbd08c8aabddb99d6d0939625205a1">[詳解]</a><br /></td></tr>
+<tr class="separator:aeefbd08c8aabddb99d6d0939625205a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7364c53610fa09023e0773e5d005ed9e"><td class="memItemLeft" align="right" valign="top">(NSURL *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#a7364c53610fa09023e0773e5d005ed9e">URL</a></td></tr>
+<tr class="memdesc:a7364c53610fa09023e0773e5d005ed9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスプラグイン専用ディレクトリへのURLを返却する。  <a href="#a7364c53610fa09023e0773e5d005ed9e">[詳解]</a><br /></td></tr>
+<tr class="separator:a7364c53610fa09023e0773e5d005ed9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6917ea499108bcb0288c96f6e0fbbbbd"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#a6917ea499108bcb0288c96f6e0fbbbbd">createFileForPath:contents:</a></td></tr>
+<tr class="memdesc:a6917ea499108bcb0288c96f6e0fbbbbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをデバイスプラグイン専用ディレクトリ以下に作成する。  <a href="#a6917ea499108bcb0288c96f6e0fbbbbd">[詳解]</a><br /></td></tr>
+<tr class="separator:a6917ea499108bcb0288c96f6e0fbbbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dfa927e9efaec708d2a5164a00e3553"><td class="memItemLeft" align="right" valign="top">(NSDirectoryEnumerator *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#a3dfa927e9efaec708d2a5164a00e3553">enumeratorWithOptions:dirPath:</a></td></tr>
+<tr class="separator:a3dfa927e9efaec708d2a5164a00e3553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ba2f661aee6d538ce6b6ae56675a20"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#ae6ba2f661aee6d538ce6b6ae56675a20">updateFileForPath:newPath:newContents:</a></td></tr>
+<tr class="memdesc:ae6ba2f661aee6d538ce6b6ae56675a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスプラグイン専用ディレクトリ以下のファイルを更新する。  <a href="#ae6ba2f661aee6d538ce6b6ae56675a20">[詳解]</a><br /></td></tr>
+<tr class="separator:ae6ba2f661aee6d538ce6b6ae56675a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63451d20135499fbcc85a114ebd66309"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#a63451d20135499fbcc85a114ebd66309">removeFileForPath:</a></td></tr>
+<tr class="memdesc:a63451d20135499fbcc85a114ebd66309"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスプラグイン専用ディレクトリ以下のファイルを削除する。  <a href="#a63451d20135499fbcc85a114ebd66309">[詳解]</a><br /></td></tr>
+<tr class="separator:a63451d20135499fbcc85a114ebd66309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+クラスメソッド</h2></td></tr>
+<tr class="memitem:a90e5f83542162094ec5fa6b855f8f5cc"><td class="memItemLeft" align="right" valign="top">(instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#a90e5f83542162094ec5fa6b855f8f5cc">fileManagerForPlugin:</a></td></tr>
+<tr class="memdesc:a90e5f83542162094ec5fa6b855f8f5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバイスプラグイン向けファイル管理オブジェクトを生成する。  <a href="#a90e5f83542162094ec5fa6b855f8f5cc">[詳解]</a><br /></td></tr>
+<tr class="separator:a90e5f83542162094ec5fa6b855f8f5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a77fcd304e849b8d3ae4ed36cd5935e"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#a8a77fcd304e849b8d3ae4ed36cd5935e">searchMimeTypeForExtension:</a></td></tr>
+<tr class="memdesc:a8a77fcd304e849b8d3ae4ed36cd5935e"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡張子に対応するMIMEタイプを返す。  <a href="#a8a77fcd304e849b8d3ae4ed36cd5935e">[詳解]</a><br /></td></tr>
+<tr class="separator:a8a77fcd304e849b8d3ae4ed36cd5935e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678db1ed1e9ddc9d81ed816db5ce58b6"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#a678db1ed1e9ddc9d81ed816db5ce58b6">searchExtensionForMimeType:</a></td></tr>
+<tr class="memdesc:a678db1ed1e9ddc9d81ed816db5ce58b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIMEタイプに対応する拡張子を返す。  <a href="#a678db1ed1e9ddc9d81ed816db5ce58b6">[詳解]</a><br /></td></tr>
+<tr class="separator:a678db1ed1e9ddc9d81ed816db5ce58b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f35fe2a835dd2c99341bca843d32534"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="../../d2/d0f/interface_d_connect_file_manager.html#a5f35fe2a835dd2c99341bca843d32534">mimeTypeForArbitraryData</a></td></tr>
+<tr class="memdesc:a5f35fe2a835dd2c99341bca843d32534"><td class="mdescLeft">&#160;</td><td class="mdescRight">任意のデータ型ファイルのMIMEタイプを返す。  <a href="#a5f35fe2a835dd2c99341bca843d32534">[詳解]</a><br /></td></tr>
+<tr class="separator:a5f35fe2a835dd2c99341bca843d32534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>デバイスプラグイン用のファイル管理クラス。 </p>
+<p>デバイスプラグイン専用ディレクトリを用意し、そのディレクトリに簡易にアクセスするためのAPIを提供する。 </p>
+</div><h2 class="groupheader">メソッド詳解</h2>
+<a id="a6917ea499108bcb0288c96f6e0fbbbbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6917ea499108bcb0288c96f6e0fbbbbd">&#9670;&nbsp;</a></span>createFileForPath:contents:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) createFileForPath: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>path</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">contents:</td>
+          <td></td>
+          <td class="paramtype">(NSData *)&#160;</td>
+          <td class="paramname"><em>contents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルをデバイスプラグイン専用ディレクトリ以下に作成する。 </p>
+<p>指定されたパスが絶対パスの場合には、デバイスプラグイン専用ディレクトリではなく、指定されたパスに保存する。 </p>
+<p>相対パスの場合には、デバイスプラグイン専用ディレクトリにファイルを保存する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>作成するファイルのパス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">contents</td><td>作成するファイルのデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">保存したファイルへのURL。</td><td></td></tr>
+    <tr><td class="paramname">nil</td><td>エラーが生じた場合。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3dfa927e9efaec708d2a5164a00e3553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dfa927e9efaec708d2a5164a00e3553">&#9670;&nbsp;</a></span>enumeratorWithOptions:dirPath:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSDirectoryEnumerator *) enumeratorWithOptions: </td>
+          <td></td>
+          <td class="paramtype">(NSDirectoryEnumerationOptions)&#160;</td>
+          <td class="paramname"><em>mask</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">dirPath:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>dirPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>デバイスプラグイン専用ディレクトリもしくは指定されたディレクトリのファイル項目をイテレートする。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>イテレートのオプション。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dirPath</td><td>ディレクトリのパス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">デバイスプラグイン専用ディレクトリ内のファイル項目をイテレートするNSDirectoryEnumerator。</td><td></td></tr>
+    <tr><td class="paramname">nil</td><td>エラーが生じた場合。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a90e5f83542162094ec5fa6b855f8f5cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e5f83542162094ec5fa6b855f8f5cc">&#9670;&nbsp;</a></span>fileManagerForPlugin:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (instancetype) fileManagerForPlugin: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../d7/d5a/interface_d_connect_device_plugin.html">DConnectDevicePlugin</a> *)&#160;</td>
+          <td class="paramname"><em>plugin</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デバイスプラグイン向けファイル管理オブジェクトを生成する。 </p>
+<p>デバイスプラグイン専用ディレクトリ（アプリSandbox内のApplication Support以下のデバイスプラグインと同じ名称のディレクトリ） が存在しない場合、ここで作成する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">plugin</td><td>ファイルマネージャと紐づけるデバイスプラグイン</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">DConnectFileManagerのインスタンス</td><td></td></tr>
+    <tr><td class="paramname">nil</td><td>インスタンスの作成に失敗した場合 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5f35fe2a835dd2c99341bca843d32534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f35fe2a835dd2c99341bca843d32534">&#9670;&nbsp;</a></span>mimeTypeForArbitraryData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (NSString *) mimeTypeForArbitraryData </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>任意のデータ型ファイルのMIMEタイプを返す。 </p>
+<p>現状、application/octet-streamを返す。拡張子からMIMEタイプを推定できなかった場合、これを代わりに用いるとよい。</p>
+<dl class="section return"><dt>戻り値</dt><dd>MIMEタイプ「application/octet-stream」 </dd></dl>
+
+</div>
+</div>
+<a id="aeefbd08c8aabddb99d6d0939625205a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeefbd08c8aabddb99d6d0939625205a1">&#9670;&nbsp;</a></span>plugin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="../../d7/d5a/interface_d_connect_device_plugin.html">DConnectDevicePlugin</a> *) plugin </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デバイスプラグインのインスタンスを取得する。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>デバイスプラグイン </dd></dl>
+
+</div>
+</div>
+<a id="a63451d20135499fbcc85a114ebd66309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63451d20135499fbcc85a114ebd66309">&#9670;&nbsp;</a></span>removeFileForPath:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) removeFileForPath: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>path</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デバイスプラグイン専用ディレクトリ以下のファイルを削除する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>削除したいファイルのパス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">YES</td><td>削除に成功 </td></tr>
+    <tr><td class="paramname">NO</td><td>削除に失敗 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a678db1ed1e9ddc9d81ed816db5ce58b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678db1ed1e9ddc9d81ed816db5ce58b6">&#9670;&nbsp;</a></span>searchExtensionForMimeType:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (NSString *) searchExtensionForMimeType: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>mimeType</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>MIMEタイプに対応する拡張子を返す。 </p>
+<p>拡張子にはドットを含まない（e.g. "txt"）。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mimeType</td><td>MIMEタイプ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">拡張子</td><td>複数あった場合は、最も短く辞書順で手前のものを返す。 </td></tr>
+    <tr><td class="paramname">nil</td><td>見つからなかった場合。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a77fcd304e849b8d3ae4ed36cd5935e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a77fcd304e849b8d3ae4ed36cd5935e">&#9670;&nbsp;</a></span>searchMimeTypeForExtension:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (NSString *) searchMimeTypeForExtension: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>extension</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>拡張子に対応するMIMEタイプを返す。 </p>
+<p>拡張子にはドットを含めないこと（e.g. "txt"）。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">extension</td><td>拡張子</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">MIMEタイプ</td><td></td></tr>
+    <tr><td class="paramname">nil</td><td>見つからなかった場合。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae6ba2f661aee6d538ce6b6ae56675a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ba2f661aee6d538ce6b6ae56675a20">&#9670;&nbsp;</a></span>updateFileForPath:newPath:newContents:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) updateFileForPath: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>path</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">newPath:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>newPath</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">newContents:</td>
+          <td></td>
+          <td class="paramtype">(NSData *)&#160;</td>
+          <td class="paramname"><em>newContents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デバイスプラグイン専用ディレクトリ以下のファイルを更新する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>更新したいファイルのパス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newPath</td><td>更新したいファイルの新たなファイルパス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newContents</td><td>更新したいファイルの新たなデータ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">更新したファイルのURL。</td><td></td></tr>
+    <tr><td class="paramname">nil</td><td>エラーが生じた場合。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7364c53610fa09023e0773e5d005ed9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7364c53610fa09023e0773e5d005ed9e">&#9670;&nbsp;</a></span>URL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSURL *) URL </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デバイスプラグイン専用ディレクトリへのURLを返却する。 </p>
+<p>デバイスプラグイン専用ディレクトリが削除されている場合は新たに作成する。</p>
+<dl class="section return"><dt>戻り値</dt><dd>デバイスプラグイン専用ディレクトリへのURLを表すNSURL </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DConnectSDK/DConnectSDK/<a class="el" href="../../db/d5d/_d_connect_file_manager_8h_source.html">DConnectFileManager.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

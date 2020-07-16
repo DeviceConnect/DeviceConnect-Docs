@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['maxvibrationtime',['maxVibrationTime',['../interface_d_connect_vibration_profile.html#a89cc5522f9e2d1c9b9de5f704bb92c55',1,'DConnectVibrationProfile']]]
+  ['host',['host',['../d3/d6e/interface_d_connect_settings.html#a282b14f6c391f087a81563f9ca7c86f1',1,'DConnectSettings::host()'],['../d1/de5/interface_d_connect_u_r_i_builder.html#ad3ed097df2634d3f7ebc7aa57a86b233',1,'DConnectURIBuilder::host()']]]
 ];
