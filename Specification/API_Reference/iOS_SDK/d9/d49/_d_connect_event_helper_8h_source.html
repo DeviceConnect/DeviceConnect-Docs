@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: DConnectSDK/DConnectSDK/DConnectEventHelper.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_3a716b816bb65351320f7ae51d116280.html">DConnectSDK</a></li><li class="navelem"><a class="el" href="../../dir_cca6906d69a669ec4a0eae7745354c7a.html">DConnectSDK</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DConnectEventHelper.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d49/_d_connect_event_helper_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  DConnectEventHelper.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  DConnectSDK</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Copyright (c) 2014 NTT DOCOMO,INC.</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Released under the MIT license</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  http://opensource.org/licenses/mit-license.php</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../de/d48/_d_connect_request_message_8h.html">DConnectSDK/DConnectRequestMessage.h</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../d4/d09/_d_connect_response_message_8h.html">DConnectSDK/DConnectResponseMessage.h</a>&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../df/d2a/_d_connect_manager_8h.html">DConnectSDK/DConnectManager.h</a>&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d9/d49/_d_connect_event_helper_8h.html#a9256951d5fe8f31f468a1c8e0c7852cc">   25</a></span>&#160;<span class="keyword">typedef</span> void (^<a class="code" href="../../d9/d49/_d_connect_event_helper_8h.html#a9256951d5fe8f31f468a1c8e0c7852cc">DConnectResponseHandler</a>)(<a class="code" href="../../df/d9a/interface_d_connect_response_message.html">DConnectResponseMessage</a> *response);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d9/d49/_d_connect_event_helper_8h.html#a8898e03065d4fc67284af59ff565df1e">   32</a></span>&#160;<span class="keyword">typedef</span> void (^<a class="code" href="../../d9/d49/_d_connect_event_helper_8h.html#a8898e03065d4fc67284af59ff565df1e">DConnectEventHandler</a>)(<a class="code" href="../../d1/d81/interface_d_connect_message.html">DConnectMessage</a> *message);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../da/d20/interface_d_connect_event_helper.html">   41</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="../../da/d20/interface_d_connect_event_helper.html">DConnectEventHelper</a> : NSObject</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;+ (<a class="code" href="../../da/d20/interface_d_connect_event_helper.html">DConnectEventHelper</a> *) <a class="code" href="../../da/d20/interface_d_connect_event_helper.html#a936d3abc78886b2bbaaf2d9dae888da3">sharedHelper</a>;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;- (void) registerEventWithRequest:(<a class="code" href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a> *)request</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                  responseHandler:(<a class="code" href="../../d9/d49/_d_connect_event_helper_8h.html#a9256951d5fe8f31f468a1c8e0c7852cc">DConnectResponseHandler</a>)responseHandler</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                   messageHandler:(<a class="code" href="../../d9/d49/_d_connect_event_helper_8h.html#a8898e03065d4fc67284af59ff565df1e">DConnectEventHandler</a>)messageHandler;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;- (void) unregisterEventWithRequest:(<a class="code" href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a> *)request</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    responseHandler:(<a class="code" href="../../d9/d49/_d_connect_event_helper_8h.html#a9256951d5fe8f31f468a1c8e0c7852cc">DConnectResponseHandler</a>)responseHandler;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;- (void) unregisterAllEventsWithAccessToken:(NSString *)accessToken;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="interface_d_connect_message_html"><div class="ttname"><a href="../../d1/d81/interface_d_connect_message.html">DConnectMessage</a></div><div class="ttdoc">Device Connect上でやり取りされるメッセージ。 </div><div class="ttdef"><b>Definition:</b> DConnectMessage.h:379</div></div>
+<div class="ttc" id="interface_d_connect_event_helper_html"><div class="ttname"><a href="../../da/d20/interface_d_connect_event_helper.html">DConnectEventHelper</a></div><div class="ttdoc">イベントメッセージの登録、解除、受信を行うヘルパークラス。 </div><div class="ttdef"><b>Definition:</b> DConnectEventHelper.h:41</div></div>
+<div class="ttc" id="_d_connect_response_message_8h_html"><div class="ttname"><a href="../../d4/d09/_d_connect_response_message_8h.html">DConnectResponseMessage.h</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div></div>
+<div class="ttc" id="_d_connect_manager_8h_html"><div class="ttname"><a href="../../df/d2a/_d_connect_manager_8h.html">DConnectManager.h</a></div><div class="ttdoc">Device Connectの本体。 </div></div>
+<div class="ttc" id="_d_connect_event_helper_8h_html_a9256951d5fe8f31f468a1c8e0c7852cc"><div class="ttname"><a href="../../d9/d49/_d_connect_event_helper_8h.html#a9256951d5fe8f31f468a1c8e0c7852cc">DConnectResponseHandler</a></div><div class="ttdeci">void(^ DConnectResponseHandler)(DConnectResponseMessage *response)</div><div class="ttdoc">リクエストメッセージに対するレスポンスメッセージを受け取るblocks。 </div><div class="ttdef"><b>Definition:</b> DConnectEventHelper.h:25</div></div>
+<div class="ttc" id="_d_connect_event_helper_8h_html_a8898e03065d4fc67284af59ff565df1e"><div class="ttname"><a href="../../d9/d49/_d_connect_event_helper_8h.html#a8898e03065d4fc67284af59ff565df1e">DConnectEventHandler</a></div><div class="ttdeci">void(^ DConnectEventHandler)(DConnectMessage *message)</div><div class="ttdoc">登録したイベントのメッセージを受け取るblocks。 </div><div class="ttdef"><b>Definition:</b> DConnectEventHelper.h:32</div></div>
+<div class="ttc" id="interface_d_connect_request_message_html"><div class="ttname"><a href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div><div class="ttdef"><b>Definition:</b> DConnectRequestMessage.h:21</div></div>
+<div class="ttc" id="interface_d_connect_response_message_html"><div class="ttname"><a href="../../df/d9a/interface_d_connect_response_message.html">DConnectResponseMessage</a></div><div class="ttdoc">レスポンスデータを提供するクラス。 </div><div class="ttdef"><b>Definition:</b> DConnectResponseMessage.h:21</div></div>
+<div class="ttc" id="_d_connect_request_message_8h_html"><div class="ttname"><a href="../../de/d48/_d_connect_request_message_8h.html">DConnectRequestMessage.h</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div></div>
+<div class="ttc" id="interface_d_connect_event_helper_html_a936d3abc78886b2bbaaf2d9dae888da3"><div class="ttname"><a href="../../da/d20/interface_d_connect_event_helper.html#a936d3abc78886b2bbaaf2d9dae888da3">+[DConnectEventHelper sharedHelper]</a></div><div class="ttdeci">DConnectEventHelper * sharedHelper()</div><div class="ttdoc">DConnectEventHelperのインスタンスを取得する。 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

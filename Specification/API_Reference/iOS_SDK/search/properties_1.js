@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['code',['code',['../interface_d_connect_response_message.html#abc090d399533d2fa444310d99fd05d87',1,'DConnectResponseMessage']]],
-  ['createdate',['createDate',['../interface_d_connect_event.html#a43dba586e141194ef3c228515eb91c3b',1,'DConnectEvent']]]
+  ['bundle',['bundle',['../d0/d06/interface_d_connect_profile_spec.html#a16f64a496a7f97a6555ff05b45a95686',1,'DConnectProfileSpec']]]
 ];

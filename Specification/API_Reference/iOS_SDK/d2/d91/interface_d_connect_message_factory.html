@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: DConnectMessageFactory クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">クラスメソッド</a> &#124;
+<a href="../../d4/de5/interface_d_connect_message_factory-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">DConnectMessageFactory クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>メッセージとHTTPデータの相互変換機能を提供する。  
+ <a href="../../d2/d91/interface_d_connect_message_factory.html#details">[詳解]</a></p>
+
+<p><code>#import &lt;<a class="el" href="../../d3/d10/_d_connect_message_factory_8h_source.html">DConnectMessageFactory.h</a>&gt;</code></p>
+<div class="dynheader">
+DConnectMessageFactory の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d2/d91/interface_d_connect_message_factory.png" usemap="#DConnectMessageFactory_map" alt=""/>
+  <map id="DConnectMessageFactory_map" name="DConnectMessageFactory_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+クラスメソッド</h2></td></tr>
+<tr class="memitem:a22ce1696aa2fbe8d7825cab1777802a9"><td class="memItemLeft" align="right" valign="top">(NSURLRequest *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="../../d2/d91/interface_d_connect_message_factory.html#a22ce1696aa2fbe8d7825cab1777802a9">requestForMessage:</a></td></tr>
+<tr class="memdesc:a22ce1696aa2fbe8d7825cab1777802a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">DConnectRequestMessageをNSURLRequestへ変換する。  <a href="#a22ce1696aa2fbe8d7825cab1777802a9">[詳解]</a><br /></td></tr>
+<tr class="separator:a22ce1696aa2fbe8d7825cab1777802a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02ef9a0b5328d0762ef16c0aa08abe0"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="../../df/d9a/interface_d_connect_response_message.html">DConnectResponseMessage</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="../../d2/d91/interface_d_connect_message_factory.html#ab02ef9a0b5328d0762ef16c0aa08abe0">messageForResponse:data:</a></td></tr>
+<tr class="memdesc:ab02ef9a0b5328d0762ef16c0aa08abe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">NSURLRequestをDConnectRequestMessageへ変換する。  <a href="#ab02ef9a0b5328d0762ef16c0aa08abe0">[詳解]</a><br /></td></tr>
+<tr class="separator:ab02ef9a0b5328d0762ef16c0aa08abe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>メッセージとHTTPデータの相互変換機能を提供する。 </p>
+</div><h2 class="groupheader">メソッド詳解</h2>
+<a id="ab02ef9a0b5328d0762ef16c0aa08abe0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab02ef9a0b5328d0762ef16c0aa08abe0">&#9670;&nbsp;</a></span>messageForResponse:data:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="../../df/d9a/interface_d_connect_response_message.html">DConnectResponseMessage</a> *) messageForResponse: </td>
+          <td></td>
+          <td class="paramtype">(NSURLResponse *)&#160;</td>
+          <td class="paramname"><em>response</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">data:</td>
+          <td></td>
+          <td class="paramtype">(NSData *)&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NSURLRequestをDConnectRequestMessageへ変換する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">request</td><td>リクエストデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>NSURLRequestの設定内容に沿うDConnectRequestMessageのオブジェクト</dd></dl>
+<p>NSURLResponseをDConnectResponseMessageへ変換する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">response</td><td>レスポンスデータ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>レスポンスボディ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>NSURLResponseの設定内容に沿うDConnectResponseMessageのオブジェクト </dd></dl>
+
+</div>
+</div>
+<a id="a22ce1696aa2fbe8d7825cab1777802a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ce1696aa2fbe8d7825cab1777802a9">&#9670;&nbsp;</a></span>requestForMessage:()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (NSURLRequest *) requestForMessage: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a> *)&#160;</td>
+          <td class="paramname"><em>request</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>DConnectRequestMessageをNSURLRequestへ変換する。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">request</td><td>リクエストデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>DConnectRequestMessageの設定内容に沿うNSURLRequestのオブジェクト </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>DConnectSDK/DConnectSDK/<a class="el" href="../../d3/d10/_d_connect_message_factory_8h_source.html">DConnectMessageFactory.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

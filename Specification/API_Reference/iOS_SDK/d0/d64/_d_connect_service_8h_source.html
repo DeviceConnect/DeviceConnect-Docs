@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: DConnectSDK/DConnectSDK/DConnectService.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_3a716b816bb65351320f7ae51d116280.html">DConnectSDK</a></li><li class="navelem"><a class="el" href="../../dir_cca6906d69a669ec4a0eae7745354c7a.html">DConnectSDK</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DConnectService.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  DConnectService.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  DConnectSDK</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Copyright (c) 2016 NTT DOCOMO,INC.</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Released under the MIT license</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  http://opensource.org/licenses/mit-license.php</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &lt;DConnectSDK/DConnectServiceProvider.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &lt;DConnectSDK/DConnectProfileProvider.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../d0/d03/_d_connect_service_information_profile_8h.html">DConnectSDK/DConnectServiceInformationProfile.h</a>&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> NSString * <span class="keyword">const</span> DConnectServiceAnonymousOrigin;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">extern</span> NSString * <span class="keyword">const</span> DConnectServiceInnerType;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> NSString * <span class="keyword">const</span> DConnectServiceInnerTypeHttp;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">@class</span> <a class="code" href="../../de/df0/interface_d_connect_service.html">DConnectService</a>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d9/d4e/protocol_on_status_change_listener_01-p.html">   25</a></span>&#160;<span class="keyword">@protocol </span>OnStatusChangeListener &lt;NSObject&gt;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;- (void) didStatusChange: (<a class="code" href="../../de/df0/interface_d_connect_service.html">DConnectService</a> *)service;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">@end</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../de/df0/interface_d_connect_service.html">   39</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="../../de/df0/interface_d_connect_service.html">DConnectService</a> : <a class="code" href="../../d4/de4/interface_d_connect_profile_provider.html">DConnectProfileProvider</a>&lt;<a class="code" href="../../da/dbe/protocol_d_connect_service_information_profile_data_source-p.html">DConnectServiceInformationProfileDataSource</a>&gt;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../de/df0/interface_d_connect_service.html#a2a1c35f547f86eaa90bc70d94412055f">   44</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSString *<a class="code" href="../../de/df0/interface_d_connect_service.html#a2a1c35f547f86eaa90bc70d94412055f">serviceId</a>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../de/df0/interface_d_connect_service.html#a09b12c71e3012aee34dfa206f3a29a17">   49</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSString *<a class="code" href="../../de/df0/interface_d_connect_service.html#a09b12c71e3012aee34dfa206f3a29a17">name</a>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../de/df0/interface_d_connect_service.html#a885cbaaee39d77cd0fc0cc2e3bc02ead">   54</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSString *<a class="code" href="../../de/df0/interface_d_connect_service.html#a885cbaaee39d77cd0fc0cc2e3bc02ead">networkType</a>;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../de/df0/interface_d_connect_service.html#aec628d203828998f0ebe4e52fe046ab2">   61</a></span>&#160;<span class="keyword">@property</span>(readwrite, getter=<a class="code" href="../../de/df0/interface_d_connect_service.html#aec628d203828998f0ebe4e52fe046ab2">online</a>, setter=setOnline:) BOOL <a class="code" href="../../de/df0/interface_d_connect_service.html#aec628d203828998f0ebe4e52fe046ab2">online</a>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../de/df0/interface_d_connect_service.html#afeded4d0da14f812fc0c7e8989bd087c">   68</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSString *<a class="code" href="../../de/df0/interface_d_connect_service.html#afeded4d0da14f812fc0c7e8989bd087c">config</a>;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../de/df0/interface_d_connect_service.html#a09f60bba7418b030ba986ea61d0e24af">   73</a></span>&#160;<span class="keyword">@property</span>(nonatomic, weak) id&lt;OnStatusChangeListener&gt; <a class="code" href="../../de/df0/interface_d_connect_service.html#a09f60bba7418b030ba986ea61d0e24af">statusListener</a>;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;- (instancetype) initWithServiceId: (NSString *)serviceId plugin: (<span class="keywordtype">id</span>) plugin;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;- (BOOL) didReceiveRequest: (<a class="code" href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a> *) request response: (<a class="code" href="../../df/d9a/interface_d_connect_response_message.html">DConnectResponseMessage</a> *)response;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="_d_connect_service_information_profile_8h_html"><div class="ttname"><a href="../../d0/d03/_d_connect_service_information_profile_8h.html">DConnectServiceInformationProfile.h</a></div><div class="ttdoc">ServiceInformationプロファイルを実装するための機能を提供する。 </div></div>
+<div class="ttc" id="interface_d_connect_service_html_aec628d203828998f0ebe4e52fe046ab2"><div class="ttname"><a href="../../de/df0/interface_d_connect_service.html#aec628d203828998f0ebe4e52fe046ab2">DConnectService::online</a></div><div class="ttdeci">BOOL online</div><div class="ttdoc">オンライン状態。 </div><div class="ttdef"><b>Definition:</b> DConnectService.h:61</div></div>
+<div class="ttc" id="interface_d_connect_service_html_a09f60bba7418b030ba986ea61d0e24af"><div class="ttname"><a href="../../de/df0/interface_d_connect_service.html#a09f60bba7418b030ba986ea61d0e24af">DConnectService::statusListener</a></div><div class="ttdeci">id&lt; OnStatusChangeListener &gt; statusListener</div><div class="ttdoc">当該サービスの状態変更を通知するリスナー。 </div><div class="ttdef"><b>Definition:</b> DConnectService.h:73</div></div>
+<div class="ttc" id="interface_d_connect_service_html_a2a1c35f547f86eaa90bc70d94412055f"><div class="ttname"><a href="../../de/df0/interface_d_connect_service.html#a2a1c35f547f86eaa90bc70d94412055f">DConnectService::serviceId</a></div><div class="ttdeci">NSString * serviceId</div><div class="ttdoc">サービスID。 </div><div class="ttdef"><b>Definition:</b> DConnectService.h:44</div></div>
+<div class="ttc" id="interface_d_connect_profile_provider_html"><div class="ttname"><a href="../../d4/de4/interface_d_connect_profile_provider.html">DConnectProfileProvider</a></div><div class="ttdoc">Device Connect プロファイルプロバイダー。 </div><div class="ttdef"><b>Definition:</b> DConnectProfileProvider.h:17</div></div>
+<div class="ttc" id="interface_d_connect_service_html_afeded4d0da14f812fc0c7e8989bd087c"><div class="ttname"><a href="../../de/df0/interface_d_connect_service.html#afeded4d0da14f812fc0c7e8989bd087c">DConnectService::config</a></div><div class="ttdeci">NSString * config</div><div class="ttdoc">コンフィグ。 </div><div class="ttdef"><b>Definition:</b> DConnectService.h:68</div></div>
+<div class="ttc" id="interface_d_connect_request_message_html"><div class="ttname"><a href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div><div class="ttdef"><b>Definition:</b> DConnectRequestMessage.h:21</div></div>
+<div class="ttc" id="interface_d_connect_response_message_html"><div class="ttname"><a href="../../df/d9a/interface_d_connect_response_message.html">DConnectResponseMessage</a></div><div class="ttdoc">レスポンスデータを提供するクラス。 </div><div class="ttdef"><b>Definition:</b> DConnectResponseMessage.h:21</div></div>
+<div class="ttc" id="interface_d_connect_service_html_a885cbaaee39d77cd0fc0cc2e3bc02ead"><div class="ttname"><a href="../../de/df0/interface_d_connect_service.html#a885cbaaee39d77cd0fc0cc2e3bc02ead">DConnectService::networkType</a></div><div class="ttdeci">NSString * networkType</div><div class="ttdoc">ネットワーク種別。 </div><div class="ttdef"><b>Definition:</b> DConnectService.h:54</div></div>
+<div class="ttc" id="protocol_d_connect_service_information_profile_data_source-p_html"><div class="ttname"><a href="../../da/dbe/protocol_d_connect_service_information_profile_data_source-p.html">DConnectServiceInformationProfileDataSource-p</a></div><div class="ttdoc">ServiceInformationプロファイルのデータソース。 </div><div class="ttdef"><b>Definition:</b> DConnectServiceInformationProfile.h:70</div></div>
+<div class="ttc" id="interface_d_connect_service_html_a09b12c71e3012aee34dfa206f3a29a17"><div class="ttname"><a href="../../de/df0/interface_d_connect_service.html#a09b12c71e3012aee34dfa206f3a29a17">DConnectService::name</a></div><div class="ttdeci">NSString * name</div><div class="ttdoc">サービス名。 </div><div class="ttdef"><b>Definition:</b> DConnectService.h:49</div></div>
+<div class="ttc" id="interface_d_connect_service_html"><div class="ttname"><a href="../../de/df0/interface_d_connect_service.html">DConnectService</a></div><div class="ttdoc">Device Connect APIサービス。 </div><div class="ttdef"><b>Definition:</b> DConnectService.h:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

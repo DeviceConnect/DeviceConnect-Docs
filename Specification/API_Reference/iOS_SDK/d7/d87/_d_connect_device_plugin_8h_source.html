@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: DConnectSDK/DConnectSDK/DConnectDevicePlugin.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_3a716b816bb65351320f7ae51d116280.html">DConnectSDK</a></li><li class="navelem"><a class="el" href="../../dir_cca6906d69a669ec4a0eae7745354c7a.html">DConnectSDK</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DConnectDevicePlugin.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d87/_d_connect_device_plugin_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  DConnectDevicePlugin.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  dConnectManager</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Copyright (c) 2014 NTT DOCOMO,INC.</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Released under the MIT license</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  http://opensource.org/licenses/mit-license.php</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;DConnectSDK/DConnectProfileProvider.h&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../de/d48/_d_connect_request_message_8h.html">DConnectSDK/DConnectRequestMessage.h</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../d4/d09/_d_connect_response_message_8h.html">DConnectSDK/DConnectResponseMessage.h</a>&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#import &lt;DConnectSDK/DConnectServiceProvider.h&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../df/df0/_d_connect_event_cache_controller_8h.html">DConnectSDK/DConnectEventCacheController.h</a>&gt;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d7/d5a/interface_d_connect_device_plugin.html">   49</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="../../d7/d5a/interface_d_connect_device_plugin.html">DConnectDevicePlugin</a> : <a class="code" href="../../d4/de4/interface_d_connect_profile_provider.html">DConnectProfileProvider</a></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">@property</span> (nonatomic) <a class="code" href="../../d2/d95/interface_d_connect_service_provider.html">DConnectServiceProvider</a> *serviceProvider;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d7/d5a/interface_d_connect_device_plugin.html#a6549cb8af01ee3bbc16c336e6497d6a2">   56</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString *<a class="code" href="../../d7/d5a/interface_d_connect_device_plugin.html#a6549cb8af01ee3bbc16c336e6497d6a2">pluginId</a>;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d7/d5a/interface_d_connect_device_plugin.html#a0ebda5a60843724bf337f1bc41ce4abc">   63</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString *<a class="code" href="../../d7/d5a/interface_d_connect_device_plugin.html#a0ebda5a60843724bf337f1bc41ce4abc">pluginName</a>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d7/d5a/interface_d_connect_device_plugin.html#a355b34ec1a57d863fc7552efabf2f63f">   70</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString *<a class="code" href="../../d7/d5a/interface_d_connect_device_plugin.html#a355b34ec1a57d863fc7552efabf2f63f">pluginVersionName</a>;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d7/d5a/interface_d_connect_device_plugin.html#a50c1d0bddd3750c9adc0e6d9137fb8a8">   80</a></span>&#160;<span class="keyword">@property</span> (nonatomic) BOOL <a class="code" href="../../d7/d5a/interface_d_connect_device_plugin.html#a50c1d0bddd3750c9adc0e6d9137fb8a8">useLocalOAuth</a>;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;- (id) initWithObject: (<span class="keywordtype">id</span>) object;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;- (BOOL) sendEvent:(<a class="code" href="../../d1/d81/interface_d_connect_message.html">DConnectMessage</a> *) event;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;- (BOOL) didReceiveRequest:(<a class="code" href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a> *) request response:(<a class="code" href="../../df/d9a/interface_d_connect_response_message.html">DConnectResponseMessage</a> *) response;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;- (void)<a class="code" href="../../d7/d5a/interface_d_connect_device_plugin.html#a6d5d56b11601cbf68797ffd582f7c4c5">applicationDidEnterBackground</a>;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;- (void)<a class="code" href="../../d7/d5a/interface_d_connect_device_plugin.html#a85f969a6303c0809a4e7a3ba74a2e24f">applicationWillEnterForeground</a>;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;- (id&lt;<a class="code" href="../../de/d43/protocol_d_connect_event_cache_controller-p.html">DConnectEventCacheController</a>&gt;) eventCacheController;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;- (NSArray *) serviceProfilesWithServiceId: (NSString *) serviceId;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;- (NSString*)iconFilePath:(BOOL)isOnline;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;- (NSBundle*)<a class="code" href="../../d7/d5a/interface_d_connect_device_plugin.html#a95e1fd85cf37383b8cdb7f85392beac7">pluginBundle</a>;</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="interface_d_connect_message_html"><div class="ttname"><a href="../../d1/d81/interface_d_connect_message.html">DConnectMessage</a></div><div class="ttdoc">Device Connect上でやり取りされるメッセージ。 </div><div class="ttdef"><b>Definition:</b> DConnectMessage.h:379</div></div>
+<div class="ttc" id="interface_d_connect_device_plugin_html_a50c1d0bddd3750c9adc0e6d9137fb8a8"><div class="ttname"><a href="../../d7/d5a/interface_d_connect_device_plugin.html#a50c1d0bddd3750c9adc0e6d9137fb8a8">DConnectDevicePlugin::useLocalOAuth</a></div><div class="ttdeci">BOOL useLocalOAuth</div><div class="ttdoc">Local OAuth認証を行うフラグ。 </div><div class="ttdef"><b>Definition:</b> DConnectDevicePlugin.h:80</div></div>
+<div class="ttc" id="_d_connect_event_cache_controller_8h_html"><div class="ttname"><a href="../../df/df0/_d_connect_event_cache_controller_8h.html">DConnectEventCacheController.h</a></div><div class="ttdoc">イベントデータのキャッシュ操作機能を定義する。 </div></div>
+<div class="ttc" id="interface_d_connect_service_provider_html"><div class="ttname"><a href="../../d2/d95/interface_d_connect_service_provider.html">DConnectServiceProvider</a></div><div class="ttdoc">プラグインのサービス管理機能のインターフェース。 </div><div class="ttdef"><b>Definition:</b> DConnectServiceProvider.h:20</div></div>
+<div class="ttc" id="interface_d_connect_device_plugin_html_a95e1fd85cf37383b8cdb7f85392beac7"><div class="ttname"><a href="../../d7/d5a/interface_d_connect_device_plugin.html#a95e1fd85cf37383b8cdb7f85392beac7">-[DConnectDevicePlugin pluginBundle]</a></div><div class="ttdeci">NSBundle * pluginBundle()</div><div class="ttdoc">プラグインのInfo.plistを取得する。 </div></div>
+<div class="ttc" id="_d_connect_response_message_8h_html"><div class="ttname"><a href="../../d4/d09/_d_connect_response_message_8h.html">DConnectResponseMessage.h</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div></div>
+<div class="ttc" id="interface_d_connect_device_plugin_html_a355b34ec1a57d863fc7552efabf2f63f"><div class="ttname"><a href="../../d7/d5a/interface_d_connect_device_plugin.html#a355b34ec1a57d863fc7552efabf2f63f">DConnectDevicePlugin::pluginVersionName</a></div><div class="ttdeci">NSString * pluginVersionName</div><div class="ttdoc">デバイスプラグインのバージョン名。 </div><div class="ttdef"><b>Definition:</b> DConnectDevicePlugin.h:70</div></div>
+<div class="ttc" id="interface_d_connect_profile_provider_html"><div class="ttname"><a href="../../d4/de4/interface_d_connect_profile_provider.html">DConnectProfileProvider</a></div><div class="ttdoc">Device Connect プロファイルプロバイダー。 </div><div class="ttdef"><b>Definition:</b> DConnectProfileProvider.h:17</div></div>
+<div class="ttc" id="interface_d_connect_device_plugin_html"><div class="ttname"><a href="../../d7/d5a/interface_d_connect_device_plugin.html">DConnectDevicePlugin</a></div><div class="ttdoc">デバイスプラグインのベースクラス。 </div><div class="ttdef"><b>Definition:</b> DConnectDevicePlugin.h:49</div></div>
+<div class="ttc" id="interface_d_connect_device_plugin_html_a6549cb8af01ee3bbc16c336e6497d6a2"><div class="ttname"><a href="../../d7/d5a/interface_d_connect_device_plugin.html#a6549cb8af01ee3bbc16c336e6497d6a2">DConnectDevicePlugin::pluginId</a></div><div class="ttdeci">NSString * pluginId</div><div class="ttdoc">デバイスプラグインのID。 </div><div class="ttdef"><b>Definition:</b> DConnectDevicePlugin.h:56</div></div>
+<div class="ttc" id="interface_d_connect_request_message_html"><div class="ttname"><a href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div><div class="ttdef"><b>Definition:</b> DConnectRequestMessage.h:21</div></div>
+<div class="ttc" id="interface_d_connect_response_message_html"><div class="ttname"><a href="../../df/d9a/interface_d_connect_response_message.html">DConnectResponseMessage</a></div><div class="ttdoc">レスポンスデータを提供するクラス。 </div><div class="ttdef"><b>Definition:</b> DConnectResponseMessage.h:21</div></div>
+<div class="ttc" id="_d_connect_request_message_8h_html"><div class="ttname"><a href="../../de/d48/_d_connect_request_message_8h.html">DConnectRequestMessage.h</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div></div>
+<div class="ttc" id="interface_d_connect_device_plugin_html_a0ebda5a60843724bf337f1bc41ce4abc"><div class="ttname"><a href="../../d7/d5a/interface_d_connect_device_plugin.html#a0ebda5a60843724bf337f1bc41ce4abc">DConnectDevicePlugin::pluginName</a></div><div class="ttdeci">NSString * pluginName</div><div class="ttdoc">デバイスプラグインの名前。 </div><div class="ttdef"><b>Definition:</b> DConnectDevicePlugin.h:63</div></div>
+<div class="ttc" id="protocol_d_connect_event_cache_controller-p_html"><div class="ttname"><a href="../../de/d43/protocol_d_connect_event_cache_controller-p.html">DConnectEventCacheController-p</a></div><div class="ttdoc">イベントデータのキャッシュ操作機能を定義するプロトコル。 </div></div>
+<div class="ttc" id="interface_d_connect_device_plugin_html_a6d5d56b11601cbf68797ffd582f7c4c5"><div class="ttname"><a href="../../d7/d5a/interface_d_connect_device_plugin.html#a6d5d56b11601cbf68797ffd582f7c4c5">-[DConnectDevicePlugin applicationDidEnterBackground]</a></div><div class="ttdeci">void applicationDidEnterBackground()</div><div class="ttdoc">アプリケーションがバックグラウンドへの遷移時に呼び出される。 </div></div>
+<div class="ttc" id="interface_d_connect_device_plugin_html_a85f969a6303c0809a4e7a3ba74a2e24f"><div class="ttname"><a href="../../d7/d5a/interface_d_connect_device_plugin.html#a85f969a6303c0809a4e7a3ba74a2e24f">-[DConnectDevicePlugin applicationWillEnterForeground]</a></div><div class="ttdeci">void applicationWillEnterForeground()</div><div class="ttdoc">アプリケーションがフォアグランドへの遷移時に呼び出される。 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

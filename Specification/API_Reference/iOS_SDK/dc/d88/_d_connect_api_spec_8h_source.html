@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Device Connect SDK for iOS: DConnectSDK/DConnectSDK/DConnectApiSpec.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Device Connect SDK for iOS
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_3a716b816bb65351320f7ae51d116280.html">DConnectSDK</a></li><li class="navelem"><a class="el" href="../../dir_cca6906d69a669ec4a0eae7745354c7a.html">DConnectSDK</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DConnectApiSpec.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  DConnectApiSpec.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  DConnectSDK</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Copyright (c) 2016 NTT DOCOMO,INC.</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Released under the MIT license</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  http://opensource.org/licenses/mit-license.php</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../db/d77/_d_connect_message_8h.html">DConnectSDK/DConnectMessage.h</a>&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &lt;<a class="code" href="../../de/d48/_d_connect_request_message_8h.html">DConnectSDK/DConnectRequestMessage.h</a>&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#import &lt;DConnectSDK/DConnectSpecConstants.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../dd/d67/interface_d_connect_api_spec.html">   19</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="../../dd/d67/interface_d_connect_api_spec.html">DConnectApiSpec</a> : NSObject&lt;NSCopying&gt;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../dd/d67/interface_d_connect_api_spec.html#aec2303b61f5e5bbbdcfa90ffdc9b8c81">   24</a></span>&#160;<span class="keyword">@property</span>(nonatomic) DConnectSpecType <a class="code" href="../../dd/d67/interface_d_connect_api_spec.html#aec2303b61f5e5bbbdcfa90ffdc9b8c81">type</a>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../dd/d67/interface_d_connect_api_spec.html#a826077ae37390015092e9b772d413574">   29</a></span>&#160;<span class="keyword">@property</span>(nonatomic) DConnectSpecMethod <a class="code" href="../../dd/d67/interface_d_connect_api_spec.html#a826077ae37390015092e9b772d413574">method</a>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../dd/d67/interface_d_connect_api_spec.html#ac88ce8cedcb3a2c0477c07d01cd07ace">   34</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSString *<a class="code" href="../../dd/d67/interface_d_connect_api_spec.html#ac88ce8cedcb3a2c0477c07d01cd07ace">apiName</a>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../dd/d67/interface_d_connect_api_spec.html#a170229141badb67e1580d4975ef5d692">   39</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSString *<a class="code" href="../../dd/d67/interface_d_connect_api_spec.html#a170229141badb67e1580d4975ef5d692">profileName</a>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../dd/d67/interface_d_connect_api_spec.html#a1aa39ba6dae17f22dd28d7e06d85cc72">   44</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSString *<a class="code" href="../../dd/d67/interface_d_connect_api_spec.html#a1aa39ba6dae17f22dd28d7e06d85cc72">interfaceName</a>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../dd/d67/interface_d_connect_api_spec.html#a1757b7a94b5135f49b4ede5478b9a4da">   49</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSString *<a class="code" href="../../dd/d67/interface_d_connect_api_spec.html#a1757b7a94b5135f49b4ede5478b9a4da">attributeName</a>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../dd/d67/interface_d_connect_api_spec.html#a0075b1cb9eec5380a44a4d78a0bb4931">   57</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) NSArray *<a class="code" href="../../dd/d67/interface_d_connect_api_spec.html#a0075b1cb9eec5380a44a4d78a0bb4931">requestParamSpecList</a>;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;- (NSString *) <a class="code" href="../../dd/d67/interface_d_connect_api_spec.html#a1250419af86922fe9148d9c06271211c">path</a>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;- (void) setPath: (NSString *) path;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;- (BOOL) validate: (<a class="code" href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a> *) request;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">@end</span></div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="ttc" id="interface_d_connect_api_spec_html_a1aa39ba6dae17f22dd28d7e06d85cc72"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html#a1aa39ba6dae17f22dd28d7e06d85cc72">DConnectApiSpec::interfaceName</a></div><div class="ttdeci">NSString * interfaceName</div><div class="ttdoc">インターフェース名。 </div><div class="ttdef"><b>Definition:</b> DConnectApiSpec.h:44</div></div>
+<div class="ttc" id="interface_d_connect_api_spec_html_a1757b7a94b5135f49b4ede5478b9a4da"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html#a1757b7a94b5135f49b4ede5478b9a4da">DConnectApiSpec::attributeName</a></div><div class="ttdeci">NSString * attributeName</div><div class="ttdoc">アトリビュート名。 </div><div class="ttdef"><b>Definition:</b> DConnectApiSpec.h:49</div></div>
+<div class="ttc" id="interface_d_connect_api_spec_html_ac88ce8cedcb3a2c0477c07d01cd07ace"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html#ac88ce8cedcb3a2c0477c07d01cd07ace">DConnectApiSpec::apiName</a></div><div class="ttdeci">NSString * apiName</div><div class="ttdoc">API名。 </div><div class="ttdef"><b>Definition:</b> DConnectApiSpec.h:34</div></div>
+<div class="ttc" id="interface_d_connect_api_spec_html_a1250419af86922fe9148d9c06271211c"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html#a1250419af86922fe9148d9c06271211c">-[DConnectApiSpec path]</a></div><div class="ttdeci">NSString * path()</div><div class="ttdoc">APIのパスを取得する。 </div></div>
+<div class="ttc" id="interface_d_connect_api_spec_html_a0075b1cb9eec5380a44a4d78a0bb4931"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html#a0075b1cb9eec5380a44a4d78a0bb4931">DConnectApiSpec::requestParamSpecList</a></div><div class="ttdeci">NSArray * requestParamSpecList</div><div class="ttdoc">リクエストパラメータ仕様のリスト。 </div><div class="ttdef"><b>Definition:</b> DConnectApiSpec.h:57</div></div>
+<div class="ttc" id="interface_d_connect_api_spec_html"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html">DConnectApiSpec</a></div><div class="ttdoc">Device Connect API仕様。 </div><div class="ttdef"><b>Definition:</b> DConnectApiSpec.h:19</div></div>
+<div class="ttc" id="interface_d_connect_api_spec_html_a170229141badb67e1580d4975ef5d692"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html#a170229141badb67e1580d4975ef5d692">DConnectApiSpec::profileName</a></div><div class="ttdeci">NSString * profileName</div><div class="ttdoc">プロファイル名。 </div><div class="ttdef"><b>Definition:</b> DConnectApiSpec.h:39</div></div>
+<div class="ttc" id="interface_d_connect_request_message_html"><div class="ttname"><a href="../../dd/d1c/interface_d_connect_request_message.html">DConnectRequestMessage</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div><div class="ttdef"><b>Definition:</b> DConnectRequestMessage.h:21</div></div>
+<div class="ttc" id="_d_connect_request_message_8h_html"><div class="ttname"><a href="../../de/d48/_d_connect_request_message_8h.html">DConnectRequestMessage.h</a></div><div class="ttdoc">リクエストデータを提供するクラス。 </div></div>
+<div class="ttc" id="interface_d_connect_api_spec_html_aec2303b61f5e5bbbdcfa90ffdc9b8c81"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html#aec2303b61f5e5bbbdcfa90ffdc9b8c81">DConnectApiSpec::type</a></div><div class="ttdeci">DConnectSpecType type</div><div class="ttdoc">API種別。 </div><div class="ttdef"><b>Definition:</b> DConnectApiSpec.h:24</div></div>
+<div class="ttc" id="interface_d_connect_api_spec_html_a826077ae37390015092e9b772d413574"><div class="ttname"><a href="../../dd/d67/interface_d_connect_api_spec.html#a826077ae37390015092e9b772d413574">DConnectApiSpec::method</a></div><div class="ttdeci">DConnectSpecMethod method</div><div class="ttdoc">APIメソッド。 </div><div class="ttdef"><b>Definition:</b> DConnectApiSpec.h:29</div></div>
+<div class="ttc" id="_d_connect_message_8h_html"><div class="ttname"><a href="../../db/d77/_d_connect_message_8h.html">DConnectMessage.h</a></div><div class="ttdoc">dConnect上でやり取りされるデータを提供する。 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2020年07月06日(月) 12時59分49秒作成 - Device Connect SDK for iOS / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
